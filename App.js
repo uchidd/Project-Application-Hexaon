@@ -31,5 +31,3 @@ const AppStackNavigator = createStackNavigator({
   });
 
 const AppContainer = createAppContainer(AppStackNavigator);
-
-//Rizki Khaerul
