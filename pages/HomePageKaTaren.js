@@ -20,7 +20,7 @@ export default class HomePage extends Component {
         />
         <View style={styles.mainView}>
           <View style={styles.rowView}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Authority')}>
               <View style={styles.iconView}>
                 <Icon name={"users-cog"} color={"#8ECCCC"} size={40} />
               </View>
@@ -28,7 +28,7 @@ export default class HomePage extends Component {
                 <Text style={styles.titleText}>Authority</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Client')}>
               <View style={styles.iconView}>
                 <Icon name={"users"} color={"#8ECCCC"} size={40} />
               </View>
@@ -38,7 +38,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
           </View>
           <View style={styles.rowView}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Product')}>
               <View style={styles.iconView}>
                 <Icon name={"box"} color={"#8ECCCC"} size={40} />
               </View>
@@ -46,7 +46,7 @@ export default class HomePage extends Component {
                 <Text style={styles.titleText}>Product</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Principle')}>
               <View style={styles.iconView}>
                 <Icon name={"user-tie"} color={"#8ECCCC"} size={40}/>
               </View>
@@ -56,7 +56,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
           </View>
           <View style={styles.rowView}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pipeline')}>
               <View style={styles.iconView}>
                 <Icon name={"tasks"} color={"#8ECCCC"} size={40} />
               </View>
@@ -64,7 +64,7 @@ export default class HomePage extends Component {
                 <Text style={styles.titleText}>Pipeline</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('LeadProject')}>
               <View style={styles.iconView}>
                 <Icon name={"file-upload"} color={"#8ECCCC"} size={40} />
               </View>
@@ -74,7 +74,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
           </View>
           <View style={styles.rowView}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SalesAgenda')}>
               <View style={styles.iconView}>
                 <Icon name={"calendar-alt"} color={"#8ECCCC"} size={40} />
               </View>
@@ -82,7 +82,7 @@ export default class HomePage extends Component {
                 <Text style={styles.titleText}>Sales Agenda</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('FileManagement')}>
               <View style={styles.iconView}>
                 <Icon name={"file"} color={"#8ECCCC"} size={40} solid={true}/>
               </View>
@@ -92,7 +92,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
           </View>
           <View style={styles.rowView}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('ContactBook')}>
               <View style={styles.iconView}>
                 <Icon name={"address-book"} color={"#8ECCCC"} size={40} />
               </View>
@@ -100,7 +100,7 @@ export default class HomePage extends Component {
                 <Text style={styles.titleText}>Contact Book</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('LogActivity')}>
               <View style={styles.iconView}>
                 <Icon name={"history"} color={"#8ECCCC"} size={40} />
               </View>
