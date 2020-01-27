@@ -77,8 +77,56 @@ export default class CardContact extends Component {
             <Text style={styles.idNumber}>{this.state.id}</Text>
           </View>
           <View style={styles.secondSecondLayer}>
-            
+            <View style={styles.firstSecondSecondLayer}>
+              <View style={styles.leftTextView}>
+                <Text style={styles.text}>Name</Text>
+              </View>
+              <View style={styles.rightTextView}>
+                <Text style={styles.text}>Example Name</Text>
+              </View>
+            </View>
+            <View style={styles.secondSecondSecondLayer}>
+              <View style={styles.leftTextView}>
+                <Text style={styles.text}>Client</Text>
+              </View>
+              <View style={styles.rightTextView}>
+                <Text style={styles.text}>Example Client</Text>
+              </View>
+            </View>
+            <View style={styles.thirdSecondSecondLayer}>
+              <View style={styles.leftTextView}>
+                <Text style={styles.text}>Division</Text>
+              </View>
+              <View style={styles.rightTextView}>
+                <Text style={styles.text}>Example Division</Text>
+              </View>
+            </View>
+            <View style={styles.fourthSecondSecondLayer}>
+              <View style={styles.leftTextView}>
+                <Text style={styles.text}>Contact</Text>
+              </View>
+              <View style={styles.rightTextView}>
+                <Text style={styles.text}>Example Contact</Text>
+              </View>
+            </View>
+            <View style={styles.fifthSecondSecondLayer}>
+              <View style={styles.leftTextView}>
+                <Text style={styles.text}>Email Person</Text>
+              </View>
+              <View style={styles.rightTextView}>
+                <Text style={styles.text}>Example Email Person</Text>
+              </View>
+            </View>
+            <View style={styles.sixthSecondSecondLayer}>
+              <View style={styles.leftTextView}>
+                <Text style={styles.text}>Email Company</Text>
+              </View>
+              <View style={styles.rightTextView}>
+                <Text style={styles.text}>Example Email Company</Text>
+              </View>
+            </View>
           </View>
+
         </TouchableOpacity>
         <Modal
           animationType={"fade"}
@@ -183,6 +231,7 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   idNumber: {
+    flex: 1,
     fontSize: 24,
     color: "#8ECCCC",
     fontWeight: "bold",
@@ -227,7 +276,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   firstSecondLayer: {
-    flex: 1,
     backgroundColor: "transparent",
     height: 52,
     justifyContent: "center",
@@ -235,12 +283,72 @@ const styles = StyleSheet.create({
   },
   secondSecondLayer: {
     backgroundColor: "#3A4042",
-    height: 204,
+    height: 132,
     marginLeft: 6,
     marginRight: 6,
     borderColor: "#8ECCCC",
     borderRadius: 3,
     borderWidth: 2,
     flexDirection: "column"
-  }
+  },
+  thirdSecondLayer: {
+    backgroundColor: "#3A4042",
+    flex: 1,
+    margin: 6,
+    borderWidth: 2,
+    borderRadius: 3,
+    borderColor: "#8ECCCC",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  textID: {
+    fontSize: 24,
+    color: "#8ECCCC",
+    fontWeight: "bold"
+  },
+  firstSecondSecondLayer: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: "row"
+  },
+  secondSecondSecondLayer: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: "row"
+  },
+  thirdSecondSecondLayer: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: "row"
+  },
+  fourthSecondSecondLayer: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: "row"
+  },
+  fifthSecondSecondLayer: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: "row"
+  },
+  sixthSecondSecondLayer: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: "row"
+  },
+  leftTextView: {
+    backgroundColor: "transparent",
+    flex: 7,
+    justifyContent: "center",
+    paddingLeft: 8
+  },
+  rightTextView: {
+    backgroundColor: "transparent",
+    flex: 12,
+    justifyContent: "center"
+  },
+  text: {
+    color: "#8ECCCC",
+    fontSize: 16
+  },
 });
