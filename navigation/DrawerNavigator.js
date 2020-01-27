@@ -11,7 +11,7 @@ import LeadProjectPage from '../pages/LeadProjectPage';
 import SalesAgendaPage from '../pages/SalesAgendaPage';
 import FileManegementPage from '../pages/FileManegementPage';
 import LogActivityPage from '../pages/LogActivityPage';
-import HomePage from '../pages/HomePage';
+import HomePage from '../pages/HomePageKaTaren';
 
 export default class DrawerNavigator extends Component{
     render(){
