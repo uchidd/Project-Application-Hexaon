@@ -73,7 +73,7 @@ export default class CardContact extends Component {
           onPress={() => this._showModalViewData()}
           onLongPress={() => this._showModalOptionAction()}
         >
-          <View style={styles.secondLeftLayer}>
+          {/* <View style={styles.secondLeftLayer}>
             <Text style={styles.idNumber}>{this.state.id}</Text>
           </View>
           <View style={styles.secondRightLayer}>
@@ -95,7 +95,15 @@ export default class CardContact extends Component {
               <Text style={styles.text}>{this.state.phone}</Text>
               <Text style={styles.text}>{this.state.email}</Text>
             </View>
+          </View> */}
+
+          <View style={styles.firstSecondLayer}>
+            <Text style={styles.idNumber}>{this.state.id}</Text>
           </View>
+          <View style={styles.secondSecondLayer}>
+
+          </View>
+
         </TouchableOpacity>
         <Modal
           animationType={"fade"}
@@ -164,12 +172,13 @@ const styles = StyleSheet.create({
   },
   firstLayer: {
     margin: 6,
-    height: 124,
+    height: 250,
     backgroundColor: "#212121",
     borderWidth: 2,
     borderColor: "#8ECCCC",
     borderRadius: 3,
-    flexDirection: "row",
+    //flexDirection: "row",
+    flexDirection: "column",
     elevation: 3
   },
   secondLeftLayer: {
@@ -195,7 +204,10 @@ const styles = StyleSheet.create({
   idNumber: {
     fontSize: 24,
     color: "#8ECCCC",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center'
   },
   thirdLeftLayer: {
     marginTop: 6,
@@ -232,5 +244,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#8ECCCC",
     fontWeight: "bold"
-  }
+  },
+  firstSecondLayer: {
+    flex: 1,
+    backgroundColor: "transparent",
+    height: 52,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  secondSecondLayer: {
+    backgroundColor: "#3A4042",
+    height: 204,
+    marginLeft: 6,
+    marginRight: 6,
+    borderColor: "#8ECCCC",
+    borderRadius: 3,
+    borderWidth: 2,
+    flexDirection: "column"
+  },
 });
