@@ -69,7 +69,7 @@ export default class ContactBookPage extends Component{
     console.log(this.state.dataSource)
     console.log(this.state.searchData)
     const {text} = this.state;
-    const newData = this.state.searchData.filter(item => { 
+    const newData = this.state.searchData.filter(item => { //test
       const itemData = '${item.name.toUpperCase()}'
       const textData = text.toUpperCase();
       return itemData.indexOf(textData) > -1;
