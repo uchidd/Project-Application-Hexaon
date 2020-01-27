@@ -6,15 +6,16 @@ import DrawerNavigator from './navigation/DrawerNavigator';
 import { MenuProvider } from "react-native-popup-menu";
 import Header from './components/header';
 import HeaderSearchWithButton from './components/headerSearchWithButton';
+import CardUser from './components/cardUserAuthority';
 
 export default class App extends Component {
 
     render() {
         return(
-            // <HeaderSearchWithButton/>
-            <MenuProvider>
-                <DrawerNavigator/>
-            </MenuProvider>
+            <CardUser/>
+            // <MenuProvider>
+            //     <DrawerNavigator/>
+            // </MenuProvider>
         )
     }
 }

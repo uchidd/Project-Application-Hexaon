@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View, StyleSheet, Modal } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
-import CardContact from "../components/cardContact";
+import CardContact from "../components/cardContactBook";
 import { ScrollView } from "react-native";
 import { FlatList } from "react-native";
 import HeaderSearch from "../components/headerSearch";
