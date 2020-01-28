@@ -73,56 +73,43 @@ export default class CardContact extends Component {
           onPress={() => this._showModalViewData()}
           onLongPress={() => this._showModalOptionAction()}
         >
-          <View style={styles.firstSecondLayer}>
-            <Text style={styles.idNumber}>{this.state.id}</Text>
+
+          <View style={styles.titleView}>
+            <Text style={styles.textTitle}>{this.state.id}</Text>
           </View>
-          <View style={styles.secondSecondLayer}>
-            <View style={styles.firstSecondSecondLayer}>
-              <View style={styles.leftTextView}>
-                <Text style={styles.text}>Name</Text>
+          <View style={styles.infoView}>
+            <View style={styles.leftInfoView}>
+              <View style={styles.topRowLeft}>
+                <Text style={styles.textInfo}>Name</Text>
               </View>
-              <View style={styles.rightTextView}>
-                <Text style={styles.text}>Example Name</Text>
+              <View style={styles.midRowLeft}>
+                <Text style={styles.textInfo}>Client</Text>
               </View>
-            </View>
-            <View style={styles.secondSecondSecondLayer}>
-              <View style={styles.leftTextView}>
-                <Text style={styles.text}>Client</Text>
+              <View style={styles.midRowLeft}>
+                <Text style={styles.textInfo}>Division</Text>
               </View>
-              <View style={styles.rightTextView}>
-                <Text style={styles.text}>Example Client</Text>
+              <View style={styles.midRowLeft}>
+                <Text style={styles.textInfo}>Contact</Text>
               </View>
-            </View>
-            <View style={styles.thirdSecondSecondLayer}>
-              <View style={styles.leftTextView}>
-                <Text style={styles.text}>Division</Text>
+              <View style={styles.midRowLeft}>
+                <Text style={styles.textInfo}>Email Person</Text>
               </View>
-              <View style={styles.rightTextView}>
-                <Text style={styles.text}>Example Division</Text>
+              <View style={styles.botRowLeft}>
+                <Text style={styles.textInfo}>Email Company</Text>
               </View>
             </View>
-            <View style={styles.fourthSecondSecondLayer}>
-              <View style={styles.leftTextView}>
-                <Text style={styles.text}>Contact</Text>
+            <View style={styles.rightInfoView}>
+              <View style={styles.topRowRight}>
+                <Text style={styles.textInfo}>{this.state.name}</Text>
               </View>
-              <View style={styles.rightTextView}>
-                <Text style={styles.text}>Example Contact</Text>
+              <View style={styles.midRowRight}></View>
+              <View style={styles.midRowRight}>
+                <Text style={styles.textInfo}>{this.state.division}</Text>
               </View>
-            </View>
-            <View style={styles.fifthSecondSecondLayer}>
-              <View style={styles.leftTextView}>
-                <Text style={styles.text}>Email Person</Text>
-              </View>
-              <View style={styles.rightTextView}>
-                <Text style={styles.text}>Example Email Person</Text>
-              </View>
-            </View>
-            <View style={styles.sixthSecondSecondLayer}>
-              <View style={styles.leftTextView}>
-                <Text style={styles.text}>Email Company</Text>
-              </View>
-              <View style={styles.rightTextView}>
-                <Text style={styles.text}>Example Email Company</Text>
+              <View style={styles.midRowRight}></View>
+              <View style={styles.midRowRight}></View>
+              <View style={styles.botRowRight}>
+                <Text style={styles.textInfo}>{this.state.email}</Text>
               </View>
             </View>
           </View>
@@ -201,154 +188,95 @@ const styles = StyleSheet.create({
   },
   firstLayer: {
     margin: 6,
-    height: 250,
+    height: 221,
     backgroundColor: "#212121",
     borderWidth: 2,
     borderColor: "#8ECCCC",
     borderRadius: 3,
     //flexDirection: "row",
     flexDirection: "column",
-    elevation: 3
+    elevation: 3,
   },
-  secondLeftLayer: {
-    marginTop: 6,
-    marginBottom: 6,
-    backgroundColor: "#212121",
+  titleView: {
+    backgroundColor: "transparent",
     flex: 1,
-    borderRadius: 3,
     justifyContent: "center",
     alignItems: "center"
   },
-  secondRightLayer: {
-    marginTop: 6,
-    marginRight: 6,
-    marginBottom: 6,
-    backgroundColor: "#3A4042",
-    flex: 6,
-    borderRadius: 3,
-    borderWidth: 2,
-    borderColor: "#8ECCCC",
-    flexDirection: "row"
-  },
-  idNumber: {
-    flex: 1,
+  textTitle: {
     fontSize: 24,
-    color: "#8ECCCC",
-    fontWeight: "bold",
-    justifyContent: "center",
-    alignContent: "center",
-    alignItems: "center"
-  },
-  thirdLeftLayer: {
-    marginTop: 6,
-    marginLeft: 12,
-    marginBottom: 6,
-    flex: 4,
-    backgroundColor: "#3A4042",
-    flexDirection: "column",
-    justifyContent: "center"
-  },
-  thirdCenterLayer: {
-    marginTop: 6,
-    marginBottom: 6,
-    flex: 2,
-    backgroundColor: "#3A4042",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  thirdRightLayer: {
-    marginTop: 6,
-    marginRight: 6,
-    marginBottom: 6,
-    flex: 14,
-    backgroundColor: "#3A4042",
-    flexDirection: "column",
-    justifyContent: "center"
-  },
-  text: {
-    fontSize: 16,
     color: "#8ECCCC"
   },
-  textColon: {
-    fontSize: 16,
-    color: "#8ECCCC",
-    fontWeight: "bold"
-  },
-  firstSecondLayer: {
-    backgroundColor: "transparent",
-    height: 52,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  secondSecondLayer: {
+  infoView: {
     backgroundColor: "#3A4042",
-    height: 132,
-    marginLeft: 6,
-    marginRight: 6,
+    height: 175,
+    margin: 3,
+    borderWidth: 2,
     borderColor: "#8ECCCC",
     borderRadius: 3,
-    borderWidth: 2,
-    flexDirection: "column"
+    flexDirection: "row"
   },
-  thirdSecondLayer: {
-    backgroundColor: "#3A4042",
+  leftInfoView: {
+    backgroundColor: "transparent",
+    flex: 2
+  },
+  rightInfoView: {
+    backgroundColor: "transparent",
+    flex: 3
+  },
+  topRowLeft: {
+    backgroundColor: "transparent",
     flex: 1,
-    margin: 6,
-    borderWidth: 2,
-    borderRadius: 3,
+    borderBottomWidth: 1,
+    borderRightWidth: 1,
     borderColor: "#8ECCCC",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  textID: {
-    fontSize: 24,
-    color: "#8ECCCC",
-    fontWeight: "bold"
-  },
-  firstSecondSecondLayer: {
-    backgroundColor: "transparent",
-    flex: 1,
-    flexDirection: "row"
-  },
-  secondSecondSecondLayer: {
-    backgroundColor: "transparent",
-    flex: 1,
-    flexDirection: "row"
-  },
-  thirdSecondSecondLayer: {
-    backgroundColor: "transparent",
-    flex: 1,
-    flexDirection: "row"
-  },
-  fourthSecondSecondLayer: {
-    backgroundColor: "transparent",
-    flex: 1,
-    flexDirection: "row"
-  },
-  fifthSecondSecondLayer: {
-    backgroundColor: "transparent",
-    flex: 1,
-    flexDirection: "row"
-  },
-  sixthSecondSecondLayer: {
-    backgroundColor: "transparent",
-    flex: 1,
-    flexDirection: "row"
-  },
-  leftTextView: {
-    backgroundColor: "transparent",
-    flex: 7,
-    justifyContent: "center",
-    paddingLeft: 8
-  },
-  rightTextView: {
-    backgroundColor: "transparent",
-    flex: 12,
     justifyContent: "center"
   },
-  text: {
-    color: "#8ECCCC",
-    fontSize: 16
+  midRowLeft: {
+    backgroundColor: "transparent",
+    flex: 1,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 1,
+    borderColor: "#8ECCCC",
+    justifyContent: "center"
   },
+  botRowLeft: {
+    backgroundColor: "transparent",
+    flex: 1,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderColor: "#8ECCCC",
+    justifyContent: "center"
+  },
+  topRowRight: {
+    backgroundColor: "transparent",
+    flex: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: "#8ECCCC",
+    justifyContent: "center"
+  },
+  midRowRight: {
+    backgroundColor: "transparent",
+    flex: 1,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: "#8ECCCC",
+    justifyContent: "center"
+  },
+  botRowRight: {
+    backgroundColor: "transparent",
+    flex: 1,
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderColor: "#8ECCCC",
+    justifyContent: "center"
+  },
+  textInfo: {
+    marginLeft: 6,
+    fontSize: 16,
+    color: "#8ECCCC"
+  }
 });
