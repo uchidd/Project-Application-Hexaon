@@ -33,10 +33,18 @@ export default class CardUser extends Component {
               </View>
             </View>
             <View style={styles.rightInfoView}>
-              <View style={styles.topRowRight}></View>
-              <View style={styles.midRowRight}></View>
-              <View style={styles.midRowRight}></View>
-              <View style={styles.botRowRight}></View>
+              <View style={styles.topRowRight}>
+                <Text style={styles.textInfo}>Example</Text>
+              </View>
+              <View style={styles.midRowRight}>
+                <Text style={styles.textInfo}>Example</Text>
+              </View>
+              <View style={styles.midRowRight}>
+                <Text style={styles.textInfo}>Example</Text>
+              </View>
+              <View style={styles.botRowRight}>
+                <Text style={styles.textInfo}>Example</Text>
+              </View>
             </View>
           </View>
         </TouchableOpacity>
