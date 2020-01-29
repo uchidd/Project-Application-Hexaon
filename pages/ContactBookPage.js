@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Modal } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";
@@ -7,6 +7,7 @@ import { ScrollView } from "react-native";
 import { FlatList } from "react-native";
 import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default class ContactBookPage extends Component {
   static navigationOptions = {
@@ -148,16 +149,6 @@ export default class ContactBookPage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        
-        <TouchableOpacity
-          activeOpacity={0.5}
-          onPress={this.SampleFunction}
-          style={styles.TouchableOpacityStyle}>
-          <View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#8ECCCC"} size={24} />
-          </View>
-        </TouchableOpacity>
-
         {this.state.headerview ? (
           <Header
             title={"Contact Book"}
@@ -192,6 +183,17 @@ export default class ContactBookPage extends Component {
             keyExtractor={(item, index) => index.toString()}
           />
         </ScrollView>
+
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={this.SampleFunction}
+          style={styles.TouchableOpacityStyle}
+        >
+          <View style={styles.fabCircle}>
+            <Icon name={"plus"} color={"#8ECCCC"} size={24} />
+          </View>
+        </TouchableOpacity>
+
       </View>
     );
   }
@@ -201,5 +203,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#3A4042"
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
+
+  fabCircle: {
+    backgroundColor: "#212121",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9,
   }
 });
