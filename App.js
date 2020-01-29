@@ -33,10 +33,10 @@ export default class App extends Component {
             // <CardFolder/>
             // <CardFile/>
             // <CardSignActivity/>
-            <CardUsersActivity/>
-            // <MenuProvider>
-            //     <DrawerNavigator/>
-            // </MenuProvider>
+            // <CardUsersActivity/>
+            <MenuProvider>
+                <DrawerNavigator/>
+            </MenuProvider>
         )
     }
 }
