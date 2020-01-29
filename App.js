@@ -22,9 +22,7 @@ export default class App extends Component {
 
     render() {
         return(
-<<<<<<< HEAD
-            <CardUser/> 
-=======
+            // <CardUser/>
             // <CardUser/>
             // <CardClient/>
             // <CardProduct/>
@@ -36,7 +34,6 @@ export default class App extends Component {
             // <CardFile/>
             // <CardSignActivity/>
             <CardUsersActivity/>
->>>>>>> e482f9a83f2f01afeee4eaf5f8d4c1468cfa5d77
             // <MenuProvider>
             //     <DrawerNavigator/>
             // </MenuProvider>
