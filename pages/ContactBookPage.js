@@ -112,7 +112,6 @@ export default class ContactBookPage extends Component {
   _showSearch() {
     this.setState({ searchview: true });
     this.setState({ headerview: false });
-    //this.setState({dataSource:this.arrayHolder})
   }
 
   _showHeader() {
