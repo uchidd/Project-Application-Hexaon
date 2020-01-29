@@ -30,7 +30,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     Pipeline: {screen: PipelinePage},
     LeadProject: {screen: LeadProjectPage},
     SalesAgenda: {screen: SalesAgendaPage},
-    FileManegement: {screen: FileManegementPage},
+    FileManagement: {screen: FileManegementPage},
     ContactBook: {screen: ContactBookPage},
     LogActivity: {screen: LogActivityPage}
 },{
