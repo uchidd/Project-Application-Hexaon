@@ -4,12 +4,11 @@ import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import TabBarNavigator from "../navigation/TabBarNavigator";
 
-
 export default class AuthorityPage extends Component{
 
   static navigationOptions = {
     drawerLabel: 'Authority',
-}
+  }
 
   render(){
     return(

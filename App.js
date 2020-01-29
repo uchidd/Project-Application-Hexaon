@@ -22,6 +22,10 @@ export default class App extends Component {
 
     render() {
         return(
+<<<<<<< HEAD
+=======
+            // <CardUser/>
+>>>>>>> 8d0246096308e683977428f5fe35308fa8844b94
             // <CardUser/>
             // <CardClient/>
             // <CardProduct/>
@@ -32,10 +36,17 @@ export default class App extends Component {
             // <CardFolder/>
             // <CardFile/>
             // <CardSignActivity/>
+<<<<<<< HEAD
             <CardUsersActivity/>
             // <MenuProvider>
             //     <DrawerNavigator/>
             // </MenuProvider>
+=======
+            // <CardUsersActivity/>
+            <MenuProvider>
+                <DrawerNavigator/>
+            </MenuProvider>
+>>>>>>> 8d0246096308e683977428f5fe35308fa8844b94
         )
     }
 }

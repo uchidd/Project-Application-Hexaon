@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   firstLayer: {
     margin: 6,
-    height: 211,
+    height: 163,
     backgroundColor: "#212121",
     borderWidth: 2,
     borderColor: "#8ECCCC",
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   },
   infoView: {
     backgroundColor: "#3A4042",
-    height: 165,
+    height: 117,
     margin: 3,
     borderWidth: 2,
     borderColor: "#8ECCCC",
