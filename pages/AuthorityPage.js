@@ -3,11 +3,15 @@ import { View, StyleSheet, Text } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import TabBarNavigator from "../navigation/TabBarNavigator";
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default class AuthorityPage extends Component{
 
   static navigationOptions = {
     drawerLabel: 'Authority',
+    drawerIcon: () => (
+      <Icon name={"users-cog"} color={"#8ECCCC"} size={19}/>
+    ),
   }
 
   render(){

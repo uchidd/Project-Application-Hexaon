@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default class PipelinePage extends Component{
 
   static navigationOptions = {
     drawerLabel: 'Pipeline',
-}
+    drawerIcon: () => (
+      <Icon name={"tasks"} color={"#8ECCCC"} size={19}/>
+    ),
+  }
 
   render(){
     return(

@@ -11,8 +11,16 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default class ContactBookPage extends Component {
   static navigationOptions = {
+<<<<<<< HEAD
     drawerLabel: "Contact Book"
   };
+=======
+    drawerLabel: 'Contact Book',
+    drawerIcon: () => (
+      <Icon name={"address-book"} color={"#8ECCCC"} size={19}/>
+    ),
+  }
+>>>>>>> 368a7eed486dc3997c7759bce413506071abe899
 
   constructor(props) {
     super(props);

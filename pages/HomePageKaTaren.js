@@ -6,7 +6,10 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default class HomePage extends Component {
   static navigationOptions = {
-    drawerLabel: "Home"
+    drawerLabel: "Home",
+    drawerIcon: () => (
+      <Icon name={"home"} color={"#8ECCCC"} size={19}/>
+    ),
   };
 
   render() {
