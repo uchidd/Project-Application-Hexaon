@@ -71,7 +71,6 @@ export default class ClientPage extends Component{
             <Icon name={"plus"} color={"#8ECCCC"} size={24} />
           </View>
         </TouchableOpacity>
-
       </View>
     )
   }
