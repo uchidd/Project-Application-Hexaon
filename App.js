@@ -12,10 +12,10 @@ export default class App extends Component {
 
     render() {
         return(
-            // <CardUser/>
-            <MenuProvider>
-                <DrawerNavigator/>
-            </MenuProvider>
+            <CardUser/> 
+            // <MenuProvider>
+            //     <DrawerNavigator/>
+            // </MenuProvider>
         )
     }
 }
