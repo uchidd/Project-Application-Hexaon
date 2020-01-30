@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";
@@ -105,7 +105,8 @@ export default class ContactBookPage extends Component {
       isLoading: true,
       text: "",
       searchData: this.arrayHolder,
-      dataSource: this.arrayHolder
+      dataSource: this.arrayHolder,
+      isActionButtonVisible: true
     };
   }
 
@@ -148,6 +149,37 @@ export default class ContactBookPage extends Component {
     });
   };
 
+  state = {
+    isActionButtonVisible: true
+  }
+  _listViewOffset = 0
+
+  _onScroll = (event) => {
+    const isBottomBounce =
+      event.nativeEvent.layoutMeasurement.height -
+        event.nativeEvent.contentSize.height +
+        event.nativeEvent.contentOffset.y >=0;
+    const CustomLayoutLinear = {
+      duration: 100,
+      create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      update: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
+    }
+    const currentOffset = event.nativeEvent.contentOffset.y
+    const direction = (currentOffset > 0 && currentOffset > this._listViewOffset)
+      ? 'down'
+      : 'up'
+    const isActionButtonVisible = direction === 'up'
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear)
+      this.setState({ isActionButtonVisible })
+    }
+    if (direction === 'up' && isBottomBounce) {
+      direction = 'down';
+    }
+    this._listViewOffset = currentOffset
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -169,7 +201,9 @@ export default class ContactBookPage extends Component {
           />
         ) : null}
 
-        <ScrollView>
+        <ScrollView
+        onScroll={this._onScroll}
+        >
           <FlatList
             data={this.state.dataSource}
             renderItem={({ item }) => (
@@ -186,7 +220,7 @@ export default class ContactBookPage extends Component {
           />
         </ScrollView>
 
-        <TouchableOpacity
+        {this.state.isActionButtonVisible ?<TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
@@ -194,7 +228,7 @@ export default class ContactBookPage extends Component {
           <View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> : null}
 
       </View>
     );
