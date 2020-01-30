@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  LayoutAnimation
+} from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";
@@ -11,11 +16,9 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default class ContactBookPage extends Component {
   static navigationOptions = {
-    drawerLabel: 'Contact Book',
-    drawerIcon: () => (
-      <Icon name={"address-book"} color={"#86C232"} size={19}/>
-    ),
-  }
+    drawerLabel: "Contact Book",
+    drawerIcon: () => <Icon name={"address-book"} color={"#86C232"} size={19} />
+  };
 
   constructor(props) {
     super(props);
@@ -105,8 +108,10 @@ export default class ContactBookPage extends Component {
       isLoading: true,
       text: "",
       searchData: this.arrayHolder,
-      dataSource: this.arrayHolder
+      dataSource: this.arrayHolder,
+      isActionButtonVisible: true
     };
+    this._listViewOffset = 0;
   }
 
   _showSearch() {
@@ -148,6 +153,33 @@ export default class ContactBookPage extends Component {
     });
   };
 
+  _onScroll = event => {
+    const CustomLayoutLinear = {
+      duration: 100,
+      create: {
+        type: LayoutAnimation.Types.linear,
+        property: LayoutAnimation.Properties.opacity
+      },
+      update: {
+        type: LayoutAnimation.Types.linear,
+        property: LayoutAnimation.Properties.opacity
+      },
+      delete: {
+        type: LayoutAnimation.Types.linear,
+        property: LayoutAnimation.Properties.opacity
+      }
+    };
+    const currentOffset = event.nativeEvent.contentOffset.y;
+    const direction =
+      currentOffset > 0 && currentOffset > this._listViewOffset ? "down" : "up";
+    const isActionButtonVisible = direction === "up";
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear);
+      this.setState({ isActionButtonVisible });
+    }
+    this._listViewOffset = currentOffset;
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -169,7 +201,7 @@ export default class ContactBookPage extends Component {
           />
         ) : null}
 
-        <ScrollView>
+        <ScrollView onScroll={this._onScroll}>
           <FlatList
             data={this.state.dataSource}
             renderItem={({ item }) => (
@@ -186,16 +218,17 @@ export default class ContactBookPage extends Component {
           />
         </ScrollView>
 
-        <TouchableOpacity
-          activeOpacity={0.5}
-          onPress={this.SampleFunction}
-          style={styles.TouchableOpacityStyle}
-        >
-          <View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#86C232"} size={24} />
-          </View>
-        </TouchableOpacity>
-
+        {this.state.isActionButtonVisible ? (
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={this.SampleFunction}
+            style={styles.TouchableOpacityStyle}
+          >
+            <View style={styles.fabCircle}>
+              <Icon name={"plus"} color={"#86C232"} size={24} />
+            </View>
+          </TouchableOpacity>
+        ) : null}
       </View>
     );
   }
@@ -224,6 +257,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    elevation: 9,
+    elevation: 9
   }
 });
