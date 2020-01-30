@@ -17,6 +17,7 @@ import CardFolder from './components/cardFolderFileManagement'
 import CardFile from './components/cardFileFileManagement'
 import CardSignActivity from './components/cardSignActivityLogActivity'
 import CardUsersActivity from './components/cardUsersActivityLogActivity'
+import CardContact from './components/cardContactBook';
 
 export default class App extends Component {
 
@@ -33,6 +34,7 @@ export default class App extends Component {
             // <CardFile/>
             // <CardSignActivity/>
             // <CardUsersActivity/>
+            // <CardContact/>
             <MenuProvider>
                 <DrawerNavigator/>
             </MenuProvider>

@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-import { View, StyleSheet, TouchableOpacity, LayoutAnimation, ScrollView, FlatList} from "react-native";
-=======
-import { Animated, View, StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
->>>>>>> 630f7f0fd07be300315820f164ec602037dc4af3
+import { Animated, View, StyleSheet, TouchableOpacity, LayoutAnimation, ScrollView, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";

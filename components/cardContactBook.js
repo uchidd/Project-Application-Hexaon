@@ -72,56 +72,13 @@ export default class CardContact extends Component {
         <TouchableOpacity
           style={styles.firstLayer}
           onPress={() => this._showModalViewData()}
-          onLongPress={() => this._showModalOptionAction()}
         >
-          <View style={{flexDirection: "row"}}>
-            <View style={styles.titleView}>
-              <View style={styles.leftTitleView}></View>
-              <View style={styles.midTitleView}>
-                <Text style={styles.textTitle}>{this.state.id}</Text>
-              </View>
-              <View style={styles.rightTitleView}>
-              <Icon name={'ellipsis-h'} color={'#86C232'} size={24}/>
-              </View>
-            </View>
+          <View style={styles.nameView}>
+            <Text style={styles.nameText}>{this.props.nameText}</Text>
           </View>
-          <View style={styles.infoView}>
-            <View style={styles.leftInfoView}>
-              <View style={styles.topRowLeft}>
-                <Text style={styles.textInfo}>Name</Text>
-              </View>
-              <View style={styles.midRowLeft}>
-                <Text style={styles.textInfo}>Client</Text>
-              </View>
-              <View style={styles.midRowLeft}>
-                <Text style={styles.textInfo}>Division</Text>
-              </View>
-              <View style={styles.midRowLeft}>
-                <Text style={styles.textInfo}>Contact</Text>
-              </View>
-              <View style={styles.midRowLeft}>
-                <Text style={styles.textInfo}>Email Person</Text>
-              </View>
-              <View style={styles.botRowLeft}>
-                <Text style={styles.textInfo}>Email Company</Text>
-              </View>
-            </View>
-            <View style={styles.rightInfoView}>
-              <View style={styles.topRowRight}>
-                <Text style={styles.textInfo}>{this.state.name}</Text>
-              </View>
-              <View style={styles.midRowRight}></View>
-              <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>{this.state.division}</Text>
-              </View>
-              <View style={styles.midRowRight}></View>
-              <View style={styles.midRowRight}></View>
-              <View style={styles.botRowRight}>
-                <Text style={styles.textInfo}>{this.state.email}</Text>
-              </View>
-            </View>
+          <View style={styles.iconView}>
+            <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
-
         </TouchableOpacity>
         <Modal
           animationType={"fade"}
@@ -196,116 +153,31 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent"
   },
   firstLayer: {
-    margin: 6,
-    height: 221,
-    backgroundColor: "#212121",
+    marginHorizontal: 6,
+    marginVertical: 3, 
+    height: 44,
+    backgroundColor: "#222629",
     borderWidth: 2,
-    borderColor: "#8ECCCC",
+    borderColor: "#86C232",
     borderRadius: 3,
-    flexDirection: "column",
-    elevation: 3,
-    padding: 3
+    flexDirection: "row",
+    elevation: 9
   },
-  titleView: {
+  nameView: {
     backgroundColor: "transparent",
     flex: 1,
-    flexDirection: 'row',
+    justifyContent: "center"
+  },
+  iconView:{
+    backgroundColor: "transparent",
+    width: 30,
     justifyContent: "center",
     alignItems: "center"
   },
-  leftTitleView: {
-    backgroundColor: "transparent",
-    flex: 1
-  },
-  midTitleView: {
-    backgroundColor: "transparent",
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  rightTitleView: {
-    backgroundColor: "transparent",
-    flex: 1,
-    paddingHorizontal: 6,
-    alignItems: "flex-end"
-  },
-  textTitle: {
-    fontSize: 24,
-    color: "#86C232",
-    justifyContent: "center",
-    alignItems: "center",
-    alignContent: "center"
-  },
-  infoView: {
-    backgroundColor: "#3A4042",
-    height: 175,
-    margin: 3,
-    borderWidth: 2,
-    borderColor: "#8ECCCC",
-    borderRadius: 3,
-    flexDirection: "row"
-  },
-  leftInfoView: {
-    backgroundColor: "transparent",
-    flex: 2
-  },
-  rightInfoView: {
-    backgroundColor: "transparent",
-    flex: 3
-  },
-  topRowLeft: {
-    backgroundColor: "transparent",
-    flex: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 1,
-    borderColor: "#61892F",
-    justifyContent: "center"
-  },
-  midRowLeft: {
-    backgroundColor: "transparent",
-    flex: 1,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 1,
-    borderColor: "#61892F",
-    justifyContent: "center"
-  },
-  botRowLeft: {
-    backgroundColor: "transparent",
-    flex: 1,
-    borderTopWidth: 1,
-    borderRightWidth: 1,
-    borderColor: "#61892F",
-    justifyContent: "center"
-  },
-  topRowRight: {
-    backgroundColor: "transparent",
-    flex: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 1,
-    borderColor: "#61892F",
-    justifyContent: "center"
-  },
-  midRowRight: {
-    backgroundColor: "transparent",
-    flex: 1,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 1,
-    borderColor: "#61892F",
-    justifyContent: "center"
-  },
-  botRowRight: {
-    backgroundColor: "transparent",
-    flex: 1,
-    borderTopWidth: 1,
-    borderLeftWidth: 1,
-    borderColor: "#61892F",
-    justifyContent: "center"
-  },
-  textInfo: {
-    marginLeft: 6,
-    fontSize: 16,
-    color: "#86C232"
-  },
+  nameText:{
+    fontSize: 20,
+    color:"#86C232",
+    marginLeft: 9
+  }
+  
 });
