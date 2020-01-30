@@ -170,6 +170,7 @@ export default class CardContact extends Component {
           onRequestClose={() =>
             this._hideModalAlertDialogAndModalOptionAction()
           }
+          presentationStyle={"overFullScreen"}
         >
           <ModalAlertDialog
             hideModalAlertDialog={() =>

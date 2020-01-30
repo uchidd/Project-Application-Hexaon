@@ -29,7 +29,7 @@ export default class ModalAlertDialog extends Component {
 const styles = StyleSheet.create({
     container : {
         backgroundColor : "rgba(33, 33, 33, 0.7)",
-        flex : 1,
+        height : 157,
         justifyContent : "center"
     },
     firstLayer : {

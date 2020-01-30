@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
+import { View, StyleSheet, TouchableOpacity, LayoutAnimation, ScrollView, FlatList} from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";
-import { ScrollView } from "react-native";
-import { FlatList } from "react-native";
 import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 import Icon from "react-native-vector-icons/FontAwesome5";
