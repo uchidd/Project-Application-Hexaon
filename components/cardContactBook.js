@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome5";
 import ModalViewData from "./modalVIewData";
 import ModalOptionAction from "./modalOptionAction";
 import ModalEditData from "./modalEditData";
@@ -73,9 +74,16 @@ export default class CardContact extends Component {
           onPress={() => this._showModalViewData()}
           onLongPress={() => this._showModalOptionAction()}
         >
-
-          <View style={styles.titleView}>
-            <Text style={styles.textTitle}>{this.state.id}</Text>
+          <View style={{flexDirection: "row"}}>
+            <View style={styles.titleView}>
+              <View style={styles.leftTitleView}></View>
+              <View style={styles.midTitleView}>
+                <Text style={styles.textTitle}>{this.state.id}</Text>
+              </View>
+              <View style={styles.rightTitleView}>
+              <Icon name={'ellipsis-h'} color={'#86C232'} size={24}/>
+              </View>
+            </View>
           </View>
           <View style={styles.infoView}>
             <View style={styles.leftInfoView}>
@@ -189,30 +197,50 @@ const styles = StyleSheet.create({
   firstLayer: {
     margin: 6,
     height: 221,
-    backgroundColor: "#222629",
+    backgroundColor: "#212121",
     borderWidth: 2,
-    borderColor: "#86C232",
+    borderColor: "#8ECCCC",
     borderRadius: 3,
     flexDirection: "column",
     elevation: 3,
-    padding : 3
+    padding: 3
   },
   titleView: {
+    backgroundColor: "transparent",
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  leftTitleView: {
+    backgroundColor: "transparent",
+    flex: 1
+  },
+  midTitleView: {
     backgroundColor: "transparent",
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
   },
+  rightTitleView: {
+    backgroundColor: "transparent",
+    flex: 1,
+    paddingHorizontal: 6,
+    alignItems: "flex-end"
+  },
   textTitle: {
     fontSize: 24,
-    color: "#86C232"
+    color: "#86C232",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center"
   },
   infoView: {
     backgroundColor: "#3A4042",
     height: 175,
     margin: 3,
     borderWidth: 2,
-    borderColor: "#61892F",
+    borderColor: "#8ECCCC",
     borderRadius: 3,
     flexDirection: "row"
   },
@@ -278,5 +306,5 @@ const styles = StyleSheet.create({
     marginLeft: 6,
     fontSize: 16,
     color: "#86C232"
-  }
+  },
 });

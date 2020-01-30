@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
+import { Animated, View, StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";
@@ -223,9 +223,9 @@ export default class ContactBookPage extends Component {
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
         >
-          <View style={styles.fabCircle}>
+          <Animated.View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
-          </View>
+          </Animated.View>
         </TouchableOpacity> : null}
 
       </View>

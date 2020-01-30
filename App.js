@@ -23,7 +23,6 @@ export default class App extends Component {
     render() {
         return(
             // <CardUser/>
-            // <CardUser/>
             // <CardClient/>
             // <CardProduct/>
             // <CardPrinciple/>
