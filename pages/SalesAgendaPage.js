@@ -10,7 +10,7 @@ export default class SalesAgendaPage extends Component{
   static navigationOptions = {
     drawerLabel: 'Sales Agenda',
     drawerIcon: () => (
-      <Icon name={"calendar-alt"} color={"#8ECCCC"} size={19}/>
+      <Icon name={"calendar-alt"} color={"#86C232"} size={19}/>
     ),
   }
 
@@ -68,7 +68,7 @@ export default class SalesAgendaPage extends Component{
           style={styles.TouchableOpacityStyle}
         >
           <View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#8ECCCC"} size={24} />
+            <Icon name={"plus"} color={"#86C232"} size={24} />
           </View>
         </TouchableOpacity>
 
@@ -80,7 +80,7 @@ export default class SalesAgendaPage extends Component{
 const styles = StyleSheet.create({
     container : {
         flex: 1,
-        backgroundColor: '#3A4042'
+        backgroundColor: '#6B6E70'
     },
     TouchableOpacityStyle: {
       position: "absolute",
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     },
   
     fabCircle: {
-      backgroundColor: "#212121",
+      backgroundColor: "#222629",
       resizeMode: "contain",
       width: 56,
       height: 56,

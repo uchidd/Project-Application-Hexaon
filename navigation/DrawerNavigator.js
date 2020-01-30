@@ -12,6 +12,7 @@ import SalesAgendaPage from '../pages/SalesAgendaPage';
 import FileManegementPage from '../pages/FileManegementPage';
 import LogActivityPage from '../pages/LogActivityPage';
 import HomePage from '../pages/HomePageKaTaren';
+import TabBarNavigator from './TabBarNavigator';
 
 export default class DrawerNavigator extends Component{
     render(){
@@ -23,7 +24,7 @@ export default class DrawerNavigator extends Component{
 
 const AppDrawerNavigator = createDrawerNavigator({
     Home: {screen: HomePage},
-    Authority: {screen: AuthorityPage},
+    Authority: {screen: TabBarNavigator},
     Client: {screen: ClientPage},
     Product: {screen: ProductPage},
     Principle: {screen: PrinciplePage},
@@ -37,13 +38,13 @@ const AppDrawerNavigator = createDrawerNavigator({
     initialRouteName: 'Home',
     drawerWidth : 304,
     drawerPosition : 'left',
-    drawerBackgroundColor : '#212121',
-    drawerType : 'back',
+    drawerBackgroundColor : '#474B4F',
+    drawerType : 'front',
     contentOptions : {
-        activeTintColor : '#8ECCCC',
-        activeBackgroundColor : '#3A4042',
-        inactiveTintColor : '#50717B',
-        inactiveBackgroundColor : '#212121',
+        activeTintColor : '#86C232',
+        activeBackgroundColor : '#6B6E70',
+        inactiveTintColor : '#61892F',
+        inactiveBackgroundColor : '#474B4F',
     }
 })
 

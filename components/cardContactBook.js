@@ -189,13 +189,13 @@ const styles = StyleSheet.create({
   firstLayer: {
     margin: 6,
     height: 221,
-    backgroundColor: "#212121",
+    backgroundColor: "#222629",
     borderWidth: 2,
-    borderColor: "#8ECCCC",
+    borderColor: "#86C232",
     borderRadius: 3,
-    //flexDirection: "row",
     flexDirection: "column",
     elevation: 3,
+    padding : 3
   },
   titleView: {
     backgroundColor: "transparent",
@@ -205,14 +205,14 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     fontSize: 24,
-    color: "#8ECCCC"
+    color: "#86C232"
   },
   infoView: {
     backgroundColor: "#3A4042",
     height: 175,
     margin: 3,
     borderWidth: 2,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     borderRadius: 3,
     flexDirection: "row"
   },
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderBottomWidth: 1,
     borderRightWidth: 1,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     justifyContent: "center"
   },
   midRowLeft: {
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderRightWidth: 1,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     justifyContent: "center"
   },
   botRowLeft: {
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderTopWidth: 1,
     borderRightWidth: 1,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     justifyContent: "center"
   },
   topRowRight: {
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderBottomWidth: 1,
     borderLeftWidth: 1,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     justifyContent: "center"
   },
   midRowRight: {
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderLeftWidth: 1,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     justifyContent: "center"
   },
   botRowRight: {
@@ -271,12 +271,12 @@ const styles = StyleSheet.create({
     flex: 1,
     borderTopWidth: 1,
     borderLeftWidth: 1,
-    borderColor: "#8ECCCC",
+    borderColor: "#61892F",
     justifyContent: "center"
   },
   textInfo: {
     marginLeft: 6,
     fontSize: 16,
-    color: "#8ECCCC"
+    color: "#86C232"
   }
 });
