@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  LayoutAnimation
-} from "react-native";
+import { View, StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from "react-navigation-drawer";
 import CardContact from "../components/cardContactBook";
@@ -153,32 +148,36 @@ export default class ContactBookPage extends Component {
     });
   };
 
-  _onScroll = event => {
+  state = {
+    isActionButtonVisible: true
+  }
+  _listViewOffset = 0
+
+  _onScroll = (event) => {
+    const isBottomBounce =
+      event.nativeEvent.layoutMeasurement.height -
+        event.nativeEvent.contentSize.height +
+        event.nativeEvent.contentOffset.y >=0;
     const CustomLayoutLinear = {
       duration: 100,
-      create: {
-        type: LayoutAnimation.Types.linear,
-        property: LayoutAnimation.Properties.opacity
-      },
-      update: {
-        type: LayoutAnimation.Types.linear,
-        property: LayoutAnimation.Properties.opacity
-      },
-      delete: {
-        type: LayoutAnimation.Types.linear,
-        property: LayoutAnimation.Properties.opacity
-      }
-    };
-    const currentOffset = event.nativeEvent.contentOffset.y;
-    const direction =
-      currentOffset > 0 && currentOffset > this._listViewOffset ? "down" : "up";
-    const isActionButtonVisible = direction === "up";
-    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
-      LayoutAnimation.configureNext(CustomLayoutLinear);
-      this.setState({ isActionButtonVisible });
+      create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      update: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
     }
-    this._listViewOffset = currentOffset;
-  };
+    const currentOffset = event.nativeEvent.contentOffset.y
+    const direction = (currentOffset > 0 && currentOffset > this._listViewOffset)
+      ? 'down'
+      : 'up'
+    const isActionButtonVisible = direction === 'up'
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear)
+      this.setState({ isActionButtonVisible })
+    }
+    if (direction === 'up' && isBottomBounce) {
+      direction = 'down';
+    }
+    this._listViewOffset = currentOffset
+  }
 
   render() {
     return (
@@ -201,7 +200,9 @@ export default class ContactBookPage extends Component {
           />
         ) : null}
 
-        <ScrollView onScroll={this._onScroll}>
+        <ScrollView
+        onScroll={this._onScroll}
+        >
           <FlatList
             data={this.state.dataSource}
             renderItem={({ item }) => (
@@ -218,17 +219,16 @@ export default class ContactBookPage extends Component {
           />
         </ScrollView>
 
-        {this.state.isActionButtonVisible ? (
-          <TouchableOpacity
-            activeOpacity={0.5}
-            onPress={this.SampleFunction}
-            style={styles.TouchableOpacityStyle}
-          >
-            <View style={styles.fabCircle}>
-              <Icon name={"plus"} color={"#86C232"} size={24} />
-            </View>
-          </TouchableOpacity>
-        ) : null}
+        {this.state.isActionButtonVisible ?<TouchableOpacity
+          activeOpacity={0.5}
+          onPress={this.SampleFunction}
+          style={styles.TouchableOpacityStyle}
+        >
+          <View style={styles.fabCircle}>
+            <Icon name={"plus"} color={"#86C232"} size={24} />
+          </View>
+        </TouchableOpacity> : null}
+
       </View>
     );
   }
