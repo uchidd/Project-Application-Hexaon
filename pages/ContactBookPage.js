@@ -166,9 +166,7 @@ export default class ContactBookPage extends Component {
       delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
     }
     const currentOffset = event.nativeEvent.contentOffset.y
-    const direction = (currentOffset > 0 && currentOffset > this._listViewOffset)
-      ? 'down'
-      : 'up'
+    let direction = currentOffset > 0 && currentOffset > this._listViewOffset ? 'down' : 'up';
     const isActionButtonVisible = direction === 'up'
     if (isActionButtonVisible !== this.state.isActionButtonVisible) {
       LayoutAnimation.configureNext(CustomLayoutLinear)
