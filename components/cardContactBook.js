@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   firstLayer: {
     marginHorizontal: 6,
     marginVertical: 3, 
-    height: 44,
+    height: 56,
     backgroundColor: "#222629",
     borderWidth: 2,
     borderColor: "#86C232",
@@ -170,14 +170,14 @@ const styles = StyleSheet.create({
   },
   iconView:{
     backgroundColor: "transparent",
-    width: 30,
+    width: 40,
     justifyContent: "center",
     alignItems: "center"
   },
   nameText:{
     fontSize: 20,
     color:"#86C232",
-    marginLeft: 9
+    marginLeft: 16
   }
   
 });
