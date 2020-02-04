@@ -223,6 +223,9 @@ export default class ContactBookPage extends Component {
           <Animated.View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
           </Animated.View>
+          <Animated.View style={styles.fabCircle}>
+            <Icon name={"plus"} color={"#86C232"} size={24} />
+          </Animated.View>
         </TouchableOpacity> : null}
 
       </View>
