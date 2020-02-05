@@ -28,7 +28,7 @@ export default class LoginPage extends Component {
                 </View>
                 <View style={styles.viewInput}>
                     <Text style={styles.textInput}>Email</Text>
-                    <TextInput 
+                    <TextInput
                     style={styles.input} 
                     autoCompleteType={"email"}                    
                     onChangeText={(email)=>this.setState({email})}

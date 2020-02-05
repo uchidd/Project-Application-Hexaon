@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { View, StyleSheet, ScrollView, TouchableOpacity, Text, Picker, Button } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
+import { TextInput } from "react-native-gesture-handler";
 
 export default class LeadProjectPage extends Component{
 
@@ -22,7 +23,8 @@ export default class LeadProjectPage extends Component{
       isLoading: true,
       text: "",
       searchData: this.arrayHolder,
-      dataSource: this.arrayHolder
+      dataSource: this.arrayHolder,
+      PickerSelectedVal : ''
     };
   }
 
@@ -59,7 +61,97 @@ export default class LeadProjectPage extends Component{
         ) : null}
 
         <ScrollView>
-          
+          <View style={styles.firstLayer}>
+            <View>
+              <Text>Client</Text>
+              <View style={styles.picker}>
+                <Picker
+                  selectedValue={this.state.PickerSelectedVal}
+                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+
+                  <Picker.Item label="BPD BANTEN" value="BPD BANTEN" />
+                  <Picker.Item label="BANK COMMONWEALTH" value="BANK COMMONWEALTH" />
+                  <Picker.Item label="BANK DANAMON" value="BANK DANAMON" />
+                  <Picker.Item label="BANK MAYBANK INDONESIA" value="BANK MAYBANK INDONESIA" />
+                  <Picker.Item label="BANK TABUNGAN NEGARA (BTN)" value="BANK TABUNGAN NEGARA (BTN)" />
+                </Picker>
+              </View>
+            </View>
+
+            <View>
+              <Text>Product</Text>
+              <View style={styles.picker}>
+                <Picker
+                  selectedValue={this.state.PickerSelectedVal}
+                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+
+                  <Picker.Item label="CRM" value="CRM" />
+                  <Picker.Item label="EJM" value="EJM" />
+                </Picker>
+              </View>
+            </View>
+
+            <View>
+              <Text>Principle</Text>
+              <View style={styles.picker}>
+                <Picker
+                  selectedValue={this.state.PickerSelectedVal}
+                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+
+                  <Picker.Item label="FIORANO" value="FIORANO" />
+                  <Picker.Item label="BPC" value="BPC" />
+                </Picker>
+              </View>
+            </View>
+
+            <View>
+              <Text>PIC Name</Text>
+              <TextInput 
+                style={styles.input}/>
+            </View>
+            <View>
+              <Text>Reference</Text>
+              <TextInput 
+                style={styles.input}/>
+            </View>
+            <View>
+              <Text>Potential/Budget</Text>
+              <TextInput 
+                style={styles.input}/>
+            </View>
+            <View>
+              <Text>Pipeline</Text>
+              <View style={styles.picker}>
+                <Picker
+                  selectedValue={this.state.PickerSelectedVal}
+                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+
+                  <Picker.Item label="Registered" value="Registered" />
+                  <Picker.Item label="Cold Call" value="Cold Call" />
+                  <Picker.Item label="Visit" value="Visit" />
+                  <Picker.Item label="Informal Meeting" value="Informal Meeting" />
+                  <Picker.Item label="Formal Meeting" value="Formal Meeting" />
+                </Picker>
+              </View>
+            </View>
+            <View>
+              <Text>Principle</Text>
+              <View style={styles.picker}>
+                <Picker
+                  selectedValue={this.state.PickerSelectedVal}
+                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+
+                  <Picker.Item label="Active" value="Active" />
+                  <Picker.Item label="Not Active" value="Not Active" />
+                </Picker>
+              </View>
+            </View>
+            <View>
+              <Text>Remark</Text>
+              <TextInput 
+                style={styles.input}/>
+            </View>
+          </View>
         </ScrollView>
 
         <TouchableOpacity
@@ -78,28 +170,45 @@ export default class LeadProjectPage extends Component{
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex: 1,
-        backgroundColor: '#6B6E70'
-    },
-    TouchableOpacityStyle: {
-      position: "absolute",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      right: 16,
-      bottom: 16
-    },
-  
-    fabCircle: {
-      backgroundColor: "#222629",
-      resizeMode: "contain",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 50,
-      elevation: 9,
-    }
+  container : {
+    flex: 1,
+    backgroundColor: '#6B6E70'
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
+  fabCircle: {
+    backgroundColor: "#222629",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9,
+  },
+  firstLayer: {
+    margin: 6,
+    elevation: 3,
+    padding: 3
+  },
+  picker: {
+    borderWidth: 1,
+    borderColor: '#CCCCCC',
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#CCCCCC',
+    borderRadius: 3,
+    paddingStart: 10,
+    paddingEnd: 10,
+    paddingTop: 5,
+    paddingBottom: 5
+  },
 })

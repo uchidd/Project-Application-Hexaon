@@ -35,6 +35,7 @@ export default class App extends Component {
             // <CardSignActivity/>
             // <CardUsersActivity/>
             // <CardContact/>
+            // <LoginPage/>
             <MenuProvider>
                 <DrawerNavigator/>
             </MenuProvider>
