@@ -20,6 +20,7 @@ export default class HomePage extends Component {
           pressIconBars={() =>
             this.props.navigation.dispatch(DrawerActions.openDrawer())
           }
+          iconSearchColor={"transparent"}
         />
         <View style={styles.mainView}>
           <View style={styles.rowView}>

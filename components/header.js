@@ -17,7 +17,7 @@ export default class Header extends Component {
                   <Text style={styles.textHeader}>{this.props.title}</Text>
                 </View>
                 <View style={styles.headerIconSearch}>
-                  <Icon style={styles.icon} name={'search'} color={'#86C232'} size={24} onPress={this.props.pressIconSearch}/>
+                  <Icon style={styles.icon} name={'search'} color={this.props.iconSearchColor} size={24} onPress={this.props.pressIconSearch}/>
                 </View>
                 <View style={styles.headerIconEllipsis}>
                   <Menu>

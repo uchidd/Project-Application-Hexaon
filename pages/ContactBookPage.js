@@ -18,82 +18,53 @@ export default class ContactBookPage extends Component {
 
     this.arrayHolder = [
       {
-        id: "1",
-        name: "Lajala",
-        division: "Example 1",
-        phone: "Example 1",
-        email: "example1@example.com"
+        name: "Cahaya Iman Putra Firdaus",
       },
       {
-        id: "2",
-        name: "Kamaki",
-        division: "Example 2",
-        phone: "Example 2",
-        email: "example2@example.com"
+        name: "Putri Fatimah Sari",
       },
       {
-        id: "3",
-        name: "Namana",
-        division: "Example 3",
-        phone: "Example 3",
-        email: "example3@example.com"
+        name: "Annisa Alya",
       },
       {
-        id: "4",
-        name: "Makama",
-        division: "Example 4",
-        phone: "Example 4",
-        email: "example4@example.com"
+        name: "Akbar Cahya Yusuf",
       },
       {
-        id: "5",
-        name: "Zazaza",
-        division: "Example 5",
-        phone: "Example 5",
-        email: "example5@example.com"
+        name: "Putu Bambang Wira",
       },
       {
-        id: "6",
-        name: "Gazaga",
-        division: "Example 6",
-        phone: "Example 6",
-        email: "example6@example.com"
+        name: "Putri Rahman Buana Kuwat",
       },
       {
-        id: "7",
-        name: "Jalaja",
-        division: "Example 7",
-        phone: "Example 7",
-        email: "example7@example.com"
+        name: "Aisyah Annisa Sari Fatimah",
       },
       {
-        id: "8",
-        name: "Yazala",
-        division: "Example 8",
-        phone: "Example 8",
-        email: "example8@example.com"
+        name: "Gallen Turangga",
       },
       {
-        id: "9",
-        name: "Kanala",
-        division: "Example 9",
-        phone: "Example 9",
-        email: "example9@example.com"
+        name: "Eka Surya",
       },
       {
-        id: "10",
-        name: "Halaka",
-        division: "Example 10",
-        phone: "Example 10",
-        email: "example9@example.com"
+        name: "Adi Suharto Vina Made",
       },
       {
-        id: "11",
-        name: "Takana",
-        division: "Example 11",
-        phone: "Example 11",
-        email: "example19@example.com"
-      }
+        name: "Bambang Mansur Wulan Raharjo",
+      },
+      {
+        name: "Buana Ratna Wahyu",
+      },
+      {
+        name: "Amir Kusuma",
+      },
+      {
+        name: "Alya Yuliana Batari",
+      },
+      {
+        name: "Sulaiman Guntur",
+      },
+      {
+        name: "Cahyo Bulan Putra Citra",
+      },
     ];
     this.state = {
       searchview: false,
@@ -176,6 +147,7 @@ export default class ContactBookPage extends Component {
   }
 
   render() {
+
     return (
       <View style={styles.container}>
         {this.state.headerview ? (
@@ -185,11 +157,12 @@ export default class ContactBookPage extends Component {
               this.props.navigation.dispatch(DrawerActions.openDrawer())
             }
             pressIconSearch={() => this._showSearch()}
+            iconSearchColor={"#86C232"}
           />
         ) : null}
 
         {this.state.searchview ? (
-          <HeaderSearchWithButton
+          <HeaderSearch
             pressIconBack={() => this._showHeader()}
             ocText={text => this.setState({ text })}
             searchFunction={() => this._buttonSearch()}
@@ -200,14 +173,11 @@ export default class ContactBookPage extends Component {
         onScroll={this._onScroll}
         >
           <FlatList
-            data={this.state.dataSource}
+          style={{marginTop: 3, marginBottom: 3}}
+            data={this.arrayHolder.sort(function(a, b){return a-b})}
             renderItem={({ item }) => (
               <CardContact
-                idText={item.id}
                 nameText={item.name}
-                divisionText={item.division}
-                phoneText={item.phone}
-                emailText={item.email}
               />
             )}
             enableEmptySections={true}

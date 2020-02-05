@@ -27,7 +27,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title={"Home"}pressIconBars={() => this.props.navigation.dispatch(DrawerActions.openDrawer())}/>
+        <Header title={"Home"}pressIconBars={() => this.props.navigation.dispatch(DrawerActions.openDrawer())} iconSearchColor={"transparent"}/>
         <View style={styles.mainView}>
           <View style={styles.photoSlideView}>
             <ImageSlider style={{flex : 1}} autoPlayWithInterval={3000} images={this.state.images}/>

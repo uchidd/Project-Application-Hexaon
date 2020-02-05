@@ -9,7 +9,7 @@ export default class HeaderSearch extends Component {
             <StatusBar hidden={true}/>
             <View style={styles.header}>
                 <View style={styles.headerIconBars}>
-                  <Icon style={styles.icon} name={'chevron-left'} color={'#8ECCCC'} size={24} onPress={this.props.pressIconBack}/>
+                  <Icon style={styles.icon} name={'chevron-left'} color={'#86C232'} size={24} onPress={this.props.pressIconBack}/>
                 </View>
                 <View style={styles.headerSearch}>
                     <TextInput
@@ -17,7 +17,7 @@ export default class HeaderSearch extends Component {
                     // value={this.props.valueInput}
                     // onChangeText={this.props.ocText}
                     placeholder={"Search"}
-                    placeholderTextColor={"#50717B"}
+                    placeholderTextColor={"#61892F"}
                     underlineColorAndroid={"transparent"}/>
                 </View>
             </View>
@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
     },
     header : {
       flexDirection : "row",
-      backgroundColor : '#212121',
+      backgroundColor : '#222629',
       height : 56,
     }, 
     headerIconBars : {
-      backgroundColor : '#212121',
+      backgroundColor : 'transparent',
       height : 56,
       width : 56
     },
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
       flex : 1,
       justifyContent : "center",
       height : 56,
-      backgroundColor : "#212121"
+      backgroundColor : "transparent"
     },
     icon : {
       margin : 16
@@ -52,14 +52,14 @@ const styles = StyleSheet.create({
     input : {
         borderWidth : 2,
         borderRadius : 3,
-        borderColor : "#8ECCCC",
+        borderColor : "#86C232",
         height : 40,
         marginTop : 8,
         marginRight : 8, 
         marginBottom : 8,
         paddingLeft : 8,
         paddingRight : 8,
-        color : "#8ECCCC",
+        color : "#86C232",
         fontSize : 20,
     }
 })

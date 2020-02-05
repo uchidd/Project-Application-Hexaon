@@ -49,6 +49,7 @@ export default class LeadProjectPage extends Component{
               this.props.navigation.dispatch(DrawerActions.openDrawer())
             }
             pressIconSearch={() => this._showSearch()}
+            iconSearchColor={"#86C232"}
           />
         ) : null}
 
