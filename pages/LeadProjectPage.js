@@ -67,6 +67,7 @@ export default class LeadProjectPage extends Component{
               <Text>Client</Text>
               <View style={styles.picker}>
                 <Picker
+                  style={{height: 40}}
                   selectedValue={this.state.PickerSelectedVal}
                   onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
@@ -79,10 +80,11 @@ export default class LeadProjectPage extends Component{
               </View>
             </View>
 
-            <View>
+            <View style={{marginTop: 6}}>
               <Text>Product</Text>
               <View style={styles.picker}>
                 <Picker
+                  style={{height: 40}}
                   selectedValue={this.state.PickerSelectedVal}
                   onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
@@ -92,10 +94,11 @@ export default class LeadProjectPage extends Component{
               </View>
             </View>
 
-            <View>
+            <View style={{marginTop: 6}}>
               <Text>Principle</Text>
               <View style={styles.picker}>
                 <Picker
+                  style={{height: 40}}
                   selectedValue={this.state.PickerSelectedVal}
                   onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
@@ -105,25 +108,29 @@ export default class LeadProjectPage extends Component{
               </View>
             </View>
 
-            <View>
+            <View style={{marginTop: 6}}>
               <Text>PIC Name</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
-            <View>
+
+            <View style={{marginTop: 6}}>
               <Text>Reference</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
-            <View>
+
+            <View style={{marginTop: 6}}>
               <Text>Potential/Budget</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
-            <View>
+
+            <View style={{marginTop: 6}}>
               <Text>Pipeline</Text>
               <View style={styles.picker}>
                 <Picker
+                  style={{height: 40}}
                   selectedValue={this.state.PickerSelectedVal}
                   onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
@@ -135,10 +142,12 @@ export default class LeadProjectPage extends Component{
                 </Picker>
               </View>
             </View>
-            <View>
+            
+            <View style={{marginTop: 6}}>
               <Text>Principle</Text>
               <View style={styles.picker}>
                 <Picker
+                  style={{height: 40}}
                   selectedValue={this.state.PickerSelectedVal}
                   onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
@@ -147,7 +156,8 @@ export default class LeadProjectPage extends Component{
                 </Picker>
               </View>
             </View>
-            <View>
+
+            <View style={{marginTop: 6}}>
               <Text>Remark</Text>
               <TextInput 
                 style={styles.input}/>
@@ -202,6 +212,7 @@ const styles = StyleSheet.create({
   picker: {
     borderWidth: 1,
     borderColor: '#CCCCCC',
+    borderRadius: 3
   },
   input: {
     borderWidth: 1,
