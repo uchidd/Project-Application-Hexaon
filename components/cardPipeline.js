@@ -7,22 +7,9 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
-import ModalViewData from "./modalVIewData";
-import ModalOptionAction from "./modalOptionAction";
-import ModalEditData from "./modalEditData";
-import ModalAlertDialog from "./modalAlertDialog";
 
 export default class CardPipeline extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // isModalViewDataVisible: false,
-      // isModalOptionActionVisible: false,
-      // isModalEditDataVisible: false,
-      // isModalAlertDialogVisible: false,
-    };
-  }
-
+  
   render() {
     return (
       <View style={styles.container}>
