@@ -17,54 +17,54 @@ export default class ContactBookPage extends Component {
     super(props);
 
     this.arrayHolder = [
-    //   {
-    //     name: "Cahaya Iman Putra Firdaus",
-    //   },
-    //   {
-    //     name: "Putri Fatimah Sari",
-    //   },
-    //   {
-    //     name: "Annisa Alya",
-    //   },
-    //   {
-    //     name: "Akbar Cahya Yusuf",
-    //   },
-    //   {
-    //     name: "Putu Bambang Wira",
-    //   },
-    //   {
-    //     name: "Putri Rahman Buana Kuwat",
-    //   },
-    //   {
-    //     name: "Aisyah Annisa Sari Fatimah",
-    //   },
-    //   {
-    //     name: "Gallen Turangga",
-    //   },
-    //   {
-    //     name: "Eka Surya",
-    //   },
-    //   {
-    //     name: "Adi Suharto Vina Made",
-    //   },
-    //   {
-    //     name: "Bambang Mansur Wulan Raharjo",
-    //   },
-    //   {
-    //     name: "Buana Ratna Wahyu",
-    //   },
-    //   {
-    //     name: "Amir Kusuma",
-    //   },
-    //   {
-    //     name: "Alya Yuliana Batari",
-    //   },
-    //   {
-    //     name: "Sulaiman Guntur",
-    //   },
-    //   {
-    //     name: "Cahyo Bulan Putra Citra",
-    //   },
+      {
+        name: "Cahaya Iman Putra Firdaus",
+      },
+      {
+        name: "Putri Fatimah Sari",
+      },
+      {
+        name: "Annisa Alya",
+      },
+      {
+        name: "Akbar Cahya Yusuf",
+      },
+      {
+        name: "Putu Bambang Wira",
+      },
+      {
+        name: "Putri Rahman Buana Kuwat",
+      },
+      {
+        name: "Aisyah Annisa Sari Fatimah",
+      },
+      {
+        name: "Gallen Turangga",
+      },
+      {
+        name: "Eka Surya",
+      },
+      {
+        name: "Adi Suharto Vina Made",
+      },
+      {
+        name: "Bambang Mansur Wulan Raharjo",
+      },
+      {
+        name: "Buana Ratna Wahyu",
+      },
+      {
+        name: "Amir Kusuma",
+      },
+      {
+        name: "Alya Yuliana Batari",
+      },
+      {
+        name: "Sulaiman Guntur",
+      },
+      {
+        name: "Cahyo Bulan Putra Citra",
+      },
     ];
     this.state = {
       searchview: false,
@@ -76,20 +76,6 @@ export default class ContactBookPage extends Component {
     };
     this._listViewOffset = 0;
   }
-
-  componentDidMount(){
-    const urlFetch = fetch('http://sales.hexaon.id/api/getOption', {
-      method: 'POST',
-    });
-    urlFetch.then( res => {
-       if(res.status === 200)
-          return res.json()   
-    }).then( resJson => {
-       this.setState({
-        dataSource: resJson
-       })
-    })
- }
 
   _showSearch() {
     this.setState({ searchview: true });
@@ -187,10 +173,10 @@ export default class ContactBookPage extends Component {
         >
           <FlatList
           style={{marginTop: 3, marginBottom: 3}}
-            data={this.state.dataSource}
+            data={this.arrayHolder}
             renderItem={({ item }) => (
               <CardContact
-                nameText={item.principles.name}
+                nameText={item.name}
               />
             )}
             enableEmptySections={true}
