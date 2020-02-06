@@ -7,10 +7,6 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
-import ModalDetailsContactBook from "./modalDetailsContactBook";
-import ModalOptionAction from "./modalOptionAction";
-import ModalEditData from "./modalEditData";
-import ModalAlertDialog from "./modalAlertDialog";
 
 export default class CardProduct extends Component {
   constructor(props) {
