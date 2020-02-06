@@ -76,7 +76,8 @@ export default class ProductPage extends Component{
       isLoading: true,
       text: "",
       searchData: this.arrayHolder,
-      dataSource: this.arrayHolder
+      dataSource: this.arrayHolder,
+      isActionButtonVisible: true
     };
     this._listViewOffset = 0;
   }

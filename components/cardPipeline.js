@@ -7,6 +7,12 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
+<<<<<<< HEAD
+=======
+import ModalOptionAction from "./modalOptionAction";
+import ModalEditData from "./modalEditData";
+import ModalAlertDialog from "./modalAlertDialog";
+>>>>>>> d5bc46345490d3c9e492e6d50b5ee9d18e008060
 
 export default class CardPipeline extends Component {
   
