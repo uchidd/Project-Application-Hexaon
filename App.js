@@ -38,10 +38,10 @@ export default class App extends Component {
             // <CardUsersActivity/>
             // <CardContact/>
             // <LoginPage/>
-            <ModalDetailsContactBook/>
-            // <MenuProvider>
-            //     <DrawerNavigator/>
-            // </MenuProvider>
+            // <ModalDetailsContactBook/>
+            <MenuProvider>
+                <DrawerNavigator/>
+            </MenuProvider>
         )
     }
 }

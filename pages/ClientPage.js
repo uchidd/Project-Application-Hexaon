@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
+import CardClient from "../components/cardClient"
 import Icon from "react-native-vector-icons/FontAwesome5";
+import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
 export default class ClientPage extends Component{
@@ -16,6 +18,88 @@ export default class ClientPage extends Component{
 
   constructor(props) {
     super(props);
+    this.arrayHolder = [
+      {
+        id: 1,
+        name: "BPD BANTEN",
+        contact: "0254791734",
+        address: "Jl. Jend. Sudirman",
+        picname: "Cun Cun",
+        piccontact: "087776222686"
+      },
+      {
+        id: 2,
+        name: "BANK COMMONWEALTH",
+        contact: "02152962888",
+        address: "Jl. Gajah Mada",
+        picname: "Adella",
+        piccontact: "082388449987"
+      },
+      {
+        id: 3,
+        name: "BANK DANAMON",
+        contact: "0211500090",
+        address: "MENARA BANK DANAMON",
+        picname: "Cun Cun",
+        piccontact: "087776222686"
+      },
+      {
+        id: 4,
+        name: "BANK MAYBANK INDONESIA",
+        contact: "02129228888",
+        address: "Sentral Senayan (SS)",
+        picname: "Cun Cun",
+        piccontact: "087776222686"
+      },
+      {
+        id: 5,
+        name: "BANK TABUNGAN NEGARA (BTN)",
+        contact: "0211500286",
+        address: "Jl. Gajah Mada",
+        picname: "Sandy",
+        piccontact: "081808810913"
+      },
+      {
+        id: 6,
+        name: "BANK MAYORA",
+        contact: "0215655287",
+        address: "Jl. Tomang Raya",
+        picname: "Cun Cun",
+        piccontact: "087776222686"
+      },
+      {
+        id: 7,
+        name: "BANK UOB INDONESIA",
+        contact: "02123506000",
+        address: "Jl. M.H. Thamrin",
+        picname: "Cun Cun",
+        piccontact: "087776222686"
+      },
+      {
+        id: 8,
+        name: "BANK MEGA",
+        contact: "02179175888",
+        address: "Jl. Kapten Tendean",
+        picname: "Mawar",
+        piccontact: "085773243917"
+      },
+      {
+        id: 9,
+        name: "BANK NEGARA INDONESIA (BNI)",
+        contact: "0212511946",
+        address: "Gedung Grha",
+        picname: "Mawar",
+        piccontact: "085773243917"
+      },
+      {
+        id: 10,
+        name: "BANK CENTRAL ASIA (BCA)",
+        contact: "02123588000",
+        address: "Menara BCA",
+        picname: "Adella",
+        piccontact: "082388449987"
+      },
+    ];
     this.state = {
       searchview: false,
       headerview: true,
@@ -35,6 +119,35 @@ export default class ClientPage extends Component{
     this.setState({ searchview: false });
     this.setState({ headerview: true });
     this.setState({ text: "" });
+  }
+
+  state = {
+    isActionButtonVisible: true
+  }
+  _listViewOffset = 0
+
+  _onScroll = (event) => {
+    const isBottomBounce =
+      event.nativeEvent.layoutMeasurement.height -
+        event.nativeEvent.contentSize.height +
+        event.nativeEvent.contentOffset.y >=0;
+    const CustomLayoutLinear = {
+      duration: 100,
+      create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      update: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
+    }
+    const currentOffset = event.nativeEvent.contentOffset.y
+    let direction = currentOffset > 0 && currentOffset > this._listViewOffset ? 'down' : 'up';
+    const isActionButtonVisible = direction === 'up'
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear)
+      this.setState({ isActionButtonVisible })
+    }
+    if (direction === 'up' && isBottomBounce) {
+      direction = 'down';
+    }
+    this._listViewOffset = currentOffset
   }
 
   render(){
@@ -59,47 +172,64 @@ export default class ClientPage extends Component{
           />
         ) : null}
 
-        <ScrollView>
-          
+        <ScrollView
+        onScroll={this._onScroll}
+        >
+          <FlatList
+          style={{marginTop: 3, marginBottom: 3}}
+            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            renderItem={({ item }) => (
+              <CardClient
+                id={item.id}
+                name={item.name}
+                contact={item.contact}
+                address={item.address}
+                picname={item.picname}
+                piccontact={item.piccontact}
+              />
+            )}
+            enableEmptySections={true}
+            keyExtractor={(item, index) => index.toString()}
+          />
         </ScrollView>
 
-        <TouchableOpacity
+        {this.state.isActionButtonVisible ?<TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
         >
-          <View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#86C232"} size={24} />
-          </View>
-        </TouchableOpacity>
+          <Animated.View style={styles.fabCircle}>
+            <Icon name={"plus"} color={"#222629"} size={24} />
+          </Animated.View>
+        </TouchableOpacity> : null}
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex: 1,
-        backgroundColor: '#6B6E70'
-    },
-    TouchableOpacityStyle: {
-      position: "absolute",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      right: 16,
-      bottom: 16
-    },
+  container : {
+      flex: 1,
+      backgroundColor: '#6B6E70'
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
   
-    fabCircle: {
-      backgroundColor: "#222629",
-      resizeMode: "contain",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 50,
-      elevation: 9,
-    }
+  fabCircle: {
+    backgroundColor: "#86C232",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9,
+  }
 })
