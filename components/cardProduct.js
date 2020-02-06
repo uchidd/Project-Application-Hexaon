@@ -31,7 +31,7 @@ export default class CardProduct extends Component {
           style={styles.firstLayer}>
 
           <View style={styles.titleView}>
-            <Text style={styles.textTitle}>1</Text>
+            <Text style={styles.textTitle}>{this.props.id}</Text>
           </View>
           <View style={styles.infoView}>
             <View style={styles.leftInfoView}>
@@ -44,10 +44,10 @@ export default class CardProduct extends Component {
             </View>
             <View style={styles.rightInfoView}>
               <View style={styles.topRowRight}>
-                <Text style={styles.textInfo}>CRM</Text>
+                <Text style={styles.textInfo}>{this.props.name}</Text>
               </View>
               <View style={styles.botRowRight}>
-                <Text style={styles.textInfo}>smartbtn</Text>
+                <Text style={styles.textInfo}>{this.props.desc}</Text>
               </View>
             </View>
           </View>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   rightInfoView: {
     backgroundColor: "transparent",
-    flex: 3
+    flex: 5
   },
   topRowLeft: {
     backgroundColor: "transparent",
