@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
+import CardProduct from "../components/cardProduct"
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
@@ -16,6 +17,58 @@ export default class ProductPage extends Component{
 
   constructor(props) {
     super(props);
+    this.arrayHolder = [
+      {
+        id: 1,
+        name: "CRM",
+        description: "BTN Smart"
+      },
+      {
+        id: 2,
+        name: "EJM",
+        description: "Electronic Journal Management"
+      },
+      {
+        id: 3,
+        name: "TAM",
+        description: "Transactional Analytical Management Tool"
+      },
+      {
+        id: 4,
+        name: "SVFM",
+        description: "Fraud Solution - BPC"
+      },
+      {
+        id: 5,
+        name: "ESB",
+        description: "Middleware - Fiorano"
+      },
+      {
+        id: 6,
+        name: "API Management",
+        description: "Middleware - Fiorano"
+      },
+      {
+        id: 7,
+        name: "Merchant Acquiring System",
+        description: "BPC"
+      },
+      {
+        id: 8,
+        name: "ATM Monitoring",
+        description: "ESQ"
+      },
+      {
+        id: 9,
+        name: "Mobile Banking",
+        description: "Temenos Kony"
+      },
+      {
+        id: 10,
+        name: "Digital Core Flatform",
+        description: "Temenos"
+      },
+    ];
     this.state = {
       searchview: false,
       headerview: true,
@@ -24,6 +77,7 @@ export default class ProductPage extends Component{
       searchData: this.arrayHolder,
       dataSource: this.arrayHolder
     };
+    this._listViewOffset = 0;
   }
 
   _showSearch() {
@@ -35,6 +89,35 @@ export default class ProductPage extends Component{
     this.setState({ searchview: false });
     this.setState({ headerview: true });
     this.setState({ text: "" });
+  }
+
+  state = {
+    isActionButtonVisible: true
+  }
+  _listViewOffset = 0
+
+  _onScroll = (event) => {
+    const isBottomBounce =
+      event.nativeEvent.layoutMeasurement.height -
+        event.nativeEvent.contentSize.height +
+        event.nativeEvent.contentOffset.y >=0;
+    const CustomLayoutLinear = {
+      duration: 100,
+      create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      update: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
+    }
+    const currentOffset = event.nativeEvent.contentOffset.y
+    let direction = currentOffset > 0 && currentOffset > this._listViewOffset ? 'down' : 'up';
+    const isActionButtonVisible = direction === 'up'
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear)
+      this.setState({ isActionButtonVisible })
+    }
+    if (direction === 'up' && isBottomBounce) {
+      direction = 'down';
+    }
+    this._listViewOffset = currentOffset
   }
 
   render(){
@@ -59,8 +142,22 @@ export default class ProductPage extends Component{
           />
         ) : null}
 
-        <ScrollView>
-          
+        <ScrollView
+        onScroll={this._onScroll}
+        >
+          <FlatList
+          style={{marginTop: 3, marginBottom: 3}}
+            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            renderItem={({ item }) => (
+              <CardProduct
+                id={item.id}
+                name={item.name}
+                desc={item.description}
+              />
+            )}
+            enableEmptySections={true}
+            keyExtractor={(item, index) => index.toString()}
+          />
         </ScrollView>
 
         <TouchableOpacity

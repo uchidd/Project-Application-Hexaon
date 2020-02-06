@@ -64,7 +64,7 @@ export default class LeadProjectPage extends Component{
         <ScrollView>
           <View style={styles.firstLayer}>
             <View>
-              <Text>Client</Text>
+              <Text style={styles.text}>Client</Text>
               <View style={styles.picker}>
                 <Picker
                   style={{height: 40}}
@@ -81,7 +81,7 @@ export default class LeadProjectPage extends Component{
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>Product</Text>
+              <Text style={styles.text}>Product</Text>
               <View style={styles.picker}>
                 <Picker
                   style={{height: 40}}
@@ -95,7 +95,7 @@ export default class LeadProjectPage extends Component{
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>Principle</Text>
+              <Text style={styles.text}>Principle</Text>
               <View style={styles.picker}>
                 <Picker
                   style={{height: 40}}
@@ -109,25 +109,25 @@ export default class LeadProjectPage extends Component{
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>PIC Name</Text>
+              <Text style={styles.text}>PIC Name</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>Reference</Text>
+              <Text style={styles.text}>Reference</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>Potential/Budget</Text>
+              <Text style={styles.text}>Potential / Budget</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>Pipeline</Text>
+              <Text style={styles.text}>Pipeline</Text>
               <View style={styles.picker}>
                 <Picker
                   style={{height: 40}}
@@ -144,7 +144,7 @@ export default class LeadProjectPage extends Component{
             </View>
             
             <View style={{marginTop: 6}}>
-              <Text>Principle</Text>
+              <Text style={styles.text}>Principle</Text>
               <View style={styles.picker}>
                 <Picker
                   style={{height: 40}}
@@ -158,14 +158,18 @@ export default class LeadProjectPage extends Component{
             </View>
 
             <View style={{marginTop: 6}}>
-              <Text>Remark</Text>
+              <Text style={styles.text}>Remark</Text>
               <TextInput 
                 style={styles.input}/>
             </View>
+
+            <TouchableOpacity style={styles.btnSave}>
+              <Text style={styles.textSave}>SAVE</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
@@ -173,7 +177,7 @@ export default class LeadProjectPage extends Component{
           <View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
       </View>
     )
@@ -209,18 +213,37 @@ const styles = StyleSheet.create({
     elevation: 3,
     padding: 3
   },
+  text: {
+    fontSize: 20,
+    color: "#86C232",
+  },
   picker: {
     borderWidth: 1,
     borderColor: '#CCCCCC',
-    borderRadius: 3
+    borderRadius: 3,
+    borderColor: '#222629'
   },
   input: {
     borderWidth: 1,
-    borderColor: '#CCCCCC',
+    borderColor: '#222629',
     borderRadius: 3,
     paddingStart: 10,
     paddingEnd: 10,
     paddingTop: 5,
     paddingBottom: 5
   },
+  btnSave: {
+    height: 40,
+    backgroundColor: '#222629',
+    borderWidth: 1,
+    borderColor: '#86C232',
+    borderRadius: 3,
+    justifyContent: 'center',
+    marginTop: 6
+  },
+  textSave: {
+    fontSize: 20,
+    color: '#86C232',
+    textAlign: 'center'
+  }
 })
