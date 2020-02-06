@@ -31,7 +31,7 @@ export default class CardPrinciple extends Component {
           style={styles.firstLayer}>
 
           <View style={styles.titleView}>
-            <Text style={styles.textTitle}>1</Text>
+            <Text style={styles.textTitle}>{this.props.id}</Text>
           </View>
           <View style={styles.infoView}>
             <View style={styles.leftInfoView}>
@@ -53,19 +53,19 @@ export default class CardPrinciple extends Component {
             </View>
             <View style={styles.rightInfoView}>
               <View style={styles.topRowRight}>
-                <Text style={styles.textInfo}>FIORANO</Text>
+                <Text style={styles.textInfo}>{this.props.name}</Text>
               </View>
               <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>919880924021</Text>
+                <Text style={styles.textInfo}>{this.props.contact}</Text>
               </View>
               <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>India</Text>
+                <Text style={styles.textInfo}>{this.props.address}</Text>
               </View>
               <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>Rajesh Rao</Text>
+                <Text style={styles.textInfo}>{this.props.picname}</Text>
               </View>
               <View style={styles.botRowRight}>
-                <Text style={styles.textInfo}>+919880924021</Text>
+                <Text style={styles.textInfo}>{this.props.piccontact}</Text>
               </View>
             </View>
           </View>
@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent"
   },
   firstLayer: {
-    margin: 6,
+    marginHorizontal: 6,
+    marginVertical: 3,
     height: 192,
     backgroundColor: "#212121",
     borderWidth: 2,

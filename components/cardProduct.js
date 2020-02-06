@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent"
   },
   firstLayer: {
-    margin: 6,
+    marginHorizontal: 6,
+    marginVertical: 3,
     height: 105,
     backgroundColor: "#212121",
     borderWidth: 2,

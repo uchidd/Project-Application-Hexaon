@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
+import CardPrinciple from '../components/cardPrinciple'
 import Icon from "react-native-vector-icons/FontAwesome5";
+import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
 export default class PrinciplePage extends Component{
@@ -16,6 +18,24 @@ export default class PrinciplePage extends Component{
 
   constructor(props) {
     super(props);
+    this.arrayHolder = [
+      {
+        id: 1,
+        name: "FIORANO",
+        contact: "rajesh.rao@fiorano.com",
+        address: "India",
+        picname: "Rajesh Rao",
+        piccontact: "+919880924021"
+      },
+      {
+        id: 2,
+        name: "BPC",
+        contact: "butyrsky@bpcbt.com",
+        address: "Swiss",
+        picname: "Sergey Butyrsky",
+        piccontact: "+79175356171"
+      },
+    ];
     this.state = {
       searchview: false,
       headerview: true,
@@ -24,6 +44,7 @@ export default class PrinciplePage extends Component{
       searchData: this.arrayHolder,
       dataSource: this.arrayHolder
     };
+    this._listViewOffset = 0;
   }
 
   _showSearch() {
@@ -35,6 +56,35 @@ export default class PrinciplePage extends Component{
     this.setState({ searchview: false });
     this.setState({ headerview: true });
     this.setState({ text: "" });
+  }
+
+  state = {
+    isActionButtonVisible: true
+  }
+  _listViewOffset = 0
+
+  _onScroll = (event) => {
+    const isBottomBounce =
+      event.nativeEvent.layoutMeasurement.height -
+        event.nativeEvent.contentSize.height +
+        event.nativeEvent.contentOffset.y >=0;
+    const CustomLayoutLinear = {
+      duration: 100,
+      create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      update: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
+    }
+    const currentOffset = event.nativeEvent.contentOffset.y
+    let direction = currentOffset > 0 && currentOffset > this._listViewOffset ? 'down' : 'up';
+    const isActionButtonVisible = direction === 'up'
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear)
+      this.setState({ isActionButtonVisible })
+    }
+    if (direction === 'up' && isBottomBounce) {
+      direction = 'down';
+    }
+    this._listViewOffset = currentOffset
   }
 
   render(){
@@ -59,19 +109,36 @@ export default class PrinciplePage extends Component{
           />
         ) : null}
 
-        <ScrollView>
-          
+        <ScrollView
+        onScroll={this._onScroll}
+        >
+          <FlatList
+          style={{marginTop: 3, marginBottom: 3}}
+            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            renderItem={({ item }) => (
+              <CardPrinciple
+                id={item.id}
+                name={item.name}
+                contact={item.contact}
+                address={item.address}
+                picname={item.picname}
+                piccontact={item.piccontact}
+              />
+            )}
+            enableEmptySections={true}
+            keyExtractor={(item, index) => index.toString()}
+          />
         </ScrollView>
 
-        <TouchableOpacity
+        {this.state.isActionButtonVisible ?<TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
         >
-          <View style={styles.fabCircle}>
+          <Animated.View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
-          </View>
-        </TouchableOpacity>
+          </Animated.View>
+        </TouchableOpacity> : null}
 
       </View>
     )

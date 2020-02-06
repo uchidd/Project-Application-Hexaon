@@ -4,6 +4,7 @@ import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import CardProduct from "../components/cardProduct"
 import Icon from "react-native-vector-icons/FontAwesome5";
+import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
 export default class ProductPage extends Component{
@@ -160,15 +161,15 @@ export default class ProductPage extends Component{
           />
         </ScrollView>
 
-        <TouchableOpacity
+        {this.state.isActionButtonVisible ?<TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
         >
-          <View style={styles.fabCircle}>
+          <Animated.View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
-          </View>
-        </TouchableOpacity>
+          </Animated.View>
+        </TouchableOpacity> : null}
 
       </View>
     )
@@ -176,28 +177,28 @@ export default class ProductPage extends Component{
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex: 1,
-        backgroundColor: '#6B6E70'
-    },
-    TouchableOpacityStyle: {
-      position: "absolute",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      right: 16,
-      bottom: 16
-    },
+  container : {
+      flex: 1,
+      backgroundColor: '#6B6E70'
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
   
-    fabCircle: {
-      backgroundColor: "#222629",
-      resizeMode: "contain",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 50,
-      elevation: 9,
-    }
+  fabCircle: {
+    backgroundColor: "#222629",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9,
+  }
 })
