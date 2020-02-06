@@ -18,6 +18,8 @@ import CardFile from './components/cardFileFileManagement'
 import CardSignActivity from './components/cardSignActivityLogActivity'
 import CardUsersActivity from './components/cardUsersActivityLogActivity'
 import CardContact from './components/cardContactBook';
+import ModalDetailsContactBook from './components/modalDetailsContactBook';
+
 
 export default class App extends Component {
 
@@ -36,9 +38,10 @@ export default class App extends Component {
             // <CardUsersActivity/>
             // <CardContact/>
             // <LoginPage/>
-            <MenuProvider>
-                <DrawerNavigator/>
-            </MenuProvider>
+            <ModalDetailsContactBook/>
+            // <MenuProvider>
+            //     <DrawerNavigator/>
+            // </MenuProvider>
         )
     }
 }

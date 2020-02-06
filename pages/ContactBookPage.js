@@ -71,8 +71,7 @@ export default class ContactBookPage extends Component {
       headerview: true,
       isLoading: true,
       text: "",
-      searchData: this.arrayHolder,
-      dataSource: this.arrayHolder,
+      dataSource: [],
       isActionButtonVisible: true
     };
     this._listViewOffset = 0;
@@ -174,7 +173,7 @@ export default class ContactBookPage extends Component {
         >
           <FlatList
           style={{marginTop: 3, marginBottom: 3}}
-            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            data={this.arrayHolder}
             renderItem={({ item }) => (
               <CardContact
                 nameText={item.name}
