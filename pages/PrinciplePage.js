@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
-import CardPrinciple from '../components/cardPrinciple'
+import CardPrinciple from '../card/cardPrinciple'
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";

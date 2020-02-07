@@ -6,19 +6,19 @@ import DrawerNavigator from './navigation/DrawerNavigator';
 import { MenuProvider } from "react-native-popup-menu";
 import Header from './components/header';
 import HeaderSearchWithButton from './components/headerSearchWithButton';
-import CardUser from './components/cardUserAuthority';
-import CardClient from './components/cardClient'
-import CardProduct from './components/cardProduct';
-import CardPrinciple from './components/cardPrinciple';
-import CardPipeline from './components/cardPipeline'
-import CardSalesAgenda from './components/cardSalesAgenda'
-import CardRoles from './components/cardRolesAuthority'
-import CardFolder from './components/cardFolderFileManagement'
-import CardFile from './components/cardFileFileManagement'
-import CardSignActivity from './components/cardSignActivityLogActivity'
-import CardUsersActivity from './components/cardUsersActivityLogActivity'
-import CardContact from './components/cardContactBook';
-import ModalDetailsContactBook from './components/modalDetailsContactBook';
+import CardUser from './card/cardUserAuthority';
+import CardClient from './card/cardClient'
+import CardProduct from './card/cardProduct';
+import CardPrinciple from './card/cardPrinciple';
+import CardPipeline from './card/cardPipeline'
+import CardSalesAgenda from './card/cardSalesAgenda'
+import CardRoles from './card/cardRolesAuthority'
+import CardFolder from './card/cardFolderFileManagement'
+import CardFile from './card/cardFileFileManagement'
+import CardSignActivity from './card/cardSignActivityLogActivity'
+import CardUsersActivity from './card/cardUsersActivityLogActivity'
+import CardContact from './card/cardContactBook';
+import ModalDetailsContactBook from './modal/modalDetailsContactBook';
 import ContactBookPage from './pages/ContactBookPage';
 
 

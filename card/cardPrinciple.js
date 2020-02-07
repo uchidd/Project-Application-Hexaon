@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
-import ModalOptionAction from "./modalOptionAction";
-import ModalEditData from "./modalEditData";
-import ModalAlertDialog from "./modalAlertDialog";
+// import ModalOptionAction from "./modalOptionAction";
+// import ModalEditData from "./modalEditData";
+// import ModalAlertDialog from "./modalAlertDialog";
 
 export default class CardPrinciple extends Component {
   constructor(props) {
