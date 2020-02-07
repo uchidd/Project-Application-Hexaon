@@ -19,86 +19,86 @@ export default class ClientPage extends Component {
     super(props);
 
     this.arrayHolder = [
-      {
-        id: 1,
-        name: "BPD BANTEN",
-        contact: "0254791734",
-        address: "Jl. Jend. Sudirman",
-        picname: "Cun Cun",
-        piccontact: "087776222686"
-      },
-      {
-        id: 2,
-        name: "BANK COMMONWEALTH",
-        contact: "02152962888",
-        address: "Jl. Gajah Mada",
-        picname: "Adella",
-        piccontact: "082388449987"
-      },
-      {
-        id: 3,
-        name: "BANK DANAMON",
-        contact: "0211500090",
-        address: "MENARA BANK DANAMON",
-        picname: "Cun Cun",
-        piccontact: "087776222686"
-      },
-      {
-        id: 4,
-        name: "BANK MAYBANK INDONESIA",
-        contact: "02129228888",
-        address: "Sentral Senayan (SS)",
-        picname: "Cun Cun",
-        piccontact: "087776222686"
-      },
-      {
-        id: 5,
-        name: "BANK TABUNGAN NEGARA (BTN)",
-        contact: "0211500286",
-        address: "Jl. Gajah Mada",
-        picname: "Sandy",
-        piccontact: "081808810913"
-      },
-      {
-        id: 6,
-        name: "BANK MAYORA",
-        contact: "0215655287",
-        address: "Jl. Tomang Raya",
-        picname: "Cun Cun",
-        piccontact: "087776222686"
-      },
-      {
-        id: 7,
-        name: "BANK UOB INDONESIA",
-        contact: "02123506000",
-        address: "Jl. M.H. Thamrin",
-        picname: "Cun Cun",
-        piccontact: "087776222686"
-      },
-      {
-        id: 8,
-        name: "BANK MEGA",
-        contact: "02179175888",
-        address: "Jl. Kapten Tendean",
-        picname: "Mawar",
-        piccontact: "085773243917"
-      },
-      {
-        id: 9,
-        name: "BANK NEGARA INDONESIA (BNI)",
-        contact: "0212511946",
-        address: "Gedung Grha",
-        picname: "Mawar",
-        piccontact: "085773243917"
-      },
-      {
-        id: 10,
-        name: "BANK CENTRAL ASIA (BCA)",
-        contact: "02123588000",
-        address: "Menara BCA",
-        picname: "Adella",
-        piccontact: "082388449987"
-      },
+      // {
+      //   id: 1,
+      //   name: "BPD BANTEN",
+      //   contact: "0254791734",
+      //   address: "Jl. Jend. Sudirman",
+      //   picname: "Cun Cun",
+      //   piccontact: "087776222686"
+      // },
+      // {
+      //   id: 2,
+      //   name: "BANK COMMONWEALTH",
+      //   contact: "02152962888",
+      //   address: "Jl. Gajah Mada",
+      //   picname: "Adella",
+      //   piccontact: "082388449987"
+      // },
+      // {
+      //   id: 3,
+      //   name: "BANK DANAMON",
+      //   contact: "0211500090",
+      //   address: "MENARA BANK DANAMON",
+      //   picname: "Cun Cun",
+      //   piccontact: "087776222686"
+      // },
+      // {
+      //   id: 4,
+      //   name: "BANK MAYBANK INDONESIA",
+      //   contact: "02129228888",
+      //   address: "Sentral Senayan (SS)",
+      //   picname: "Cun Cun",
+      //   piccontact: "087776222686"
+      // },
+      // {
+      //   id: 5,
+      //   name: "BANK TABUNGAN NEGARA (BTN)",
+      //   contact: "0211500286",
+      //   address: "Jl. Gajah Mada",
+      //   picname: "Sandy",
+      //   piccontact: "081808810913"
+      // },
+      // {
+      //   id: 6,
+      //   name: "BANK MAYORA",
+      //   contact: "0215655287",
+      //   address: "Jl. Tomang Raya",
+      //   picname: "Cun Cun",
+      //   piccontact: "087776222686"
+      // },
+      // {
+      //   id: 7,
+      //   name: "BANK UOB INDONESIA",
+      //   contact: "02123506000",
+      //   address: "Jl. M.H. Thamrin",
+      //   picname: "Cun Cun",
+      //   piccontact: "087776222686"
+      // },
+      // {
+      //   id: 8,
+      //   name: "BANK MEGA",
+      //   contact: "02179175888",
+      //   address: "Jl. Kapten Tendean",
+      //   picname: "Mawar",
+      //   piccontact: "085773243917"
+      // },
+      // {
+      //   id: 9,
+      //   name: "BANK NEGARA INDONESIA (BNI)",
+      //   contact: "0212511946",
+      //   address: "Gedung Grha",
+      //   picname: "Mawar",
+      //   piccontact: "085773243917"
+      // },
+      // {
+      //   id: 10,
+      //   name: "BANK CENTRAL ASIA (BCA)",
+      //   contact: "02123588000",
+      //   address: "Menara BCA",
+      //   picname: "Adella",
+      //   piccontact: "082388449987"
+      // },
     ];
     this.state = {
       searchview: false,
