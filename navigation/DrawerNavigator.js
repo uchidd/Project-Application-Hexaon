@@ -11,7 +11,6 @@ import SalesAgendaPage from '../pages/SalesAgendaPage';
 import FileManegementPage from '../pages/FileManegementPage';
 import LogActivityPage from '../pages/LogActivityPage';
 import HomePage from '../pages/HomePageKaTaren';
-import TabBarNavigator from './TabBarNavigator';
 import { AuthorityUserPage } from "../pages/AuthorityUserPage";
 import { AuthorityRolePage } from "../pages/AuthorityRolePage";
 
