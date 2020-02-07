@@ -4,15 +4,18 @@ import {
   TouchableOpacity,
   StyleSheet,
   StatusBar,
-  Text
+  Text,
+  Dimensions
 } from "react-native";
-
+ 
 export default class ModalDetailsContactBook extends Component {
   render() {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
         <TouchableOpacity style={styles.firstLayer} disabled={true}>
+
+          <Text style={{color:"#fff"}}></Text>
 
         </TouchableOpacity>
       </View>
@@ -29,10 +32,11 @@ const styles = StyleSheet.create({
   firstLayer: {
     backgroundColor: "#212121",
     margin: 6,
-    height: 235,
     borderColor: "#8ECCCC",
     borderWidth: 2,
     borderRadius: 3,
-    flexDirection: "column"
-  },
+    flexDirection: "column",
+    alignSelf : "stretch",
+    padding : 10,
+   },
 });

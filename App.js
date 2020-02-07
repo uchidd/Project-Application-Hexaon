@@ -19,6 +19,7 @@ import CardSignActivity from './components/cardSignActivityLogActivity'
 import CardUsersActivity from './components/cardUsersActivityLogActivity'
 import CardContact from './components/cardContactBook';
 import ModalDetailsContactBook from './components/modalDetailsContactBook';
+import ContactBookPage from './pages/ContactBookPage';
 
 
 export default class App extends Component {
@@ -38,10 +39,11 @@ export default class App extends Component {
             // <CardUsersActivity/>
             // <CardContact/>
             // <LoginPage/>
-            <ModalDetailsContactBook/>
-            // <MenuProvider>
-            //     <DrawerNavigator/>
-            // </MenuProvider>
+            // <ModalDetailsContactBook/>
+            <MenuProvider>
+                <DrawerNavigator/>
+            </MenuProvider>
+            // <ContactBookPage/>
         )
     }
 }

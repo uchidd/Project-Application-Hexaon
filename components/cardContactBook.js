@@ -76,7 +76,7 @@ export default class CardContact extends Component {
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
-        <Modal
+        {/* <Modal
           animationType={"fade"}
           transparent={true}
           visible={this.state.isModalViewDataVisible}
@@ -138,7 +138,7 @@ export default class CardContact extends Component {
               this._hideModalAlertDialogAndModalOptionAction()
             }
           />
-        </Modal>
+        </Modal> */}
       </View>
     );
   }
