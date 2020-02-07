@@ -27,7 +27,7 @@ export default class CardClient extends Component {
           style={styles.firstLayer}>
 
           <View style={styles.titleView}>
-            <Text style={styles.textTitle}>1</Text>
+            <Text style={styles.textTitle}>{this.props.id}</Text>
           </View>
           <View style={styles.infoView}>
             <View style={styles.leftInfoView}>
@@ -49,19 +49,19 @@ export default class CardClient extends Component {
             </View>
             <View style={styles.rightInfoView}>
               <View style={styles.topRowRight}>
-                <Text style={styles.textInfo}>BPD BANTEN</Text>
+                <Text style={styles.textInfo}>{this.props.name}</Text>
               </View>
               <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>0254791734</Text>
+                <Text style={styles.textInfo}>{this.props.contact}</Text>
               </View>
               <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>Jl. Jend. Sudirman</Text>
+                <Text style={styles.textInfo}>{this.props.address}</Text>
               </View>
               <View style={styles.midRowRight}>
-                <Text style={styles.textInfo}>Cun Cun</Text>
+                <Text style={styles.textInfo}>{this.props.picname}</Text>
               </View>
               <View style={styles.botRowRight}>
-                <Text style={styles.textInfo}>087776227686</Text>
+                <Text style={styles.textInfo}>{this.props.piccontact}</Text>
               </View>
             </View>
           </View>
@@ -77,7 +77,8 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent"
   },
   firstLayer: {
-    margin: 6,
+    marginHorizontal: 6,
+    marginVertical: 3,
     height: 192,
     backgroundColor: "#212121",
     borderWidth: 2,
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
   },
   rightInfoView: {
     backgroundColor: "transparent",
-    flex: 3
+    flex: 5
   },
   topRowLeft: {
     backgroundColor: "transparent",

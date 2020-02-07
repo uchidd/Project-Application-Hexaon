@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
+import CardPipeline from '../components/cardPipeline'
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
@@ -16,14 +17,88 @@ export default class PipelinePage extends Component{
 
   constructor(props) {
     super(props);
+    this.arrayHolder = [
+      {
+        id: 1,
+        name: "Registered",
+        description: "Status Registered",
+        activitydate: "&#x2713;",
+        remark: '&#x2713;'
+      },
+      {
+        id: 2,
+        name: "Cold Call",
+        description: "Status Cold Call",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 3,
+        name: "Visit",
+        description: "Status Visit",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 4,
+        name: "Informal Meeting",
+        description: "Status Informal Meeting",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 5,
+        name: "Formal Meeting",
+        description: "Status Formal Meeting",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 6,
+        name: "RFI",
+        description: "Status RFI",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 7,
+        name: "RFP",
+        description: "Status RFP",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 8,
+        name: "Join Lelang",
+        description: "Status Join Lelang",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 9,
+        name: "Daftar Lelang",
+        description: "Status Daftar Lelang",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+      {
+        id: 10,
+        name: "Pra-Kualifikasi",
+        description: "Status Pra-Kualifikasi",
+        activitydate: "&#x2713;",
+        remark: "&#x2713;"
+      },
+    ];
     this.state = {
       searchview: false,
       headerview: true,
       isLoading: true,
       text: "",
       searchData: this.arrayHolder,
-      dataSource: this.arrayHolder
+      dataSource: this.arrayHolder,
+      isActionButtonVisible: true
     };
+    this._listViewOffset = 0;
   }
 
   _showSearch() {
@@ -35,6 +110,35 @@ export default class PipelinePage extends Component{
     this.setState({ searchview: false });
     this.setState({ headerview: true });
     this.setState({ text: "" });
+  }
+
+  state = {
+    isActionButtonVisible: true
+  }
+  _listViewOffset = 0
+
+  _onScroll = (event) => {
+    const isBottomBounce =
+      event.nativeEvent.layoutMeasurement.height -
+        event.nativeEvent.contentSize.height +
+        event.nativeEvent.contentOffset.y >=0;
+    const CustomLayoutLinear = {
+      duration: 100,
+      create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      update: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
+      delete: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity }
+    }
+    const currentOffset = event.nativeEvent.contentOffset.y
+    let direction = currentOffset > 0 && currentOffset > this._listViewOffset ? 'down' : 'up';
+    const isActionButtonVisible = direction === 'up'
+    if (isActionButtonVisible !== this.state.isActionButtonVisible) {
+      LayoutAnimation.configureNext(CustomLayoutLinear)
+      this.setState({ isActionButtonVisible })
+    }
+    if (direction === 'up' && isBottomBounce) {
+      direction = 'down';
+    }
+    this._listViewOffset = currentOffset
   }
 
   render(){
@@ -59,26 +163,40 @@ export default class PipelinePage extends Component{
           />
         ) : null}
 
-        <ScrollView>
-          
+        <ScrollView
+        onScroll={this._onScroll}
+        >
+          <FlatList
+          style={{marginTop: 3, marginBottom: 3}}
+            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            renderItem={({ item }) => (
+              <CardPipeline
+                id={item.id}
+                name={item.name}
+                desc={item.description}
+                activitydate={item.activitydate}
+                remark={item.remark}
+              />
+            )}
+            enableEmptySections={true}
+            keyExtractor={(item, index) => index.toString()}
+          />
         </ScrollView>
 
-        <TouchableOpacity
+        {this.state.isActionButtonVisible ?<TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
         >
-          <View style={styles.fabCircle}>
+          <Animated.View style={styles.fabCircle}>
             <Icon name={"plus"} color={"#86C232"} size={24} />
-          </View>
-        </TouchableOpacity>
+          </Animated.View>
+        </TouchableOpacity> : null}
 
       </View>
     )
   }
 }
-
-
 
 const styles = StyleSheet.create({
     container : {

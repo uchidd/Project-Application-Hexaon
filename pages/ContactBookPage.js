@@ -209,7 +209,7 @@ export default class ContactBookPage extends Component {
           style={styles.TouchableOpacityStyle}
         >
           <Animated.View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#86C232"} size={24} />
+            <Icon name={"plus"} color={"#222629"} size={24} />
           </Animated.View>
         </TouchableOpacity> : null}
 
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
   },
 
   fabCircle: {
-    backgroundColor: "#222629",
+    backgroundColor: "#86C232",
     resizeMode: "contain",
     width: 56,
     height: 56,
