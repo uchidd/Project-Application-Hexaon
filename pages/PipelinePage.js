@@ -2,103 +2,122 @@ import React, { Component } from "react";
 import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../components/header";
 import { DrawerActions } from 'react-navigation-drawer';
-import CardPipeline from '../card/cardPipeline'
+import CardPipeline from "../card/cardPipeline"
 import Icon from "react-native-vector-icons/FontAwesome5";
+import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
-export default class PipelinePage extends Component{
-
+export default class ClientPage extends Component {
   static navigationOptions = {
-    drawerLabel: 'Pipeline',
+    drawerLabel: "Pipeline",
     drawerIcon: () => (
       <Icon name={"tasks"} color={"#86C232"} size={19}/>
     ),
-  }
+  };
 
   constructor(props) {
     super(props);
+
     this.arrayHolder = [
-      {
-        id: 1,
-        name: "Registered",
-        description: "Status Registered",
-        activitydate: "&#x2713;",
-        remark: '&#x2713;'
-      },
-      {
-        id: 2,
-        name: "Cold Call",
-        description: "Status Cold Call",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 3,
-        name: "Visit",
-        description: "Status Visit",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 4,
-        name: "Informal Meeting",
-        description: "Status Informal Meeting",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 5,
-        name: "Formal Meeting",
-        description: "Status Formal Meeting",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 6,
-        name: "RFI",
-        description: "Status RFI",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 7,
-        name: "RFP",
-        description: "Status RFP",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 8,
-        name: "Join Lelang",
-        description: "Status Join Lelang",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 9,
-        name: "Daftar Lelang",
-        description: "Status Daftar Lelang",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
-      {
-        id: 10,
-        name: "Pra-Kualifikasi",
-        description: "Status Pra-Kualifikasi",
-        activitydate: "&#x2713;",
-        remark: "&#x2713;"
-      },
+      // {
+      //   id: 1,
+      //   name: "Registered",
+      //   description: "Status Registered",
+      //   activitydate: "&#x2713;",
+      //   remark: '&#x2713;'
+      // },
+      // {
+      //   id: 2,
+      //   name: "Cold Call",
+      //   description: "Status Cold Call",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 3,
+      //   name: "Visit",
+      //   description: "Status Visit",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 4,
+      //   name: "Informal Meeting",
+      //   description: "Status Informal Meeting",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 5,
+      //   name: "Formal Meeting",
+      //   description: "Status Formal Meeting",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 6,
+      //   name: "RFI",
+      //   description: "Status RFI",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 7,
+      //   name: "RFP",
+      //   description: "Status RFP",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 8,
+      //   name: "Join Lelang",
+      //   description: "Status Join Lelang",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 9,
+      //   name: "Daftar Lelang",
+      //   description: "Status Daftar Lelang",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
+      // {
+      //   id: 10,
+      //   name: "Pra-Kualifikasi",
+      //   description: "Status Pra-Kualifikasi",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
+      // },
     ];
     this.state = {
       searchview: false,
       headerview: true,
       isLoading: true,
       text: "",
-      searchData: this.arrayHolder,
-      dataSource: this.arrayHolder,
+      dataSource: [],
       isActionButtonVisible: true
     };
     this._listViewOffset = 0;
+  }
+
+  componentDidMount(){
+    return fetch('http://sales.hexaon.id/api/getOption',
+    {method: 'POST'})
+      .then((response) => response.json())
+      .then((responseJson) => {
+
+        this.setState({
+          isLoading: false,
+          dataSource: responseJson.pipelines,
+        }, function(){
+
+        });
+
+      })
+      .catch((error) =>{
+        console.error(error);
+      });
   }
 
   _showSearch() {
@@ -111,6 +130,34 @@ export default class PipelinePage extends Component{
     this.setState({ headerview: true });
     this.setState({ text: "" });
   }
+
+  // _searchFilterFunction(text){
+  //   const newData = this.arrayHolder.filter(function(item) {
+  //     const itemData = item.name ? item.name.toUpperCase() : ''.toUpperCase();
+  //     const textData = text.toUpperCase();
+  //     return itemData.indexOf(textData) > -1;
+  //   });
+  //   this.setState({
+  //     dataSource: newData,
+  //     text: text
+  //   })
+  // }
+
+  _buttonSearch = () => {
+    console.log(this.state.dataSource);
+    console.log(this.state.searchData);
+    const { text } = this.state;
+    const newData = this.state.searchData.filter(item => {
+      //test
+      const itemData = "${item.name.toUpperCase()}";
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    this.setState({
+      dataSource: newData
+    });
+  };
 
   state = {
     isActionButtonVisible: true
@@ -141,8 +188,9 @@ export default class PipelinePage extends Component{
     this._listViewOffset = currentOffset
   }
 
-  render(){
-    return(
+  render() {
+
+    return (
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
@@ -156,7 +204,7 @@ export default class PipelinePage extends Component{
         ) : null}
 
         {this.state.searchview ? (
-          <HeaderSearchWithButton
+          <HeaderSearch
             pressIconBack={() => this._showHeader()}
             ocText={text => this.setState({ text })}
             searchFunction={() => this._buttonSearch()}
@@ -168,14 +216,10 @@ export default class PipelinePage extends Component{
         >
           <FlatList
           style={{marginTop: 3, marginBottom: 3}}
-            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardPipeline
-                id={item.id}
                 name={item.name}
-                desc={item.description}
-                activitydate={item.activitydate}
-                remark={item.remark}
               />
             )}
             enableEmptySections={true}
@@ -189,38 +233,38 @@ export default class PipelinePage extends Component{
           style={styles.TouchableOpacityStyle}
         >
           <Animated.View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#86C232"} size={24} />
+            <Icon name={"plus"} color={"#222629"} size={24} />
           </Animated.View>
         </TouchableOpacity> : null}
 
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex: 1,
-        backgroundColor: '#6B6E70'
-    },
-    TouchableOpacityStyle: {
-      position: "absolute",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      right: 16,
-      bottom: 16
-    },
-  
-    fabCircle: {
-      backgroundColor: "#222629",
-      resizeMode: "contain",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 50,
-      elevation: 9,
-    }
-})
+  container: {
+    flex: 1,
+    backgroundColor: "#6B6E70"
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
+
+  fabCircle: {
+    backgroundColor: "#86C232",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9
+  }
+});

@@ -7,17 +7,17 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
-export default class ClientPage extends Component{
-
+export default class ClientPage extends Component {
   static navigationOptions = {
-    drawerLabel: 'Client',
+    drawerLabel: "Client",
     drawerIcon: () => (
       <Icon name={"users"} color={"#86C232"} size={19}/>
     ),
-  }
+  };
 
   constructor(props) {
     super(props);
+
     this.arrayHolder = [
       {
         id: 1,
@@ -105,9 +105,29 @@ export default class ClientPage extends Component{
       headerview: true,
       isLoading: true,
       text: "",
-      searchData: this.arrayHolder,
-      dataSource: this.arrayHolder
+      dataSource: [],
+      isActionButtonVisible: true
     };
+    this._listViewOffset = 0;
+  }
+
+  componentDidMount(){
+    return fetch('http://sales.hexaon.id/api/getOption',
+    {method: 'POST'})
+      .then((response) => response.json())
+      .then((responseJson) => {
+
+        this.setState({
+          isLoading: false,
+          dataSource: responseJson.clients,
+        }, function(){
+
+        });
+
+      })
+      .catch((error) =>{
+        console.error(error);
+      });
   }
 
   _showSearch() {
@@ -120,6 +140,34 @@ export default class ClientPage extends Component{
     this.setState({ headerview: true });
     this.setState({ text: "" });
   }
+
+  // _searchFilterFunction(text){
+  //   const newData = this.arrayHolder.filter(function(item) {
+  //     const itemData = item.name ? item.name.toUpperCase() : ''.toUpperCase();
+  //     const textData = text.toUpperCase();
+  //     return itemData.indexOf(textData) > -1;
+  //   });
+  //   this.setState({
+  //     dataSource: newData,
+  //     text: text
+  //   })
+  // }
+
+  _buttonSearch = () => {
+    console.log(this.state.dataSource);
+    console.log(this.state.searchData);
+    const { text } = this.state;
+    const newData = this.state.searchData.filter(item => {
+      //test
+      const itemData = "${item.name.toUpperCase()}";
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    this.setState({
+      dataSource: newData
+    });
+  };
 
   state = {
     isActionButtonVisible: true
@@ -150,8 +198,9 @@ export default class ClientPage extends Component{
     this._listViewOffset = currentOffset
   }
 
-  render(){
-    return(
+  render() {
+
+    return (
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
@@ -165,7 +214,7 @@ export default class ClientPage extends Component{
         ) : null}
 
         {this.state.searchview ? (
-          <HeaderSearchWithButton
+          <HeaderSearch
             pressIconBack={() => this._showHeader()}
             ocText={text => this.setState({ text })}
             searchFunction={() => this._buttonSearch()}
@@ -177,15 +226,10 @@ export default class ClientPage extends Component{
         >
           <FlatList
           style={{marginTop: 3, marginBottom: 3}}
-            data={this.arrayHolder.sort(function(a, b){return a-b})}
+            data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardClient
-                id={item.id}
                 name={item.name}
-                contact={item.contact}
-                address={item.address}
-                picname={item.picname}
-                piccontact={item.piccontact}
               />
             )}
             enableEmptySections={true}
@@ -202,15 +246,16 @@ export default class ClientPage extends Component{
             <Icon name={"plus"} color={"#222629"} size={24} />
           </Animated.View>
         </TouchableOpacity> : null}
+
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
-  container : {
-      flex: 1,
-      backgroundColor: '#6B6E70'
+  container: {
+    flex: 1,
+    backgroundColor: "#6B6E70"
   },
   TouchableOpacityStyle: {
     position: "absolute",
@@ -221,7 +266,7 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16
   },
-  
+
   fabCircle: {
     backgroundColor: "#86C232",
     resizeMode: "contain",
@@ -230,6 +275,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    elevation: 9,
+    elevation: 9
   }
-})
+});
