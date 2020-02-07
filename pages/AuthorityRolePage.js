@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class RolePage extends Component{
+export default class AuthorityRolePage extends Component{
+
+  static navigationOptions = {
+    drawerLabel: "Authority (Role)",
+    drawerIcon: () => <Icon name={"address-book"} color={"#86C232"} size={19} />
+  };
+
   render(){
   return (
     <View style={styles.container}>

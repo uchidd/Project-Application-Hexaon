@@ -4,7 +4,6 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 import ProductPage from '../pages/ProductPage';
 import ClientPage from '../pages/ClientPage';
 import ContactBookPage from '../pages/ContactBookPage';
-import AuthorityPage from '../pages/AuthorityPage';
 import PrinciplePage from '../pages/PrinciplePage';
 import PipelinePage from '../pages/PipelinePage';
 import LeadProjectPage from '../pages/LeadProjectPage';
@@ -13,6 +12,8 @@ import FileManegementPage from '../pages/FileManegementPage';
 import LogActivityPage from '../pages/LogActivityPage';
 import HomePage from '../pages/HomePageKaTaren';
 import TabBarNavigator from './TabBarNavigator';
+import { AuthorityUserPage } from "../pages/AuthorityUserPage";
+import { AuthorityRolePage } from "../pages/AuthorityRolePage";
 
 export default class DrawerNavigator extends Component{
     render(){
@@ -24,7 +25,8 @@ export default class DrawerNavigator extends Component{
 
 const AppDrawerNavigator = createDrawerNavigator({
     Home: {screen: HomePage},
-    Authority: {screen: TabBarNavigator},
+    AuthorityUser: {screen: AuthorityUserPage},
+    AuthorityRole: {screen: AuthorityRolePage},
     Client: {screen: ClientPage},
     Product: {screen: ProductPage},
     Principle: {screen: PrinciplePage},

@@ -5,7 +5,12 @@ import HeaderSearchWithButton from '../components/headerSearchWithButton';
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 
-export default class UserPage extends Component{
+export default class AuthorityUserPage extends Component{
+  static navigationOptions = {
+    drawerLabel: "Authority (User)",
+    drawerIcon: () => <Icon name={"address-book"} color={"#86C232"} size={19} />
+  };
+
   constructor(props) {
     super(props);
     this.state = {
