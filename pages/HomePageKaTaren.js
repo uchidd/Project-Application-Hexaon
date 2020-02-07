@@ -164,6 +164,6 @@ const styles = StyleSheet.create({
   },
   titleText: {
     color: "#86C232",
-    fontSize: 20
+    fontSize: 19
   }
 });
