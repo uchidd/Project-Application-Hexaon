@@ -175,5 +175,4 @@ const styles = StyleSheet.create({
     color:"#86C232",
     marginLeft: 16
   }
-  
 });

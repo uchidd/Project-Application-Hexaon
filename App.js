@@ -43,10 +43,7 @@ export default class App extends Component {
             <MenuProvider>
                 <DrawerNavigator/>
             </MenuProvider>
-<<<<<<< HEAD
             // <ContactBookPage/>
-=======
->>>>>>> bd29798e6455e64ddfd70f357588747b1817e18f
         )
     }
 }
