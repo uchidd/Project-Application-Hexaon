@@ -70,7 +70,7 @@ export default class CardContact extends Component {
           onPress={() => this._showModalViewData()}
         >
           <View style={styles.nameView}>
-            <Text style={styles.nameText}>{this.props.nameText}</Text>
+            <Text numberOfLines={1} style={styles.nameText}>{this.props.nameText}</Text>
           </View>
           <View style={styles.iconView}>
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
