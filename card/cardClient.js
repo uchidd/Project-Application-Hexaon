@@ -65,7 +65,7 @@ export default class CardClient extends Component {
           onPress={() => this._showModalViewData()}
         >
           <View style={styles.nameView}>
-            <Text style={styles.nameText}>{this.props.name}</Text>
+            <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
           </View>
           <View style={styles.iconView}>
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>

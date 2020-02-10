@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
       margin : 16
     },
     textHeader : {
-      fontSize : 24,
+      fontSize : 22,
       color : "#86C232",
       marginLeft  : 16
     },

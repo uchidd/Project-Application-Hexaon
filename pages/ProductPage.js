@@ -7,7 +7,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearch from "../components/headerSearch";
 import HeaderSearchWithButton from "../components/headerSearchWithButton";
 
-export default class ContactBookPage extends Component {
+export default class ProductPage extends Component {
   static navigationOptions = {
     drawerLabel: "Product",
     drawerIcon: () => (
