@@ -65,7 +65,7 @@ export default class CardUserAuthority extends Component {
           onPress={() => this._showModalViewData()}
         >
           <View style={styles.nameView}>
-            <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
+            <Text numberOfLines={1} style={styles.nameText}>{this.props.name} ({this.props.nik})</Text>
           </View>
           <View style={styles.iconView}>
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
