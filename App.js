@@ -18,7 +18,7 @@ import CardFile from './card/cardFileFileManagement'
 import CardSignActivity from './card/cardSignActivityLogActivity'
 import CardUsersActivity from './card/cardUsersActivityLogActivity'
 import CardContact from './card/cardContactBook';
-import ModalDetailsContactBook from './modal/modalDetailsContactBook';
+import ModalViewData from './modal/modalViewData';
 import ContactBookPage from './pages/ContactBookPage';
 
 

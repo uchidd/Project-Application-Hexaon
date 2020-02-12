@@ -220,6 +220,7 @@ export default class AuthorityUserPage extends Component {
             renderItem={({ item }) => (
               <CardUserAuthority
                 name={item.name}
+                nik={item.nik}
               />
             )}
             enableEmptySections={true}

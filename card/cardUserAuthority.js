@@ -8,15 +8,19 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import ModalViewData from '../modal/modalViewData'
+import ModalOptionAction from '../modal/modalOptionAction'
+import ModalEditData from '../modal/modalEditData'
+import ModalAlertDialog from '../modal/modalAlertDialog'
 
 export default class CardUserAuthority extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // isModalViewDataVisible: false,
-      // isModalOptionActionVisible: false,
-      // isModalEditDataVisible: false,
-      // isModalAlertDialogVisible: false,
+      isModalViewDataVisible: false,
+      isModalOptionActionVisible: false,
+      isModalEditDataVisible: false,
+      isModalAlertDialogVisible: false,
     };
   }
 
@@ -65,13 +69,13 @@ export default class CardUserAuthority extends Component {
           onPress={() => this._showModalViewData()}
         >
           <View style={styles.nameView}>
-            <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
+            <Text numberOfLines={1} style={styles.nameText}>{this.props.name} ({this.props.nik})</Text>
           </View>
           <View style={styles.iconView}>
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
-        {/* <Modal
+        <Modal
           animationType={"fade"}
           transparent={true}
           visible={this.state.isModalViewDataVisible}
@@ -133,7 +137,7 @@ export default class CardUserAuthority extends Component {
               this._hideModalAlertDialogAndModalOptionAction()
             }
           />
-        </Modal> */}
+        </Modal>
       </View>
     );
   }
