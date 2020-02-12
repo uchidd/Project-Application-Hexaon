@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, StatusBar} from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, StyleSheet, Text, StatusBar, TouchableOpacity } from "react-native";
 
 export default class ModalDetailPrinciple extends Component{
     render(){

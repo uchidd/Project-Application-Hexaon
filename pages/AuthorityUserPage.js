@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
-import Header from "../components/header";
+import Header from "../headers/header";
 import { DrawerActions } from 'react-navigation-drawer';
-import CardUserAuthority from "../card/cardUserAuthority"
+import CardUserAuthority from "../cards/cardUserAuthority"
 import Icon from "react-native-vector-icons/FontAwesome5";
-import HeaderSearch from "../components/headerSearch";
-import HeaderSearchWithButton from "../components/headerSearchWithButton";
+import HeaderSearch from "../headers/headerSearch";
+import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 
 export default class AuthorityUserPage extends Component {
   static navigationOptions = {

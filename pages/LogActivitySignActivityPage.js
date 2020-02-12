@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
-import Header from "../components/header";
+import Header from "../headers/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
-import HeaderSearchWithButton from "../components/headerSearchWithButton";
+import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 
 export default class LogActivitySignActivityPage extends Component{
 
