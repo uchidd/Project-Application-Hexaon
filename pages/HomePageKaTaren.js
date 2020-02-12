@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
-import Header from "../components/header";
+import Header from "../headers/header";
 import { DrawerActions } from "react-navigation-drawer";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
