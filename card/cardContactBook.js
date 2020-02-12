@@ -8,6 +8,10 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import ModalViewData from '../modal/modalViewData'
+import ModalOptionAction from '../modal/modalOptionAction'
+import ModalEditData from '../modal/modalEditData'
+import ModalAlertDialog from '../modal/modalAlertDialog'
 
 export default class CardContact extends Component {
   constructor(props) {
