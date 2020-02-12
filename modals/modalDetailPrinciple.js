@@ -89,12 +89,12 @@ const styles = StyleSheet.create({
     },
     mainView : {
         alignSelf : "stretch",
-        backgroundColor : "#222629",
+        backgroundColor : "#373834",
         margin : 3,
         padding : 3,
         flexDirection : "column",
         borderRadius : 3,
-        borderColor : "#86C232",
+        borderColor : "#152642",
         borderWidth : 2
     },
     titleView : {
@@ -107,15 +107,15 @@ const styles = StyleSheet.create({
     },
     textTitle : {
         fontSize : 24,
-        color : "#86C232",
+        color : "#FFFFFF",
     },
     contentView : {
         alignSelf : "stretch",
-        backgroundColor : "#474B4F",
+        backgroundColor : "#373834",
         margin : 3,
         flexDirection : "column",
         borderRadius : 3,
-        borderColor : "#86C232",
+        borderColor : "#152642",
         borderWidth : 2,
     },
     topRow : {
@@ -123,13 +123,13 @@ const styles = StyleSheet.create({
         backgroundColor : "transparent",
         flexDirection : "row",
         borderBottomWidth : 1,
-        borderBottomColor : "#86C232",
+        borderBottomColor : "#152642",
     },
     leftView : {
         alignSelf : "stretch",
         backgroundColor : "transparent",
         borderRightWidth : 1,
-        borderRightColor : "#86C232",
+        borderRightColor : "#152642",
         width : 100,
         padding : 3,
         justifyContent : "center"
@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
         alignSelf : "stretch",
         backgroundColor : "transparent",
         borderLeftWidth : 1,
-        borderLeftColor : "#86C232",
+        borderLeftColor : "#152642",
         padding : 3,
         flex : 1,
         justifyContent : "center"
     },
     text : {
         fontSize : 16,
-        color : "#86C232",
+        color : "#FFFFFF",
         margin : 3
     },
     row : {
@@ -153,25 +153,25 @@ const styles = StyleSheet.create({
         backgroundColor : "transparent",
         flexDirection : "row",
         borderBottomWidth : 1,
-        borderBottomColor : "#86C232",
-        borderTopColor : "#86C232",
+        borderBottomColor : "#152642",
+        borderTopColor : "#152642",
         borderTopWidth : 1,
     },
     rowBottom : {
         alignSelf : "stretch",
         backgroundColor : "transparent",
         flexDirection : "row",
-        borderTopColor : "#86C232",
+        borderTopColor : "#152642",
         borderTopWidth : 1,
     },
     button : {
         height : 50,
-        backgroundColor : "#222629",
+        backgroundColor : "#373834",
         margin : 3,
         padding : 3,
         flexDirection : "column",
         borderRadius : 3,
-        borderColor : "#86C232",
+        borderColor : "#152642",
         borderWidth : 2,
         justifyContent : "center",
         alignItems : "center"
