@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Animated, View, StyleSheet, TouchableOpacity, LayoutAnimation, ScrollView, FlatList } from "react-native";
-import Header from "../components/header";
+import Header from "../headers/header";
 import { DrawerActions } from "react-navigation-drawer";
-import CardContact from "../card/cardContactBook";
-import HeaderSearch from "../components/headerSearch";
-import HeaderSearchWithButton from "../components/headerSearchWithButton";
+import CardContact from "../cards/cardContactBook";
+import HeaderSearch from "../headers/headerSearch";
+import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default class ContactBookPage extends Component {

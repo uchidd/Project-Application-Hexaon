@@ -4,22 +4,21 @@ import { createStackNavigator } from 'react-navigation-stack';
 import LoginPage from './pages/LoginPage';
 import DrawerNavigator from './navigation/DrawerNavigator';
 import { MenuProvider } from "react-native-popup-menu";
-import Header from './components/header';
-import HeaderSearchWithButton from './components/headerSearchWithButton';
-import CardUser from './card/cardUserAuthority';
-import CardClient from './card/cardClient'
-import CardProduct from './card/cardProduct';
-import CardPrinciple from './card/cardPrinciple';
-import CardPipeline from './card/cardPipeline'
-import CardSalesAgenda from './card/cardSalesAgenda'
-import CardRoles from './card/cardRolesAuthority'
-import CardFolder from './card/cardFolderFileManagement'
-import CardFile from './card/cardFileFileManagement'
-import CardSignActivity from './card/cardSignActivityLogActivity'
-import CardUsersActivity from './card/cardUsersActivityLogActivity'
-import CardContact from './card/cardContactBook';
+import Header from './headers/header';
+import HeaderSearchWithButton from './headers/headerSearchWithButton';
+import CardUser from './cards/cardUserAuthority';
+import CardClient from './cards/cardClient'
+import CardProduct from './cards/cardProduct';
+import CardPrinciple from './cards/cardPrinciple';
+import CardPipeline from './cards/cardPipeline'
+import CardSalesAgenda from './cards/cardSalesAgenda'
+import CardRoles from './cards/cardRolesAuthority'
+import CardFolder from './cards/cardFolderFileManagement'
+import CardFile from './cards/cardFileFileManagement'
+import CardSignActivity from './cards/cardSignActivityLogActivity'
+import CardUsersActivity from './cards/cardUsersActivityLogActivity'
+import CardContact from './cards/cardContactBook';
 import ContactBookPage from './pages/ContactBookPage';
-import ModalDetailPrinciple from './modalDetail/modalDetailPrinciple';
 
 
 export default class App extends Component {
@@ -44,7 +43,6 @@ export default class App extends Component {
                 <DrawerNavigator/>
             </MenuProvider>
             // <ContactBookPage/>
-            // <ModalDetailPrinciple/>
         )
     }
 }

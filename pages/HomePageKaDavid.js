@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import Header from "../components/header";
+import Header from "../headers/header";
 import { DrawerActions } from "react-navigation-drawer";
 import Icon from "react-native-vector-icons/FontAwesome";
 import ImageSlider from 'react-native-image-slider';
-
-
 
 export default class HomePage extends Component {
   static navigationOptions = {
