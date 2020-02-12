@@ -82,9 +82,11 @@ export default class ModalDetailPrinciple extends Component{
 const styles = StyleSheet.create({
     container : {
         alignSelf : "stretch",
-        backgroundColor : "transparent",
+        backgroundColor : "rgba(33, 33, 33, 0.7)",
         padding : 3,
         flexDirection : "column",
+        justifyContent : "center",
+        flex : 1
     },
     mainView : {
         alignSelf : "stretch",

@@ -40,11 +40,11 @@ export default class App extends Component {
             // <CardContact/>
             // <LoginPage/>
             // <ModalDetailsContactBook/>
-            // <MenuProvider>
-            //     <DrawerNavigator/>
-            // </MenuProvider>
+            <MenuProvider>
+                <DrawerNavigator/>
+            </MenuProvider>
             // <ContactBookPage/>
-            <ModalDetailPrinciple/>
+            // <ModalDetailPrinciple/>
         )
     }
 }

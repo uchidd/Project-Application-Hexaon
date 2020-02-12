@@ -12,6 +12,7 @@ import ModalViewData from '../modal/modalViewData'
 import ModalOptionAction from '../modal/modalOptionAction'
 import ModalEditData from '../modal/modalEditData'
 import ModalAlertDialog from '../modal/modalAlertDialog'
+import ModalDetailPrinciple from "../modalDetail/modalDetailPrinciple";
 
 export default class CardUserAuthority extends Component {
   constructor(props) {
@@ -81,7 +82,7 @@ export default class CardUserAuthority extends Component {
           visible={this.state.isModalViewDataVisible}
           onRequestClose={() => this._hideModalViewData()}
         >
-          <ModalViewData
+          <ModalDetailPrinciple
             hideModalViewData={() => this._hideModalViewData()}
             idModal={this.state.id}
             nameModal={this.state.name}
