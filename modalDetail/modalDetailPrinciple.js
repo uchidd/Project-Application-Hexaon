@@ -71,7 +71,7 @@ export default class ModalDetailPrinciple extends Component{
                     </View>
                     
                 </View>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity onPress={this.props.hideModalViewData} style={styles.button}>
                     <Text style={styles.textTitle}>Close</Text>
                 </TouchableOpacity>
             </View>
