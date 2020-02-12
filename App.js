@@ -18,8 +18,8 @@ import CardFile from './card/cardFileFileManagement'
 import CardSignActivity from './card/cardSignActivityLogActivity'
 import CardUsersActivity from './card/cardUsersActivityLogActivity'
 import CardContact from './card/cardContactBook';
-import ModalViewData from './modal/modalViewData';
 import ContactBookPage from './pages/ContactBookPage';
+import ModalDetailPrinciple from './modalDetail/modalDetailPrinciple';
 
 
 export default class App extends Component {
@@ -40,10 +40,11 @@ export default class App extends Component {
             // <CardContact/>
             // <LoginPage/>
             // <ModalDetailsContactBook/>
-            <MenuProvider>
-                <DrawerNavigator/>
-            </MenuProvider>
+            // <MenuProvider>
+            //     <DrawerNavigator/>
+            // </MenuProvider>
             // <ContactBookPage/>
+            <ModalDetailPrinciple/>
         )
     }
 }
