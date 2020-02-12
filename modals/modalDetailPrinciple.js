@@ -69,10 +69,10 @@ export default class ModalDetailPrinciple extends Component{
                         </View>
                     </View>
                     
+                    <TouchableOpacity onPress={this.props.hideModalViewData} style={styles.button}>
+                        <Text style={styles.textTitle}>Close</Text>
+                    </TouchableOpacity>
                 </View>
-                <TouchableOpacity onPress={this.props.hideModalViewData} style={styles.button}>
-                    <Text style={styles.textTitle}>Close</Text>
-                </TouchableOpacity>
             </View>
         )
     }
@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
         padding : 3,
         flexDirection : "column",
         justifyContent : "center",
-        flex : 1
+        flex : 1,
+        alignItems: "center"
     },
     mainView : {
         alignSelf : "stretch",
