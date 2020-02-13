@@ -16,7 +16,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>ID</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>1</Text>
+                                <Text style={styles.text}>{this.props.idModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -24,7 +24,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>FIORANO</Text>
+                                <Text style={styles.text}>{this.props.nameModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -32,7 +32,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>Email</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>rajesh.rao@fiorano.com</Text>
+                                <Text style={styles.text}>{this.props.emailModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -40,7 +40,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>Phone</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>+919880924021</Text>
+                                <Text style={styles.text}>{this.props.phoneModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -48,7 +48,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>Address</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>India</Text>
+                                <Text style={styles.text}>{this.props.addressModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -56,7 +56,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>PIC Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>Rajesh Rao</Text>
+                                <Text style={styles.text}>{this.props.pic_nameModal}</Text>
                             </View>
                         </View>
                         <View style={styles.rowBottom}>
@@ -64,7 +64,7 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>PIC Contact</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>+919880924021</Text>
+                                <Text style={styles.text}>{this.props.pic_contactModal}</Text>
                             </View>
                         </View>
                     </View>

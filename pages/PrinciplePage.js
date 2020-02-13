@@ -219,7 +219,13 @@ export default class PrinciplePage extends Component {
             data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardPrinciple
+                id={item.id}
                 name={item.name}
+                email={item.email}
+                phone={item.phone}
+                address={item.address}
+                pic_name={item.pic_name}
+                pic_contact={item.pic_contact}
               />
             )}
             enableEmptySections={true}
