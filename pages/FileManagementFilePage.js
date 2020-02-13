@@ -11,7 +11,7 @@ export default class FileManagementFilePage extends Component{
   static navigationOptions = {
     drawerLabel: 'File Management',
     drawerIcon: () => (
-      <Icon name={"file"} color={"#86C232"} size={19} solid={true}/>
+      <Icon name={"file"} color={"#2A4580"} size={19} solid={true}/>
     ),
   }
 

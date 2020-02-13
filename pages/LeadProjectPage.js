@@ -11,7 +11,7 @@ export default class LeadProjectPage extends Component{
   static navigationOptions = {
     drawerLabel: 'Lead Project',
     drawerIcon: () => (
-      <Icon name={"file-upload"} color={"#86C232"} size={19}/>
+      <Icon name={"file-upload"} color={"#2A4580"} size={19}/>
     ),
   }
 

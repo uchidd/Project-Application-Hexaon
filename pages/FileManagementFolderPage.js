@@ -11,7 +11,7 @@ export default class FileManagementFolderPage extends Component{
   static navigationOptions = {
     drawerLabel: 'Folder Management',
     drawerIcon: () => (
-      <Icon name={"folder-open"} color={"#86C232"} size={19} solid={true}/>
+      <Icon name={"folder-open"} color={"#2A4580"} size={19} solid={true}/>
     ),
   }
 

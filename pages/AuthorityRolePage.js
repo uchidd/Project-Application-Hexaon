@@ -11,7 +11,7 @@ export default class AuthorityRolePage extends Component{
   static navigationOptions = {
     drawerLabel: 'Authority Role',
     drawerIcon: () => (
-      <Icon name={"users-cog"} color={"#86C232"} size={19} solid={true}/>
+      <Icon name={"users-cog"} color={"#2A4580"} size={19} solid={true}/>
     ),
   }
 

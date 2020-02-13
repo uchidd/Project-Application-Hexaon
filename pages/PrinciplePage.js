@@ -11,7 +11,7 @@ export default class PrinciplePage extends Component {
   static navigationOptions = {
     drawerLabel: "Principle",
     drawerIcon: () => (
-      <Icon name={"user-tie"} color={"#86C232"} size={19}/>
+      <Icon name={"user-tie"} color={"#2A4580"} size={19}/>
     ),
   };
 

@@ -11,7 +11,7 @@ export default class ClientPage extends Component {
   static navigationOptions = {
     drawerLabel: "Client",
     drawerIcon: () => (
-      <Icon name={"users"} color={"#86C232"} size={19}/>
+      <Icon name={"users"} color={"#2A4580"} size={19}/>
     ),
   };
 

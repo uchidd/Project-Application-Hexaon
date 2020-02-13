@@ -43,13 +43,13 @@ const AppDrawerNavigator = createDrawerNavigator({
     initialRouteName: 'Home',
     drawerWidth : 304,
     drawerPosition : 'left',
-    drawerBackgroundColor : '#474B4F',
+    drawerBackgroundColor : '#D3D3D3',
     drawerType : 'front',
     contentOptions : {
-        activeTintColor : '#86C232',
-        activeBackgroundColor : '#6B6E70',
-        inactiveTintColor : '#61892F',
-        inactiveBackgroundColor : '#474B4F',
+        activeTintColor : '#2A4580',
+        activeBackgroundColor : '#FFFFFF',
+        inactiveTintColor : '#2A4580',
+        inactiveBackgroundColor : '#D3D3D3',
     }
 })
 

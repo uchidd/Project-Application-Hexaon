@@ -10,7 +10,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 export default class ContactBookPage extends Component {
   static navigationOptions = {
     drawerLabel: "Contact Book",
-    drawerIcon: () => <Icon name={"address-book"} color={"#86C232"} size={19} />
+    drawerIcon: () => <Icon name={"address-book"} color={"#2A4580"} size={19} />
   };
 
   constructor(props) {
