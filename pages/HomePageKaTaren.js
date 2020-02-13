@@ -27,7 +27,7 @@ export default class HomePage extends Component {
           <View style={styles.rowView}>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('AuthorityUser')}>
               <View style={styles.iconView}>
-                <Icon name={"user-cog"} color={"#86C232"} size={40} />
+                <Icon name={"user-cog"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Authority User</Text>
@@ -35,7 +35,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('AuthorityRole')}>
               <View style={styles.iconView}>
-                <Icon name={"users-cog"} color={"#86C232"} size={40} />
+                <Icon name={"users-cog"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Authority Role</Text>
@@ -43,7 +43,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Client')}>
               <View style={styles.iconView}>
-                <Icon name={"users"} color={"#86C232"} size={40} />
+                <Icon name={"users"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Client</Text>
@@ -54,7 +54,7 @@ export default class HomePage extends Component {
           <View style={styles.rowView}>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Product')}>
               <View style={styles.iconView}>
-                <Icon name={"box"} color={"#86C232"} size={40}/>
+                <Icon name={"box"} color={"#fff"} size={40}/>
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Product</Text>
@@ -62,7 +62,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Principle')}>
               <View style={styles.iconView}>
-                <Icon name={"user-tie"} color={"#86C232"} size={40} />
+                <Icon name={"user-tie"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Principle</Text>
@@ -70,7 +70,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pipeline')}>
               <View style={styles.iconView}>
-                <Icon name={"tasks"} color={"#86C232"} size={40} />
+                <Icon name={"tasks"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Pipeline</Text>
@@ -81,7 +81,7 @@ export default class HomePage extends Component {
           <View style={styles.rowView}>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('LeadProject')}>
               <View style={styles.iconView}>
-                <Icon name={"file-upload"} color={"#86C232"} size={40} />
+                <Icon name={"file-upload"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Lead Project</Text>
@@ -89,7 +89,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SalesAgenda')}>
               <View style={styles.iconView}>
-                <Icon name={"calendar-alt"} color={"#86C232"} size={40} solid={true}/>
+                <Icon name={"calendar-alt"} color={"#fff"} size={40} solid={true}/>
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Sales Agenda</Text>
@@ -97,7 +97,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('FileManagement')}>
               <View style={styles.iconView}>
-                <Icon name={"file"} color={"#86C232"} size={40} />
+                <Icon name={"file"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>File Management</Text>
@@ -108,7 +108,7 @@ export default class HomePage extends Component {
           <View style={styles.rowView}>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('FolderManagement')}>
               <View style={styles.iconView}>
-                <Icon name={"folder-open"} color={"#86C232"} size={40} />
+                <Icon name={"folder-open"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Folder Management</Text>
@@ -116,7 +116,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('ContactBook')}>
               <View style={styles.iconView}>
-                <Icon name={"address-book"} color={"#86C232"} size={40} />
+                <Icon name={"address-book"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Contact Book</Text>
@@ -124,7 +124,7 @@ export default class HomePage extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('LogSignActivity')}>
               <View style={styles.iconView}>
-                <Icon name={"history"} color={"#86C232"} size={40} />
+                <Icon name={"history"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Sign Activity</Text>
@@ -135,7 +135,7 @@ export default class HomePage extends Component {
           <View style={styles.rowView}>
             <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('LogUsersActivity')}>
               <View style={styles.iconView}>
-                <Icon name={"user-clock"} color={"#86C232"} size={40} />
+                <Icon name={"user-clock"} color={"#fff"} size={40} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Users Activity</Text>
@@ -152,7 +152,7 @@ export default class HomePage extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#6B6E70",
+    backgroundColor: "#F8F9FA",
     flexDirection: "column"
   },
   mainView: {
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   button: {
     height: 110,
     width: 110,
-    backgroundColor: "#222629",
+    backgroundColor: "#012EC9",
     alignSelf: "center",
     // flex: 1,
     // flexDirection: "column",
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     padding: 3,
     borderWidth: 3,
     borderRadius: 5,
-    borderColor: "#86C232"
+    borderColor: "#00498D"
   },
   iconView: {
     backgroundColor: "transparent",
@@ -188,17 +188,17 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   titleView: {
-    backgroundColor: "#474B4F",
+    backgroundColor: "#F8F9FA",
     flex: 1,
     margin: 3,
     borderWidth: 2,
     borderRadius: 3,
-    borderColor: "#61892F",
+    borderColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
   },
   titleText: {
-    color: "#86C232",
+    color: "#012EC9",
     fontSize: 12,
     textAlign: "center"
   }

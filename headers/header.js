@@ -11,7 +11,7 @@ export default class Header extends Component {
             <StatusBar hidden={true}/>
             <View style={styles.header} headerIconBars>
                 <View style={styles.headerIconBars}>
-                  <Icon style={styles.icon} name={'bars'} color={'#86C232'} size={24} onPress={this.props.pressIconBars}/>
+                  <Icon style={styles.icon} name={'bars'} color={'#F8F9FA'} size={24} onPress={this.props.pressIconBars}/>
                 </View>
                 <View style={styles.headerTitle}>
                   <Text style={styles.textHeader}>{this.props.title}</Text>
@@ -22,7 +22,7 @@ export default class Header extends Component {
                 <View style={styles.headerIconEllipsis}>
                   <Menu>
                       <MenuTrigger >
-                      <Icon style={styles.icon} name={'ellipsis-v'} color={'#86C232'} size={24}/>
+                      <Icon style={styles.icon} name={'ellipsis-v'} color={'#F8F9FA'} size={24}/>
                       </MenuTrigger>
                       <MenuOptions>
                       <MenuOption style={styles.menuContent} value={"Logout"} onSelect={value => alert(`You Clicked : ${value}`)}>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
     header : {
       flexDirection : "row",
-      backgroundColor : '#222629',
+      backgroundColor : '#012EC9',
       height : 56,
     }, 
     headerIconBars : {
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     },
     textHeader : {
       fontSize : 22,
-      color : "#86C232",
+      color : "#fff",
       marginLeft  : 16
     },
     menuContent : {
