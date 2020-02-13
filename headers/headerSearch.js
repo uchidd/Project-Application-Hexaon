@@ -17,7 +17,7 @@ export default class HeaderSearch extends Component {
                     // value={this.props.valueInput}
                     // onChangeText={this.props.ocText}
                     placeholder={"Search"}
-                    placeholderTextColor={"#61892F"}
+                    placeholderTextColor={"#FFFFFF"}
                     underlineColorAndroid={"transparent"}/>
                 </View>
             </View>
