@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#8ECCCC",
     borderWidth: 2,
     borderRadius: 3,
-    borderColor: "#8ECCCC"
+    borderColor: "#FFFFFF"
   },
   input: {
     borderWidth: 0,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   iconSearchView: {
     width: 40,
-    backgroundColor: "#8ECCCC",
+    backgroundColor: "#FFFFFF",
     justifyContent : "center",
     alignItems : "center"
   },
