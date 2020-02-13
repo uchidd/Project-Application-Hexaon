@@ -84,11 +84,13 @@ export default class CardClient extends Component {
         >
           <ModalDetailClient
             hideModalViewData={() => this._hideModalViewData()}
-            idModal={this.state.id}
-            nameModal={this.state.name}
-            divisionModal={this.state.division}
-            phoneModal={this.state.phone}
-            emailModal={this.state.email}
+            idModal={this.props.id}
+            nameModal={this.props.name}
+            emailModal={this.props.email}
+            phoneModal={this.props.phone}
+            addressModal={this.props.address}
+            pic_nameModal={this.props.pic_name}
+            pic_contactModal={this.props.pic_contact}
           />
         </Modal>
         <Modal

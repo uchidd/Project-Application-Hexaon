@@ -16,7 +16,7 @@ export default class ModalDetailClient extends Component{
                                 <Text style={styles.text}>ID</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>1</Text>
+                                <Text style={styles.text}>{this.props.idModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -24,15 +24,23 @@ export default class ModalDetailClient extends Component{
                                 <Text style={styles.text}>Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>BPD BANTEN</Text>
+                                <Text style={styles.text}>{this.props.nameModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
                             <View style={styles.leftView}>
-                                <Text style={styles.text}>Contact</Text>
+                                <Text style={styles.text}>Email</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>0254791734</Text>
+                                <Text style={styles.text}>{this.props.emailModal}</Text>
+                            </View>
+                        </View>
+                        <View style={styles.row}>
+                            <View style={styles.leftView}>
+                                <Text style={styles.text}>Phone</Text>
+                            </View>
+                            <View style={styles.rightView}>
+                                <Text style={styles.text}>{this.props.phoneModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -40,23 +48,15 @@ export default class ModalDetailClient extends Component{
                                 <Text style={styles.text}>Address</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>Jl. Jend. Sudirman Ruko Sembilan, Lingkungan Kemang, Kel, Sumurpecung, Kota Serang, Banten 42118</Text>
+                                <Text style={styles.text}>{this.props.addressModal}</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
                             <View style={styles.leftView}>
-                                <Text style={styles.text}>Pic Name</Text>
+                                <Text style={styles.text}>PIC Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>Cun Cun</Text>
-                            </View>
-                        </View>
-                        <View style={styles.row}>
-                            <View style={styles.leftView}>
-                                <Text style={styles.text}>PIC Contact</Text>
-                            </View>
-                            <View style={styles.rightView}>
-                                <Text style={styles.text}>087776222686</Text>
+                                <Text style={styles.text}>{this.props.pic_nameModal}</Text>
                             </View>
                         </View>
                         <View style={styles.rowBottom}>
@@ -64,7 +64,7 @@ export default class ModalDetailClient extends Component{
                                 <Text style={styles.text}>PIC Contact</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>+919880924021</Text>
+                                <Text style={styles.text}>{this.props.pic_contactModal}</Text>
                             </View>
                         </View>
                     </View>
