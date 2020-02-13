@@ -79,11 +79,11 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 0,
     borderRadius: 3,
-    borderColor: "#8ECCCC",
+    borderColor: "#2A4580",
     // borderRightWidth: 2,
     paddingLeft: 8,
     paddingRight: 8,
-    color: "#8ECCCC",
+    color: "#2A4580",
     fontSize: 20,
     flex: 1,
     backgroundColor: "#D3D3D3"
