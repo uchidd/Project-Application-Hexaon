@@ -20,6 +20,7 @@ import CardUsersActivity from './cards/cardUsersActivityLogActivity'
 import CardContact from './cards/cardContactBook';
 import ContactBookPage from './pages/ContactBookPage';
 import ModalDetailPrinciple from './modals/modalDetailPrinciple';
+import ModalOptionAction from './modals/modalOptionAction';
 
 
 export default class App extends Component {
@@ -45,6 +46,7 @@ export default class App extends Component {
             </MenuProvider>
             // <ContactBookPage/>
             // <ModalDetailPrinciple/>
+            // <ModalOptionAction/>
         )
     }
 }

@@ -73,7 +73,7 @@ export default class CardClient extends Component {
             <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
           </View>
           <View style={styles.iconView}>
-            <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
+            <Icon name={'ellipsis-v'} color={"#2A4580"} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
         <Modal
