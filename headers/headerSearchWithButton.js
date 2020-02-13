@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     color: "#8ECCCC",
     fontSize: 20,
     flex: 1,
-    backgroundColor: "#212121"
+    backgroundColor: "#D3D3D3"
   },
   iconSearchView: {
     width: 40,
