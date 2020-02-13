@@ -9,7 +9,7 @@ export default class HeaderSearch extends Component {
             <StatusBar hidden={true}/>
             <View style={styles.header}>
                 <View style={styles.headerIconBars}>
-                  <Icon style={styles.icon} name={'chevron-left'} color={'#86C232'} size={24} onPress={this.props.pressIconBack}/>
+                  <Icon style={styles.icon} name={'chevron-left'} color={'#FFFFFF'} size={24} onPress={this.props.pressIconBack}/>
                 </View>
                 <View style={styles.headerSearch}>
                     <TextInput
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         marginBottom : 8,
         paddingLeft : 8,
         paddingRight : 8,
-        color : "#86C232",
+        color : "#FFFFFF",
         fontSize : 20,
     }
 })
