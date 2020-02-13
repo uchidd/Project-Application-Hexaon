@@ -209,7 +209,7 @@ export default class ClientPage extends Component {
               this.props.navigation.dispatch(DrawerActions.openDrawer())
             }
             pressIconSearch={() => this._showSearch()}
-            iconSearchColor={"#86C232"}
+            iconSearchColor={"#FFFFFF"}
           />
         ) : null}
 
@@ -249,7 +249,7 @@ export default class ClientPage extends Component {
           style={styles.TouchableOpacityStyle}
         >
           <Animated.View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#222629"} size={24} />
+            <Icon name={"plus"} color={"#FFFFFF"} size={24} />
           </Animated.View>
         </TouchableOpacity> : null}
 
@@ -261,7 +261,7 @@ export default class ClientPage extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#6B6E70"
+    backgroundColor: "#D3D3D3"
   },
   TouchableOpacityStyle: {
     position: "absolute",
@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
   },
 
   fabCircle: {
-    backgroundColor: "#86C232",
+    backgroundColor: "#2A4580",
     resizeMode: "contain",
     width: 56,
     height: 56,

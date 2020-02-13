@@ -49,7 +49,7 @@ export default class LeadProjectPage extends Component{
               this.props.navigation.dispatch(DrawerActions.openDrawer())
             }
             pressIconSearch={() => this._showSearch()}
-            iconSearchColor={"#86C232"}
+            iconSearchColor={"#FFFFFF"}
           />
         ) : null}
 
@@ -187,7 +187,7 @@ export default class LeadProjectPage extends Component{
 const styles = StyleSheet.create({
   container : {
     flex: 1,
-    backgroundColor: '#6B6E70'
+    backgroundColor: '#D3D3D3'
   },
   TouchableOpacityStyle: {
     position: "absolute",
