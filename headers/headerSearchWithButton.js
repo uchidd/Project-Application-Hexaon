@@ -12,7 +12,7 @@ export default class HeaderSearchWithButton extends Component {
             <Icon
               style={styles.icon}
               name={"chevron-left"}
-              color={"#8ECCCC"}
+              color={"#FFFFFF"}
               size={24}
               onPress={this.props.pressIconBack}
             />
