@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, StatusBar, TouchableOpacity } from "react-native";
 
-export default class ModalDetailPrinciple extends Component{
+export default class ModalDetailClient extends Component{
     render(){
         return(
             <View style={styles.container}>
@@ -24,23 +24,15 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>FIORANO</Text>
+                                <Text style={styles.text}>BPD BANTEN</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
                             <View style={styles.leftView}>
-                                <Text style={styles.text}>Email</Text>
+                                <Text style={styles.text}>Contact</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>rajesh.rao@fiorano.com</Text>
-                            </View>
-                        </View>
-                        <View style={styles.row}>
-                            <View style={styles.leftView}>
-                                <Text style={styles.text}>Phone</Text>
-                            </View>
-                            <View style={styles.rightView}>
-                                <Text style={styles.text}>+919880924021</Text>
+                                <Text style={styles.text}>0254791734</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -48,15 +40,23 @@ export default class ModalDetailPrinciple extends Component{
                                 <Text style={styles.text}>Address</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>India</Text>
+                                <Text style={styles.text}>Jl. Jend. Sudirman Ruko Sembilan, Lingkungan Kemang, Kel, Sumurpecung, Kota Serang, Banten 42118</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
                             <View style={styles.leftView}>
-                                <Text style={styles.text}>PIC Name</Text>
+                                <Text style={styles.text}>Pic Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>Rajesh Rao</Text>
+                                <Text style={styles.text}>Cun Cun</Text>
+                            </View>
+                        </View>
+                        <View style={styles.row}>
+                            <View style={styles.leftView}>
+                                <Text style={styles.text}>PIC Contact</Text>
+                            </View>
+                            <View style={styles.rightView}>
+                                <Text style={styles.text}>087776222686</Text>
                             </View>
                         </View>
                         <View style={styles.rowBottom}>
