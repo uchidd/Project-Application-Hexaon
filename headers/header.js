@@ -74,11 +74,11 @@ const styles = StyleSheet.create({
     },
     menuContent : {
       justifyContent : "center",
-      backgroundColor : '#474B4F',
+      backgroundColor : '#FFFFFF',
     },
     menuText : {
       fontSize : 16, 
-      color : "#86C232",
+      color : "#2A4580",
       margin : 16
     }
 })

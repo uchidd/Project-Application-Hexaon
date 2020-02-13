@@ -215,17 +215,16 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    color: "#86C232",
+    color: "#2A4580"
   },
   picker: {
     borderWidth: 1,
-    borderColor: '#CCCCCC',
+    borderColor: "#2A4580",
     borderRadius: 3,
-    borderColor: '#222629'
   },
   input: {
     borderWidth: 1,
-    borderColor: '#222629',
+    borderColor: '#2A4580',
     borderRadius: 3,
     paddingStart: 10,
     paddingEnd: 10,
@@ -234,16 +233,16 @@ const styles = StyleSheet.create({
   },
   btnSave: {
     height: 40,
-    backgroundColor: '#222629',
+    backgroundColor: '#2A4580',
     borderWidth: 1,
-    borderColor: '#86C232',
+    borderColor: '#FFFFFF',
     borderRadius: 3,
     justifyContent: 'center',
     marginTop: 6
   },
   textSave: {
     fontSize: 20,
-    color: '#86C232',
+    color: '#FFFFFF',
     textAlign: 'center'
   }
 })
