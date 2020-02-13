@@ -29,7 +29,7 @@ export default class HeaderSearchWithButton extends Component {
               <View style={styles.iconSearchView}>
                 <Icon
                   name={"search"}
-                  color={"#212121"}
+                  color={"#2A4580"}
                   size={20}
                   onPress={this.props.searchFunction}
                 />
