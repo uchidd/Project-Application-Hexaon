@@ -197,7 +197,9 @@ export default class ProductPage extends Component {
             data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardProduct
-                name={item.name}
+              id={item.id}
+              name={item.name}
+              description={item.description}
               />
             )}
             enableEmptySections={true}

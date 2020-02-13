@@ -8,15 +8,20 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import ModalViewData from '../modals/modalViewData'
+import ModalOptionAction from '../modals/modalOptionAction'
+import ModalEditData from '../modals/modalEditData'
+import ModalAlertDialog from '../modals/modalAlertDialog'
+import ModalDetailPipeline from "../modals/modalDetailPipeline";
 
 export default class CardPipeline extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // isModalViewDataVisible: false,
-      // isModalOptionActionVisible: false,
-      // isModalEditDataVisible: false,
-      // isModalAlertDialogVisible: false,
+      isModalViewDataVisible: false,
+      isModalOptionActionVisible: false,
+      isModalEditDataVisible: false,
+      isModalAlertDialogVisible: false,
     };
   }
 
@@ -71,19 +76,17 @@ export default class CardPipeline extends Component {
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
-        {/* <Modal
+        <Modal
           animationType={"fade"}
           transparent={true}
           visible={this.state.isModalViewDataVisible}
           onRequestClose={() => this._hideModalViewData()}
         >
-          <ModalViewData
+          <ModalDetailPipeline
             hideModalViewData={() => this._hideModalViewData()}
-            idModal={this.state.id}
-            nameModal={this.state.name}
-            divisionModal={this.state.division}
-            phoneModal={this.state.phone}
-            emailModal={this.state.email}
+            idModal={this.props.id}
+            nameModal={this.props.name}
+            descriptionModal={this.props.description}
           />
         </Modal>
         <Modal
@@ -133,7 +136,7 @@ export default class CardPipeline extends Component {
               this._hideModalAlertDialogAndModalOptionAction()
             }
           />
-        </Modal> */}
+        </Modal>
       </View>
     );
   }

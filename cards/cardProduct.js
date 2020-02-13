@@ -8,6 +8,11 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import ModalViewData from '../modals/modalViewData'
+import ModalOptionAction from '../modals/modalOptionAction'
+import ModalEditData from '../modals/modalEditData'
+import ModalAlertDialog from '../modals/modalAlertDialog'
+import ModalDetailProduct from "../modals/modalDetailProduct";
 
 export default class CardProduct extends Component {
   constructor(props) {
@@ -16,12 +21,7 @@ export default class CardProduct extends Component {
       isModalViewDataVisible: false,
       isModalOptionActionVisible: false,
       isModalEditDataVisible: false,
-      isModalAlertDialogVisible: false,
-      id: this.props.idText,
-      name: this.props.nameText,
-      division: this.props.divisionText,
-      phone: this.props.phoneText,
-      email: this.props.emailText
+      isModalAlertDialogVisible: false
     };
   }
 
@@ -76,19 +76,17 @@ export default class CardProduct extends Component {
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
-        {/* <Modal
+        <Modal
           animationType={"fade"}
           transparent={true}
           visible={this.state.isModalViewDataVisible}
           onRequestClose={() => this._hideModalViewData()}
         >
-          <ModalViewData
+          <ModalDetailProduct
             hideModalViewData={() => this._hideModalViewData()}
-            idModal={this.state.id}
-            nameModal={this.state.name}
-            divisionModal={this.state.division}
-            phoneModal={this.state.phone}
-            emailModal={this.state.email}
+            idModal={this.props.id}
+            nameModal={this.props.name}
+            descriptionModal={this.props.description}
           />
         </Modal>
         <Modal
@@ -138,7 +136,7 @@ export default class CardProduct extends Component {
               this._hideModalAlertDialogAndModalOptionAction()
             }
           />
-        </Modal> */}
+        </Modal>
       </View>
     );
   }

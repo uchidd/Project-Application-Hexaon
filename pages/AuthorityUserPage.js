@@ -219,8 +219,11 @@ export default class AuthorityUserPage extends Component {
             data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardUserAuthority
-                name={item.name}
+                id={item.id}
                 nik={item.nik}
+                name={item.name}
+                email={item.email}
+                phone={item.phone}
               />
             )}
             enableEmptySections={true}
