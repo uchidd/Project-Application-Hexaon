@@ -23,7 +23,7 @@ export default class HeaderSearchWithButton extends Component {
                 style={styles.input}
                 onChangeText={this.props.ocText}
                 placeholder={"Search"}
-                placeholderTextColor={"#50717B"}
+                placeholderTextColor={"#2A4580"}
                 underlineColorAndroid={"transparent"}
               />
               <View style={styles.iconSearchView}>
