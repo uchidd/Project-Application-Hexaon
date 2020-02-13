@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   nameText:{
     fontSize: 20,
-    color:"#2A4580",
+    color: "#2A4580",
     marginLeft: 16
   }
 });

@@ -73,7 +73,7 @@ export default class CardClient extends Component {
             <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
           </View>
           <View style={styles.iconView}>
-            <Icon name={'ellipsis-v'} color={"#2A4580"} size={20} onPress={() => this._showModalOptionAction()}/>
+            <Icon name={'ellipsis-v'} color={'#2A4580'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
         <Modal
@@ -154,12 +154,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 6,
     marginVertical: 3, 
     height: 56,
-    backgroundColor: "#222629",
+    backgroundColor: "#FFFFFF",
     borderWidth: 2,
-    borderColor: "#86C232",
+    borderColor: "#FFFFFF",
     borderRadius: 3,
     flexDirection: "row",
-    elevation: 9
+    // elevation: 9
   },
   nameView: {
     backgroundColor: "transparent",
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
   },
   nameText:{
     fontSize: 20,
-    color:"#86C232",
+    color: "#2A4580",
     marginLeft: 16
   }
 });

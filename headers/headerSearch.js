@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     },
     header : {
       flexDirection : "row",
-      backgroundColor : '#222629',
+      backgroundColor : '#2A4580',
       height : 56,
     }, 
     headerIconBars : {

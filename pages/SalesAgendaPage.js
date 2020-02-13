@@ -47,7 +47,7 @@ export default class SalesAgendaPage extends Component{
               this.props.navigation.dispatch(DrawerActions.openDrawer())
             }
             pressIconSearch={() => this._showSearch()}
-            iconSearchColor={"#86C232"}
+            iconSearchColor={"#FFFFFF"}
           />
         ) : null}
 
@@ -69,7 +69,7 @@ export default class SalesAgendaPage extends Component{
           style={styles.TouchableOpacityStyle}
         >
           <View style={styles.fabCircle}>
-            <Icon name={"plus"} color={"#86C232"} size={24} />
+            <Icon name={"plus"} color={"#FFFFFF"} size={24} />
           </View>
         </TouchableOpacity>
 
@@ -79,28 +79,28 @@ export default class SalesAgendaPage extends Component{
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex: 1,
-        backgroundColor: '#6B6E70'
-    },
-    TouchableOpacityStyle: {
-      position: "absolute",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      right: 16,
-      bottom: 16
-    },
+  container : {
+      flex: 1,
+       backgroundColor: '#D3D3D3'
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
   
-    fabCircle: {
-      backgroundColor: "#222629",
-      resizeMode: "contain",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 50,
-      elevation: 9,
-    }
+  fabCircle: {
+    backgroundColor: "#2A4580",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9,
+  }
 })
