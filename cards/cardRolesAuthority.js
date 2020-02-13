@@ -7,16 +7,57 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
+import ModalViewData from '../modals/modalViewData'
+import ModalOptionAction from '../modals/modalOptionAction'
+import ModalEditData from '../modals/modalEditData'
+import ModalAlertDialog from '../modals/modalAlertDialog'
+import ModalDetailPrinciple from "../modals/modalDetailPrinciple";
 
 export default class CardRoles extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // isModalViewDataVisible: false,
-      // isModalOptionActionVisible: false,
-      // isModalEditDataVisible: false,
-      // isModalAlertDialogVisible: false,
+      isModalViewDataVisible: false,
+      isModalOptionActionVisible: false,
+      isModalEditDataVisible: false,
+      isModalAlertDialogVisible: false,
     };
+  }
+
+  _showModalViewData() {
+    this.setState({ isModalViewDataVisible: true });
+  }
+
+  _hideModalViewData() {
+    this.setState({ isModalViewDataVisible: false });
+  }
+
+  _showModalOptionAction() {
+    this.setState({ isModalOptionActionVisible: true });
+  }
+
+  _hideModalOptionAction() {
+    this.setState({ isModalOptionActionVisible: false });
+  }
+
+  _hideModalOptionActionAndShowModalEditData() {
+    this.setState({ isModalOptionActionVisible: false });
+    this.setState({ isModalEditDataVisible: true });
+  }
+
+  _hideModalEditDataAndModalOptionAction() {
+    this.setState({ isModalEditDataVisible: false });
+    this.setState({ isModalOptionActionVisible: true });
+  }
+
+  _hideModalOptionActionAndShowModalAlertDialog() {
+    this.setState({ isModalOptionActionVisible: false });
+    this.setState({ isModalAlertDialogVisible: true });
+  }
+
+  _hideModalAlertDialogAndModalOptionAction() {
+    this.setState({ isModalAlertDialogVisible: false });
+    this.setState({ isModalOptionActionVisible: true });
   }
 
   render() {

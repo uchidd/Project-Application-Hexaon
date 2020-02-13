@@ -12,7 +12,7 @@ import ModalViewData from '../modals/modalViewData'
 import ModalOptionAction from '../modals/modalOptionAction'
 import ModalEditData from '../modals/modalEditData'
 import ModalAlertDialog from '../modals/modalAlertDialog'
-import ModalDetailPrinciple from "../modals/modalDetailPrinciple";
+import ModalDetailPrinciple from '../modals/modalDetailPrinciple'
 
 export default class CardUserAuthority extends Component {
   constructor(props) {
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     borderColor: "#86C232",
     borderRadius: 3,
     flexDirection: "row",
-    elevation: 9
+    elevation: 9,
   },
   nameView: {
     backgroundColor: "transparent",

@@ -69,10 +69,10 @@ export default class ModalDetailPrinciple extends Component{
                         </View>
                     </View>
                     
-                    <TouchableOpacity onPress={this.props.hideModalViewData} style={styles.button}>
-                        <Text style={styles.textTitle}>Close</Text>
-                    </TouchableOpacity>
                 </View>
+                <TouchableOpacity onPress={this.props.hideModalViewData} style={styles.button}>
+                    <Text style={styles.textTitle}>Close</Text>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -85,17 +85,16 @@ const styles = StyleSheet.create({
         padding : 3,
         flexDirection : "column",
         justifyContent : "center",
-        flex : 1,
-        alignItems: "center"
+        flex : 1
     },
     mainView : {
         alignSelf : "stretch",
-        backgroundColor : "#373834",
+        backgroundColor : "#222629",
         margin : 3,
         padding : 3,
         flexDirection : "column",
         borderRadius : 3,
-        borderColor : "#152642",
+        borderColor : "#86C232",
         borderWidth : 2
     },
     titleView : {
@@ -108,15 +107,15 @@ const styles = StyleSheet.create({
     },
     textTitle : {
         fontSize : 24,
-        color : "#FFFFFF",
+        color : "#86C232",
     },
     contentView : {
         alignSelf : "stretch",
-        backgroundColor : "#373834",
+        backgroundColor : "#474B4F",
         margin : 3,
         flexDirection : "column",
         borderRadius : 3,
-        borderColor : "#152642",
+        borderColor : "#86C232",
         borderWidth : 2,
     },
     topRow : {
@@ -124,13 +123,13 @@ const styles = StyleSheet.create({
         backgroundColor : "transparent",
         flexDirection : "row",
         borderBottomWidth : 1,
-        borderBottomColor : "#152642",
+        borderBottomColor : "#86C232",
     },
     leftView : {
         alignSelf : "stretch",
         backgroundColor : "transparent",
         borderRightWidth : 1,
-        borderRightColor : "#152642",
+        borderRightColor : "#86C232",
         width : 100,
         padding : 3,
         justifyContent : "center"
@@ -139,14 +138,14 @@ const styles = StyleSheet.create({
         alignSelf : "stretch",
         backgroundColor : "transparent",
         borderLeftWidth : 1,
-        borderLeftColor : "#152642",
+        borderLeftColor : "#86C232",
         padding : 3,
         flex : 1,
         justifyContent : "center"
     },
     text : {
         fontSize : 16,
-        color : "#FFFFFF",
+        color : "#86C232",
         margin : 3
     },
     row : {
@@ -154,25 +153,25 @@ const styles = StyleSheet.create({
         backgroundColor : "transparent",
         flexDirection : "row",
         borderBottomWidth : 1,
-        borderBottomColor : "#152642",
-        borderTopColor : "#152642",
+        borderBottomColor : "#86C232",
+        borderTopColor : "#86C232",
         borderTopWidth : 1,
     },
     rowBottom : {
         alignSelf : "stretch",
         backgroundColor : "transparent",
         flexDirection : "row",
-        borderTopColor : "#152642",
+        borderTopColor : "#86C232",
         borderTopWidth : 1,
     },
     button : {
         height : 50,
-        backgroundColor : "#373834",
+        backgroundColor : "#222629",
         margin : 3,
         padding : 3,
         flexDirection : "column",
         borderRadius : 3,
-        borderColor : "#152642",
+        borderColor : "#86C232",
         borderWidth : 2,
         justifyContent : "center",
         alignItems : "center"

@@ -8,15 +8,20 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import ModalViewData from '../modals/modalViewData'
+import ModalOptionAction from '../modals/modalOptionAction'
+import ModalEditData from '../modals/modalEditData'
+import ModalAlertDialog from '../modals/modalAlertDialog'
+import ModalDetailClient from '../modals/modalDetailClient'
 
 export default class CardClient extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // isModalViewDataVisible: false,
-      // isModalOptionActionVisible: false,
-      // isModalEditDataVisible: false,
-      // isModalAlertDialogVisible: false,
+      isModalViewDataVisible: false,
+      isModalOptionActionVisible: false,
+      isModalEditDataVisible: false,
+      isModalAlertDialogVisible: false,
     };
   }
 
@@ -71,13 +76,13 @@ export default class CardClient extends Component {
             <Icon name={'ellipsis-v'} color={'#86C232'} size={20} onPress={() => this._showModalOptionAction()}/>
           </View>
         </TouchableOpacity>
-        {/* <Modal
+        <Modal
           animationType={"fade"}
           transparent={true}
           visible={this.state.isModalViewDataVisible}
           onRequestClose={() => this._hideModalViewData()}
         >
-          <ModalViewData
+          <ModalDetailClient
             hideModalViewData={() => this._hideModalViewData()}
             idModal={this.state.id}
             nameModal={this.state.name}
@@ -133,7 +138,7 @@ export default class CardClient extends Component {
               this._hideModalAlertDialogAndModalOptionAction()
             }
           />
-        </Modal> */}
+        </Modal>
       </View>
     );
   }
