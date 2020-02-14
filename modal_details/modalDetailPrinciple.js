@@ -93,6 +93,27 @@ const styles = StyleSheet.create({
         padding : 3,
         flexDirection : "column",
         borderRadius : 5,
+<<<<<<< HEAD
+=======
+    },
+    container: {
+        alignSelf: "stretch",
+        backgroundColor: "rgba(33, 33, 33, 0.7)",
+        padding: 3,
+        flexDirection: "column",
+        justifyContent: "center",
+        flex: 1
+    },
+    mainView: {
+        alignSelf: "stretch",
+        backgroundColor: "#FFFFFF",
+        margin: 3,
+        padding: 3,
+        flexDirection: "column",
+        borderRadius: 5,
+        borderColor: "#FFFFFF",
+        borderWidth: 2
+>>>>>>> 839b09ce118e0c0348aa8d48152246b56d9d64b3
     },
     titleView: {
         backgroundColor: "transparent",
@@ -114,6 +135,18 @@ const styles = StyleSheet.create({
         borderRadius : 5,
         borderColor : "#2A4580",
         borderWidth : 2,
+<<<<<<< HEAD
+=======
+    },
+    contentView: {
+        alignSelf: "stretch",
+        backgroundColor: "#D3D3D3",
+        margin: 3,
+        flexDirection: "column",
+        borderRadius: 3,
+        borderColor: "#2A4580",
+        borderWidth: 2,
+>>>>>>> 839b09ce118e0c0348aa8d48152246b56d9d64b3
     },
     topRow: {
         alignSelf: "stretch",
@@ -174,5 +207,20 @@ const styles = StyleSheet.create({
     textButton : {
         fontSize : 24,
         color : "#FFFFFF",
+<<<<<<< HEAD
+=======
+    },
+    button: {
+        height: 50,
+        backgroundColor: "#FFFFFF",
+        margin: 3,
+        padding: 3,
+        flexDirection: "column",
+        borderRadius: 5,
+        borderColor: "#FFFFFF",
+        borderWidth: 2,
+        justifyContent: "center",
+        alignItems: "center"
+>>>>>>> 839b09ce118e0c0348aa8d48152246b56d9d64b3
     }
 })
