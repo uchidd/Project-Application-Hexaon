@@ -21,12 +21,8 @@ import CardContact from './cards/cardContactBook';
 import ContactBookPage from './pages/ContactBookPage';
 import ModalDetailPrinciple from './modal_details/modalDetailPrinciple';
 import ModalOptionAction from './modal/modalOptionAction';
-<<<<<<< HEAD
 import ModalEditPrinciple from './modal_edit/modalEditPrinciple';
 
-=======
-import ModalEditPrinciple from "./modal_edit/modalEditPrinciple";
->>>>>>> 839b09ce118e0c0348aa8d48152246b56d9d64b3
 
 export default class App extends Component {
 
