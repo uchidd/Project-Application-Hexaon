@@ -21,10 +21,7 @@ import CardContact from './cards/cardContactBook';
 import ContactBookPage from './pages/ContactBookPage';
 import ModalDetailPrinciple from './modal_details/modalDetailPrinciple';
 import ModalOptionAction from './modal/modalOptionAction';
-<<<<<<< HEAD
 import ModalEditPrinciple from "./modal_edit/modalEditPrinciple";
-=======
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2
 
 
 export default class App extends Component {
@@ -45,13 +42,13 @@ export default class App extends Component {
             // <CardContact/>
             // <LoginPage/>
             // <ModalDetailsContactBook/>
-            // <MenuProvider>
-            //     <DrawerNavigator/>
-            // </MenuProvider>
+            <MenuProvider>
+                <DrawerNavigator/>
+            </MenuProvider>
             // <ContactBookPage/>
             // <ModalDetailPrinciple/>
             // <ModalOptionAction/>
-            <ModalEditPrinciple/>
+            // <ModalEditPrinciple/>
         )
     }
 }

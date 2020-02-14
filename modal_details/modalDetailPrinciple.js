@@ -93,8 +93,6 @@ const styles = StyleSheet.create({
         padding : 3,
         flexDirection : "column",
         borderRadius : 5,
-<<<<<<< HEAD:modal_details/modalDetailPrinciple.js
-=======
     },
     container: {
         alignSelf: "stretch",
@@ -113,7 +111,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor: "#FFFFFF",
         borderWidth: 2
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2:modal details/modalDetailPrinciple.js
     },
     titleView: {
         backgroundColor: "transparent",
@@ -135,8 +132,6 @@ const styles = StyleSheet.create({
         borderRadius : 5,
         borderColor : "#2A4580",
         borderWidth : 2,
-<<<<<<< HEAD:modal_details/modalDetailPrinciple.js
-=======
     },
     contentView: {
         alignSelf: "stretch",
@@ -146,7 +141,6 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         borderColor: "#2A4580",
         borderWidth: 2,
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2:modal details/modalDetailPrinciple.js
     },
     topRow: {
         alignSelf: "stretch",
@@ -207,8 +201,6 @@ const styles = StyleSheet.create({
     textButton : {
         fontSize : 24,
         color : "#FFFFFF",
-<<<<<<< HEAD:modal_details/modalDetailPrinciple.js
-=======
     },
     button: {
         height: 50,
@@ -221,6 +213,5 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         justifyContent: "center",
         alignItems: "center"
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2:modal details/modalDetailPrinciple.js
     }
 })
