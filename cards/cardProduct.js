@@ -73,7 +73,7 @@ export default class CardProduct extends Component {
             <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
           </View>
           <View style={styles.iconView}>
-            <Icon name={'ellipsis-v'} color={'#2A4580'} size={20} onPress={() => this._showModalOptionAction()}/>
+            <Icon name={'ellipsis-v'} color={'#2A4580'} size={20} onPress={() => this._showModalOptionAction()} />
           </View>
         </TouchableOpacity>
         <Modal
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   },
   firstLayer: {
     marginHorizontal: 6,
-    marginVertical: 3, 
+    marginVertical: 3,
     height: 56,
     backgroundColor: "#FFFFFF",
     borderWidth: 2,
@@ -162,15 +162,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center"
   },
-  iconView:{
+  iconView: {
     backgroundColor: "transparent",
     width: 40,
     justifyContent: "center",
     alignItems: "center"
   },
-  nameText:{
+  nameText: {
     fontSize: 20,
-    color:"#2A4580",
+    color: "#2A4580",
     marginLeft: 16
   }
 });
