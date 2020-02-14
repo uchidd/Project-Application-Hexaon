@@ -38,47 +38,47 @@ export default class Header extends Component {
 }
 
 const styles = StyleSheet.create({
-    container : {
-        backgroundColor: 'transparent',
-        elevation: 10
+  container : {
+    backgroundColor: 'transparent',
+    elevation: 10
+  },
+  header : {
+    flexDirection : "row",
+    backgroundColor : '#2A4580',
+    height : 56,
+  }, 
+  headerIconBars : {
+    backgroundColor : 'transparent',
+    height : 56,
+    width : 56
+  },
+  headerTitle : {
+    flex : 1,
+    justifyContent : "center"
+  },
+  headerIconSearch : {
+    backgroundColor : 'transparent',
+    height : 56
+  },
+  headerIconEllipsis : {
+    backgroundColor : 'transparent',
+    height : 56,
+  },
+  icon : {
+    margin : 16
+  },
+  textHeader : {
+    fontSize : 22,
+    color : "#fff",
+    marginLeft  : 16
+  },
+  menuContent : {
+    justifyContent : "center",
+    backgroundColor : '#FFFFFF',
     },
-    header : {
-      flexDirection : "row",
-      backgroundColor : '#2A4580',
-      height : 56,
-    }, 
-    headerIconBars : {
-      backgroundColor : 'transparent',
-      height : 56,
-      width : 56
-    },
-    headerTitle : {
-      flex : 1,
-      justifyContent : "center"
-    },
-    headerIconSearch : {
-      backgroundColor : 'transparent',
-      height : 56
-    },
-    headerIconEllipsis : {
-      backgroundColor : 'transparent',
-      height : 56,
-    },
-    icon : {
-      margin : 16
-    },
-    textHeader : {
-      fontSize : 22,
-      color : "#fff",
-      marginLeft  : 16
-    },
-    menuContent : {
-      justifyContent : "center",
-      backgroundColor : '#FFFFFF',
-    },
-    menuText : {
-      fontSize : 16, 
-      color : "#2A4580",
-      margin : 16
-    }
+  menuText : {
+    fontSize : 16, 
+    color : "#2A4580",
+    margin : 16
+  }
 })
