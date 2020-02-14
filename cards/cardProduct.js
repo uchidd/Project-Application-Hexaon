@@ -8,11 +8,10 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import ModalViewData from '../modals/modalViewData'
-import ModalOptionAction from '../modals/modalOptionAction'
-import ModalEditData from '../modals/modalEditData'
-import ModalAlertDialog from '../modals/modalAlertDialog'
-import ModalDetailProduct from "../modals/modalDetailProduct";
+import ModalOptionAction from '../modal/modalOptionAction';
+import ModalEditData from '../modal_edit/modalEditData';
+import ModalAlertDialog from '../modal/modalAlertDialog';
+import ModalDetailProduct from "../modal_details/modalDetailProduct";
 
 export default class CardProduct extends Component {
   constructor(props) {

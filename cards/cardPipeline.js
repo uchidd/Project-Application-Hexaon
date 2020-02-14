@@ -8,11 +8,10 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import ModalViewData from '../modals/modalViewData'
-import ModalOptionAction from '../modals/modalOptionAction'
-import ModalEditData from '../modals/modalEditData'
-import ModalAlertDialog from '../modals/modalAlertDialog'
-import ModalDetailPipeline from "../modals/modalDetailPipeline";
+import ModalOptionAction from '../modal/modalOptionAction'
+import ModalEditData from '../modal_edit/modalEditData'
+import ModalAlertDialog from '../modal/modalAlertDialog'
+import ModalDetailPipeline from "../modal_details/modalDetailPipeline";
 
 export default class CardPipeline extends Component {
   constructor(props) {

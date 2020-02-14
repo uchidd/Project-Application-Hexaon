@@ -79,7 +79,6 @@ export default class ModalDetailPrinciple extends Component {
 }
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD:modal details/modalDetailPrinciple.js
     container : {
         backgroundColor : "rgba(211, 211, 211, 0.5)",
         padding : 3,
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
         padding : 3,
         flexDirection : "column",
         borderRadius : 5,
-=======
+    },
     container: {
         alignSelf: "stretch",
         backgroundColor: "rgba(33, 33, 33, 0.7)",
@@ -112,7 +111,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor: "#FFFFFF",
         borderWidth: 2
->>>>>>> 5377556bccb49dc3a525602736e87ec1d4c95f3e:modals/modalDetailPrinciple.js
     },
     titleView: {
         backgroundColor: "transparent",
@@ -126,7 +124,6 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: "#2A4580",
     },
-<<<<<<< HEAD:modal details/modalDetailPrinciple.js
     contentView : {
         alignSelf : "stretch",
         backgroundColor : "#D3D3D3",
@@ -135,7 +132,7 @@ const styles = StyleSheet.create({
         borderRadius : 5,
         borderColor : "#2A4580",
         borderWidth : 2,
-=======
+    },
     contentView: {
         alignSelf: "stretch",
         backgroundColor: "#D3D3D3",
@@ -144,7 +141,6 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         borderColor: "#2A4580",
         borderWidth: 2,
->>>>>>> 5377556bccb49dc3a525602736e87ec1d4c95f3e:modals/modalDetailPrinciple.js
     },
     topRow: {
         alignSelf: "stretch",
@@ -192,7 +188,6 @@ const styles = StyleSheet.create({
         borderTopColor: "#2A4580",
         borderTopWidth: 1,
     },
-<<<<<<< HEAD:modal details/modalDetailPrinciple.js
     button : {
         height : 50,
         backgroundColor : "#2A4580",
@@ -206,7 +201,7 @@ const styles = StyleSheet.create({
     textButton : {
         fontSize : 24,
         color : "#FFFFFF",
-=======
+    },
     button: {
         height: 50,
         backgroundColor: "#FFFFFF",
@@ -218,6 +213,5 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         justifyContent: "center",
         alignItems: "center"
->>>>>>> 5377556bccb49dc3a525602736e87ec1d4c95f3e:modals/modalDetailPrinciple.js
     }
-}) 
+})
