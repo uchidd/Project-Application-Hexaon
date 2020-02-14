@@ -23,7 +23,6 @@ import ModalDetailPrinciple from './modal_details/modalDetailPrinciple';
 import ModalOptionAction from './modal/modalOptionAction';
 import ModalEditPrinciple from "./modal_edit/modalEditPrinciple";
 
-
 export default class App extends Component {
 
     render() {
