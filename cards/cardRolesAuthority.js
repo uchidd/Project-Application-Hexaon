@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Modal
 } from "react-native";
-import ModalViewData from '../modals/modalViewData'
 import ModalOptionAction from '../modal/modalOptionAction'
 import ModalEditData from '../modal_edit/modalEditData'
 import ModalAlertDialog from '../modal/modalAlertDialog'
