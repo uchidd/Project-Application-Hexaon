@@ -16,7 +16,7 @@ export default class ModalDetailPrinciple extends Component {
                                 <Text style={styles.text}>ID</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <Text style={styles.text}>{this.props.idModal}</Text>
+                                <Text style={styles.text}>LALALALALLALALALAAL</Text>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -80,7 +80,7 @@ export default class ModalDetailPrinciple extends Component {
 
 const styles = StyleSheet.create({
     container : {
-        backgroundColor : "rgba(211, 211, 211, 0.5)",
+        backgroundColor : "rgba(211, 211, 211, 0.7)",
         padding : 3,
         flexDirection : "column",
         justifyContent : "center",
@@ -93,27 +93,6 @@ const styles = StyleSheet.create({
         padding : 3,
         flexDirection : "column",
         borderRadius : 5,
-<<<<<<< HEAD:modal_details/modalDetailPrinciple.js
-=======
-    },
-    container: {
-        alignSelf: "stretch",
-        backgroundColor: "rgba(33, 33, 33, 0.7)",
-        padding: 3,
-        flexDirection: "column",
-        justifyContent: "center",
-        flex: 1
-    },
-    mainView: {
-        alignSelf: "stretch",
-        backgroundColor: "#FFFFFF",
-        margin: 3,
-        padding: 3,
-        flexDirection: "column",
-        borderRadius: 5,
-        borderColor: "#FFFFFF",
-        borderWidth: 2
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2:modal details/modalDetailPrinciple.js
     },
     titleView: {
         backgroundColor: "transparent",
@@ -135,18 +114,6 @@ const styles = StyleSheet.create({
         borderRadius : 5,
         borderColor : "#2A4580",
         borderWidth : 2,
-<<<<<<< HEAD:modal_details/modalDetailPrinciple.js
-=======
-    },
-    contentView: {
-        alignSelf: "stretch",
-        backgroundColor: "#D3D3D3",
-        margin: 3,
-        flexDirection: "column",
-        borderRadius: 3,
-        borderColor: "#2A4580",
-        borderWidth: 2,
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2:modal details/modalDetailPrinciple.js
     },
     topRow: {
         alignSelf: "stretch",
@@ -207,20 +174,5 @@ const styles = StyleSheet.create({
     textButton : {
         fontSize : 24,
         color : "#FFFFFF",
-<<<<<<< HEAD:modal_details/modalDetailPrinciple.js
-=======
-    },
-    button: {
-        height: 50,
-        backgroundColor: "#FFFFFF",
-        margin: 3,
-        padding: 3,
-        flexDirection: "column",
-        borderRadius: 5,
-        borderColor: "#FFFFFF",
-        borderWidth: 2,
-        justifyContent: "center",
-        alignItems: "center"
->>>>>>> 33291b86304d0cb45275e19e8156de6646ed22e2:modal details/modalDetailPrinciple.js
     }
 })
