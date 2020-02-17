@@ -63,104 +63,105 @@ export default class LeadProjectPage extends Component{
 
         <ScrollView>
           <View style={styles.firstLayer}>
-            <View>
-              <Text style={styles.text}>Client</Text>
-              <View style={styles.picker}>
-                <Picker
-                  style={{height: 40}}
-                  selectedValue={this.state.PickerSelectedVal}
-                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+            <View style={styles.secondLayer}>
+              <View>
+                <Text style={styles.text}>Client</Text>
+                <View style={styles.picker}>
+                  <Picker
+                    style={{height: 40}}
+                    selectedValue={this.state.PickerSelectedVal}
+                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
-                  <Picker.Item label="BPD BANTEN" value="BPD BANTEN" />
-                  <Picker.Item label="BANK COMMONWEALTH" value="BANK COMMONWEALTH" />
-                  <Picker.Item label="BANK DANAMON" value="BANK DANAMON" />
-                  <Picker.Item label="BANK MAYBANK INDONESIA" value="BANK MAYBANK INDONESIA" />
-                  <Picker.Item label="BANK TABUNGAN NEGARA (BTN)" value="BANK TABUNGAN NEGARA (BTN)" />
-                </Picker>
+                    <Picker.Item label="BPD BANTEN" value="BPD BANTEN" />
+                    <Picker.Item label="BANK COMMONWEALTH" value="BANK COMMONWEALTH" />
+                    <Picker.Item label="BANK DANAMON" value="BANK DANAMON" />
+                    <Picker.Item label="BANK MAYBANK INDONESIA" value="BANK MAYBANK INDONESIA" />
+                    <Picker.Item label="BANK TABUNGAN NEGARA (BTN)" value="BANK TABUNGAN NEGARA (BTN)" />
+                  </Picker>
+                </View>
               </View>
-            </View>
 
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Product</Text>
-              <View style={styles.picker}>
-                <Picker
-                  style={{height: 40}}
-                  selectedValue={this.state.PickerSelectedVal}
-                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+              <View>
+                <Text style={styles.text}>Product</Text>
+                <View style={styles.picker}>
+                  <Picker
+                    style={{height: 40}}
+                    selectedValue={this.state.PickerSelectedVal}
+                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
-                  <Picker.Item label="CRM" value="CRM" />
-                  <Picker.Item label="EJM" value="EJM" />
-                </Picker>
+                    <Picker.Item label="CRM" value="CRM" />
+                    <Picker.Item label="EJM" value="EJM" />
+                  </Picker>
+                </View>
               </View>
-            </View>
 
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Principle</Text>
-              <View style={styles.picker}>
-                <Picker
-                  style={{height: 40}}
-                  selectedValue={this.state.PickerSelectedVal}
-                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+              <View>
+                <Text style={styles.text}>Principle</Text>
+                <View style={styles.picker}>
+                  <Picker
+                    style={{height: 40}}
+                    selectedValue={this.state.PickerSelectedVal}
+                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
-                  <Picker.Item label="FIORANO" value="FIORANO" />
-                  <Picker.Item label="BPC" value="BPC" />
-                </Picker>
+                    <Picker.Item label="FIORANO" value="FIORANO" />
+                    <Picker.Item label="BPC" value="BPC" />
+                  </Picker>
+                </View>
               </View>
-            </View>
 
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>PIC Name</Text>
-              <TextInput 
-                style={styles.input}/>
-            </View>
-
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Reference</Text>
-              <TextInput 
-                style={styles.input}/>
-            </View>
-
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Potential / Budget</Text>
-              <TextInput 
-                style={styles.input}/>
-            </View>
-
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Pipeline</Text>
-              <View style={styles.picker}>
-                <Picker
-                  style={{height: 40}}
-                  selectedValue={this.state.PickerSelectedVal}
-                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
-
-                  <Picker.Item label="Registered" value="Registered" />
-                  <Picker.Item label="Cold Call" value="Cold Call" />
-                  <Picker.Item label="Visit" value="Visit" />
-                  <Picker.Item label="Informal Meeting" value="Informal Meeting" />
-                  <Picker.Item label="Formal Meeting" value="Formal Meeting" />
-                </Picker>
+              <View>
+                <Text style={styles.text}>PIC Name</Text>
+                <TextInput 
+                  style={styles.input}/>
               </View>
-            </View>
+
+              <View>
+                <Text style={styles.text}>Reference</Text>
+                <TextInput 
+                  style={styles.input}/>
+              </View>
+
+              <View>
+                <Text style={styles.text}>Potential / Budget</Text>
+                <TextInput 
+                  style={styles.input}/>
+              </View>
+
+              <View>
+                <Text style={styles.text}>Pipeline</Text>
+                <View style={styles.picker}>
+                  <Picker
+                    style={{height: 40}}
+                    selectedValue={this.state.PickerSelectedVal}
+                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+
+                    <Picker.Item label="Registered" value="Registered" />
+                    <Picker.Item label="Cold Call" value="Cold Call" />
+                    <Picker.Item label="Visit" value="Visit" />
+                    <Picker.Item label="Informal Meeting" value="Informal Meeting" />
+                    <Picker.Item label="Formal Meeting" value="Formal Meeting" />
+                  </Picker>
+                </View>
+              </View>
             
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Principle</Text>
-              <View style={styles.picker}>
-                <Picker
-                  style={{height: 40}}
-                  selectedValue={this.state.PickerSelectedVal}
-                  onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+              <View>
+                <Text style={styles.text}>Principle</Text>
+                <View style={styles.picker}>
+                  <Picker
+                    style={{height: 40}}
+                    selectedValue={this.state.PickerSelectedVal}
+                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
 
-                  <Picker.Item label="Active" value="Active" />
-                  <Picker.Item label="Not Active" value="Not Active" />
-                </Picker>
+                    <Picker.Item label="Active" value="Active" />
+                    <Picker.Item label="Not Active" value="Not Active" />
+                  </Picker>
+                </View>
               </View>
-            </View>
 
-            <View style={{marginTop: 6}}>
-              <Text style={styles.text}>Remark</Text>
-              <TextInput 
-                style={styles.input}/>
+              <View>
+                <Text style={styles.text}>Remark</Text>
+                <TextInput style={styles.input}/>
+              </View>
             </View>
 
             <TouchableOpacity style={styles.btnSave}>
@@ -209,18 +210,30 @@ const styles = StyleSheet.create({
     elevation: 9,
   },
   firstLayer: {
-    margin: 6,
     elevation: 3,
     padding: 3
   },
+  secondLayer: {
+    marginHorizontal: 3,
+    marginVertical: 3,
+    alignSelf: "stretch",
+    backgroundColor: "#FFFFFF",
+    borderWidth: 2,
+    borderColor: "#FFFFFF",
+    borderRadius: 3,
+    // flexDirection: "row",
+  },
   text: {
     fontSize: 20,
-    color: "#2A4580"
+    color: "#2A4580",
+    marginHorizontal: 6
   },
   picker: {
     borderWidth: 1,
     borderColor: "#2A4580",
     borderRadius: 3,
+    marginHorizontal: 6,
+    marginBottom: 6
   },
   input: {
     borderWidth: 1,
@@ -229,16 +242,20 @@ const styles = StyleSheet.create({
     paddingStart: 10,
     paddingEnd: 10,
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 5,
+    marginHorizontal: 6,
+    marginBottom: 6,
+    fontSize: 16,
   },
   btnSave: {
-    height: 40,
+    height: 50,
     backgroundColor: '#2A4580',
     borderWidth: 1,
     borderColor: '#FFFFFF',
     borderRadius: 3,
     justifyContent: 'center',
-    marginTop: 6
+    marginVertical: 3,
+    marginHorizontal: 3
   },
   textSave: {
     fontSize: 20,
