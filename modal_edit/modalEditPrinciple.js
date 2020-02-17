@@ -16,7 +16,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>ID</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.idModal} multiline></TextInput>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -24,7 +24,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.nameModal} multiline></TextInput>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -32,7 +32,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>Email</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.emailModal} multiline></TextInput>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -40,7 +40,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>Phone</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.phoneModal} multiline></TextInput>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -48,7 +48,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>Address</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.addressModal} multiline></TextInput>
                             </View>
                         </View>
                         <View style={styles.row}>
@@ -56,7 +56,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>PIC Name</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.pic_nameModal} multiline></TextInput>
                             </View>
                         </View>
                         <View style={styles.rowBottom}>
@@ -64,7 +64,7 @@ export default class ModalEditPrinciple extends Component {
                                 <Text style={styles.text}>PIC Contact</Text>
                             </View>
                             <View style={styles.rightView}>
-                                <TextInput></TextInput>
+                                <TextInput style={styles.inputText} defaultValue={this.props.pic_contactModal} multiline></TextInput>
                             </View>
                         </View>
                     </View>
@@ -80,7 +80,7 @@ export default class ModalEditPrinciple extends Component {
 
 const styles = StyleSheet.create({
     container : {
-        backgroundColor : "rgba(211, 211, 211, 0.5)",
+        backgroundColor : "rgba(211, 211, 211, 0.7)",
         padding : 3,
         flexDirection : "column",
         justifyContent : "center",
@@ -174,5 +174,10 @@ const styles = StyleSheet.create({
     textButton : {
         fontSize : 24,
         color : "#FFFFFF",
+    },
+    inputText : {
+        fontSize: 16,
+        color: "#2A4580",
+        margin: 3,
     }
 }) 
