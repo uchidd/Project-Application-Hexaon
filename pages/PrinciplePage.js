@@ -1,3 +1,5 @@
+// Done
+
 import React, { Component } from "react";
 import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../headers/header";
@@ -17,79 +19,6 @@ export default class PrinciplePage extends Component {
 
   constructor(props) {
     super(props);
-
-    this.arrayHolder = [
-      // {
-      //   id: 1,
-      //   name: "Registered",
-      //   description: "Status Registered",
-      //   activitydate: "&#x2713;",
-      //   remark: '&#x2713;'
-      // },
-      // {
-      //   id: 2,
-      //   name: "Cold Call",
-      //   description: "Status Cold Call",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 3,
-      //   name: "Visit",
-      //   description: "Status Visit",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 4,
-      //   name: "Informal Meeting",
-      //   description: "Status Informal Meeting",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 5,
-      //   name: "Formal Meeting",
-      //   description: "Status Formal Meeting",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 6,
-      //   name: "RFI",
-      //   description: "Status RFI",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 7,
-      //   name: "RFP",
-      //   description: "Status RFP",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 8,
-      //   name: "Join Lelang",
-      //   description: "Status Join Lelang",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 9,
-      //   name: "Daftar Lelang",
-      //   description: "Status Daftar Lelang",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-      // {
-      //   id: 10,
-      //   name: "Pra-Kualifikasi",
-      //   description: "Status Pra-Kualifikasi",
-      //   activitydate: "&#x2713;",
-      //   remark: "&#x2713;"
-      // },
-    ];
     this.state = {
       searchview: false,
       headerview: true,

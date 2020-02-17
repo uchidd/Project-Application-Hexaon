@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import { Animated, View, StyleSheet, TouchableOpacity, LayoutAnimation, ScrollView, FlatList } from "react-native";
+import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../headers/header";
-import { DrawerActions } from "react-navigation-drawer";
-import CardContact from "../cards/cardContactBook";
+import { DrawerActions } from 'react-navigation-drawer';
+// import Card ubah jika Api sudah ada
+import CardPrinciple from "../cards/cardPrinciple"
+import CardContactBook from "../cards/cardContactBook"
+import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearch from "../headers/headerSearch";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
-import Icon from "react-native-vector-icons/FontAwesome5";
 
-export default class ContactBookPage extends Component {
+export default class PrinciplePage extends Component {
   static navigationOptions = {
-    drawerLabel: "Contact Book",
-    drawerIcon: () => <Icon name={"address-book"} color={"#2A4580"} size={19} />
+    drawerLabel: "Contack Book",
+    drawerIcon: () => (
+      <Icon name={"address-book"} color={"#2A4580"} size={19}/>
+    ),
   };
 
   constructor(props) {
@@ -18,52 +22,74 @@ export default class ContactBookPage extends Component {
 
     this.arrayHolder = [
       // {
-      //   name: "Cahaya Iman Putra Firdaus",
+      //   id: 1,
+      //   name: "Registered",
+      //   description: "Status Registered",
+      //   activitydate: "&#x2713;",
+      //   remark: '&#x2713;'
       // },
       // {
-      //   name: "Putri Fatimah Sari",
+      //   id: 2,
+      //   name: "Cold Call",
+      //   description: "Status Cold Call",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Annisa Alya",
+      //   id: 3,
+      //   name: "Visit",
+      //   description: "Status Visit",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Akbar Cahya Yusuf",
+      //   id: 4,
+      //   name: "Informal Meeting",
+      //   description: "Status Informal Meeting",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Putu Bambang Wira",
+      //   id: 5,
+      //   name: "Formal Meeting",
+      //   description: "Status Formal Meeting",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Putri Rahman Buana Kuwat",
+      //   id: 6,
+      //   name: "RFI",
+      //   description: "Status RFI",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Aisyah Annisa Sari Fatimah",
+      //   id: 7,
+      //   name: "RFP",
+      //   description: "Status RFP",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Gallen Turangga",
+      //   id: 8,
+      //   name: "Join Lelang",
+      //   description: "Status Join Lelang",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Eka Surya",
+      //   id: 9,
+      //   name: "Daftar Lelang",
+      //   description: "Status Daftar Lelang",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
       // {
-      //   name: "Adi Suharto Vina Made",
-      // },
-      // {
-      //   name: "Bambang Mansur Wulan Raharjo",
-      // },
-      // {
-      //   name: "Buana Ratna Wahyu",
-      // },
-      // {
-      //   name: "Amir Kusuma",
-      // },
-      // {
-      //   name: "Alya Yuliana Batari",
-      // },
-      // {
-      //   name: "Sulaiman Guntur",
-      // },
-      // {
-      //   name: "Cahyo Bulan Putra Citra",
+      //   id: 10,
+      //   name: "Pra-Kualifikasi",
+      //   description: "Status Pra-Kualifikasi",
+      //   activitydate: "&#x2713;",
+      //   remark: "&#x2713;"
       // },
     ];
     this.state = {
@@ -170,7 +196,7 @@ export default class ContactBookPage extends Component {
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
-            title={"Contact Book"}
+            title={"Principle"}
             pressIconBars={() =>
               this.props.navigation.dispatch(DrawerActions.openDrawer())
             }
@@ -194,8 +220,14 @@ export default class ContactBookPage extends Component {
           style={{marginTop: 3, marginBottom: 3}}
             data={this.state.dataSource}
             renderItem={({ item }) => (
-              <CardContact
-                nameText={item.name}
+              <CardPrinciple
+                id={item.id}
+                name={item.name}
+                email={item.email}
+                phone={item.phone}
+                address={item.address}
+                pic_name={item.pic_name}
+                pic_contact={item.pic_contact}
               />
             )}
             enableEmptySections={true}
