@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import ModalOptionAction from "../modal/modalOptionAction";
-import ModalEditData from "../modal_edit/modalEditData";
 import ModalAlertDialog from "../modal/modalAlertDialog";
 import ModalDetailPrinciple from "../modal_details/modalDetailPrinciple";
 import ModalEditPrinciple from "../modal_edit/modalEditPrinciple";

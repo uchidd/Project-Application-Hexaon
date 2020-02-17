@@ -1,10 +1,12 @@
+// API Data belum ada
+// Card Container belum ada
+
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import Header from "../headers/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
-
 
 export default class FileManagementFilePage extends Component{
 

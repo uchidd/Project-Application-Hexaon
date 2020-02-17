@@ -1,3 +1,5 @@
+// Done
+
 import React, { Component } from "react";
 import {
   View,
@@ -21,7 +23,10 @@ export default class PrinciplePage extends Component {
 
   constructor(props) {
     super(props);
+<<<<<<< HEAD
 
+=======
+>>>>>>> aeb319b0ec3295573a0981ddb3e86a16a4b80483
     this.state = {
       searchview: false,
       headerview: true,

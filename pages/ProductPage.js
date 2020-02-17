@@ -1,3 +1,5 @@
+// Done
+
 import React, { Component } from "react";
 import { Animated, View, StyleSheet, ScrollView, TouchableOpacity, LayoutAnimation, FlatList } from "react-native";
 import Header from "../headers/header";
@@ -17,57 +19,6 @@ export default class ProductPage extends Component {
 
   constructor(props) {
     super(props);
-
-    this.arrayHolder = [
-      // {
-      //   name: "Cahaya Iman Putra Firdaus",
-      // },
-      // {
-      //   name: "Putri Fatimah Sari",
-      // },
-      // {
-      //   name: "Annisa Alya",
-      // },
-      // {
-      //   name: "Akbar Cahya Yusuf",
-      // },
-      // {
-      //   name: "Putu Bambang Wira",
-      // },
-      // {
-      //   name: "Putri Rahman Buana Kuwat",
-      // },
-      // {
-      //   name: "Aisyah Annisa Sari Fatimah",
-      // },
-      // {
-      //   name: "Gallen Turangga",
-      // },
-      // {
-      //   name: "Eka Surya",
-      // },
-      // {
-      //   name: "Adi Suharto Vina Made",
-      // },
-      // {
-      //   name: "Bambang Mansur Wulan Raharjo",
-      // },
-      // {
-      //   name: "Buana Ratna Wahyu",
-      // },
-      // {
-      //   name: "Amir Kusuma",
-      // },
-      // {
-      //   name: "Alya Yuliana Batari",
-      // },
-      // {
-      //   name: "Sulaiman Guntur",
-      // },
-      // {
-      //   name: "Cahyo Bulan Putra Citra",
-      // },
-    ];
     this.state = {
       searchview: false,
       headerview: true,

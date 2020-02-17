@@ -1,3 +1,5 @@
+// API Data Belum ada 
+
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity} from "react-native";
 import Header from "../headers/header";

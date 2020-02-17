@@ -23,9 +23,7 @@ export default class ModalEditPrinciple extends Component {
                 <Text style={styles.text}>ID</Text>
               </View>
               <View style={styles.rightView}>
-                <Text
-                  style={styles.inputText}
-                >{this.props.idModal}</Text>
+                <Text style={styles.inputText}>{this.props.idModal}</Text>
               </View>
             </View>
             <View style={styles.row}>
