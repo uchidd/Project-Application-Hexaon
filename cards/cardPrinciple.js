@@ -8,11 +8,11 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import ModalViewData from '../modal_details/modalViewData'
-import ModalOptionAction from '../modal/modalOptionAction'
-import ModalEditData from '../modal_edit/modalEditData'
-import ModalAlertDialog from '../modal/modalAlertDialog'
+import ModalOptionAction from "../modal/modalOptionAction";
+import ModalEditData from "../modal_edit/modalEditData";
+import ModalAlertDialog from "../modal/modalAlertDialog";
 import ModalDetailPrinciple from "../modal_details/modalDetailPrinciple";
+import ModalEditPrinciple from "../modal_edit/modalEditPrinciple";
 
 export default class CardPrinciple extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ export default class CardPrinciple extends Component {
       isModalViewDataVisible: false,
       isModalOptionActionVisible: false,
       isModalEditDataVisible: false,
-      isModalAlertDialogVisible: false,
+      isModalAlertDialogVisible: false
     };
   }
 
@@ -70,10 +70,17 @@ export default class CardPrinciple extends Component {
           onPress={() => this._showModalViewData()}
         >
           <View style={styles.nameView}>
-            <Text numberOfLines={1} style={styles.nameText}>{this.props.name}</Text>
+            <Text numberOfLines={1} style={styles.nameText}>
+              {this.props.name}
+            </Text>
           </View>
           <View style={styles.iconView}>
-            <Icon name={'ellipsis-v'} color={'#2A4580'} size={20} onPress={() => this._showModalOptionAction()}/>
+            <Icon
+              name={"ellipsis-v"}
+              color={"#2A4580"}
+              size={20}
+              onPress={() => this._showModalOptionAction()}
+            />
           </View>
         </TouchableOpacity>
         <Modal
@@ -101,7 +108,7 @@ export default class CardPrinciple extends Component {
         >
           <ModalOptionAction
             hideModalOptionAction={() => this._hideModalOptionAction()}
-            showModalEditData={() =>
+            showModalEdit={() =>
               this._hideModalOptionActionAndShowModalEditData()
             }
             showModalAlertDialog={() =>
@@ -115,12 +122,14 @@ export default class CardPrinciple extends Component {
           visible={this.state.isModalEditDataVisible}
           onRequestClose={() => this._hideModalEditDataAndModalOptionAction()}
         >
-          <ModalEditData
-            idModal={this.state.id}
-            nameModal={this.state.name}
-            divisionModal={this.state.division}
-            phoneModal={this.state.phone}
-            emailModal={this.state.email}
+          <ModalEditPrinciple
+            idModal={this.props.id}
+            nameModal={this.props.name}
+            emailModal={this.props.email}
+            phoneModal={this.props.phone}
+            addressModal={this.props.address}
+            pic_nameModal={this.props.pic_name}
+            pic_contactModal={this.props.pic_contact}
             hideModalEditData={() =>
               this._hideModalEditDataAndModalOptionAction()
             }
@@ -152,29 +161,26 @@ const styles = StyleSheet.create({
   },
   firstLayer: {
     marginHorizontal: 6,
-    marginVertical: 3, 
+    marginVertical: 3,
     height: 56,
     backgroundColor: "#FFFFFF",
-    borderWidth: 2,
-    borderColor: "#FFFFFF",
     borderRadius: 5,
-    flexDirection: "row",
-    // elevation: 9
+    flexDirection: "row"
   },
   nameView: {
     backgroundColor: "transparent",
     flex: 1,
     justifyContent: "center"
   },
-  iconView:{
+  iconView: {
     backgroundColor: "transparent",
     width: 40,
     justifyContent: "center",
     alignItems: "center"
   },
-  nameText:{
+  nameText: {
     fontSize: 20,
-    color:"#2A4580",
+    color: "#2A4580",
     marginLeft: 16
   }
 });

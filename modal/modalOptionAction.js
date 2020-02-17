@@ -8,15 +8,15 @@ export default class ModalOptionAction extends Component {
             <View style={styles.container}>
                 <StatusBar hidden={true}/>
                 <View style={styles.mainView}>
-                    <View style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={this.props.showModalEdit}>
                         <Text style={styles.textButton}>Edit</Text>
-                    </View>
-                    <View style={styles.button}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={this.props.showModalAlertDialog}>
                         <Text style={styles.textButton}>Delete</Text>
-                    </View>
-                    <View style={styles.button}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={this.props.hideModalOptionAction}>
                         <Text style={styles.textButton}>Close</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         )

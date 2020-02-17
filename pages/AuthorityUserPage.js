@@ -1,5 +1,4 @@
-// Done
-// Jika API sudah lengkap, ubah
+// Data API belom lengkap
 
 import React, { Component } from "react";
 import {
