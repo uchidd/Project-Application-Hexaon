@@ -112,19 +112,19 @@ export default class LeadProjectPage extends Component{
               <View>
                 <Text style={styles.text}>PIC Name</Text>
                 <TextInput 
-                  style={styles.input}/>
+                  style={styles.input} multiline/>
               </View>
 
               <View>
                 <Text style={styles.text}>Reference</Text>
                 <TextInput 
-                  style={styles.input}/>
+                  style={styles.input} multiline/>
               </View>
 
               <View>
                 <Text style={styles.text}>Potential / Budget</Text>
                 <TextInput 
-                  style={styles.input}/>
+                  style={styles.input} multiline/>
               </View>
 
               <View>
@@ -160,7 +160,7 @@ export default class LeadProjectPage extends Component{
 
               <View>
                 <Text style={styles.text}>Remark</Text>
-                <TextInput style={styles.input}/>
+                  <TextInput style={styles.input} multiline/>
               </View>
             </View>
 
