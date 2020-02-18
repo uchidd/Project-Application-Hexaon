@@ -22,11 +22,8 @@ import ContactBookPage from './pages/ContactBookPage';
 import ModalDetailPrinciple from './modal_details/modalDetailPrinciple';
 import ModalOptionAction from './modal/modalOptionAction';
 import ModalEditPrinciple from "./modal_edit/modalEditPrinciple";
-<<<<<<< HEAD
 import ModalEditUserAuthority from './modal_edit/modalEditUserAuthority';
 
-=======
->>>>>>> aeb319b0ec3295573a0981ddb3e86a16a4b80483
 export default class App extends Component {
 
     render() {
@@ -52,10 +49,7 @@ export default class App extends Component {
             // <ModalDetailPrinciple/>
             // <ModalOptionAction/>
             // <ModalEditPrinciple/>
-<<<<<<< HEAD
             // <ModalEditUserAuthority/>
-=======
->>>>>>> aeb319b0ec3295573a0981ddb3e86a16a4b80483
         )
     }
 }

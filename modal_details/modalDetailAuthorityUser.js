@@ -159,8 +159,4 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: "#FFFFFF",
   }
-<<<<<<< HEAD
 });
-=======
-})
->>>>>>> aeb319b0ec3295573a0981ddb3e86a16a4b80483
