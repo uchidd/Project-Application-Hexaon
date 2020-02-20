@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   iconSearchView: {
     width: 40,
     backgroundColor: "#FFFFFF",
-    justifyContent : "center",
-    alignItems : "center"
+    justifyContent: "center",
+    alignItems: "center"
   },
 });

@@ -1,18 +1,18 @@
 // API Data Belum ada 
 
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity} from "react-native";
+import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import Header from "../headers/header";
 import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 
-export default class SalesAgendaPage extends Component{
+export default class SalesAgendaPage extends Component {
 
   static navigationOptions = {
     drawerLabel: 'Sales Agenda',
     drawerIcon: () => (
-      <Icon name={"calendar-alt"} color={"#2A4580"} size={19} solid={true}/>
+      <Icon name={"calendar-alt"} color={"#2A4580"} size={19} solid={true} />
     ),
   }
 
@@ -39,8 +39,8 @@ export default class SalesAgendaPage extends Component{
     this.setState({ text: "" });
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
@@ -62,7 +62,7 @@ export default class SalesAgendaPage extends Component{
         ) : null}
 
         <ScrollView>
-          
+
         </ScrollView>
 
         <TouchableOpacity
@@ -81,9 +81,9 @@ export default class SalesAgendaPage extends Component{
 }
 
 const styles = StyleSheet.create({
-  container : {
-      flex: 1,
-       backgroundColor: '#D3D3D3'
+  container: {
+    flex: 1,
+    backgroundColor: '#D3D3D3'
   },
   TouchableOpacityStyle: {
     position: "absolute",
@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16
   },
-  
   fabCircle: {
     backgroundColor: "#2A4580",
     resizeMode: "contain",

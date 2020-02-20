@@ -3,10 +3,10 @@ import { View, StyleSheet, StatusBar, TouchableOpacity, Text } from "react-nativ
 
 export default class ModalOptionAction extends Component {
 
-    render(){
-        return(
+    render() {
+        return (
             <View style={styles.container}>
-                <StatusBar hidden={true}/>
+                <StatusBar hidden={true} />
                 <View style={styles.mainView}>
                     <TouchableOpacity style={styles.button} onPress={this.props.showModalEdit}>
                         <Text style={styles.textButton}>Edit</Text>
@@ -24,33 +24,33 @@ export default class ModalOptionAction extends Component {
 }
 
 const styles = StyleSheet.create({
-    container : {
-        backgroundColor : "rgba(211, 211, 211, 0.7)",
-        padding : 3,
-        flexDirection : "column",
-        justifyContent : "center",
-        flex : 1
+    container: {
+        backgroundColor: "rgba(211, 211, 211, 0.7)",
+        padding: 3,
+        flexDirection: "column",
+        justifyContent: "center",
+        flex: 1
     },
-    mainView : {
-        alignSelf : "stretch",
-        backgroundColor : "#FFFFFF",
-        margin : 3,
-        padding : 3,
-        flexDirection : "column",
-        borderRadius : 5,
+    mainView: {
+        alignSelf: "stretch",
+        backgroundColor: "#FFFFFF",
+        margin: 3,
+        padding: 3,
+        flexDirection: "column",
+        borderRadius: 5,
     },
-    button : {
-        height : 50,
-        backgroundColor : "#2A4580",
-        margin : 3,
-        padding : 3,
-        flexDirection : "column",
-        borderRadius : 5,
-        justifyContent : "center",
-        alignItems : "center"
+    button: {
+        height: 50,
+        backgroundColor: "#2A4580",
+        margin: 3,
+        padding: 3,
+        flexDirection: "column",
+        borderRadius: 5,
+        justifyContent: "center",
+        alignItems: "center"
     },
-    textButton : {
-        fontSize : 24, 
-        color : "#FFFFFF",
+    textButton: {
+        fontSize: 24,
+        color: "#FFFFFF",
     }
 })

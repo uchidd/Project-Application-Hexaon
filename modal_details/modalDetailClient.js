@@ -79,20 +79,20 @@ export default class ModalDetailClient extends Component {
 }
 
 const styles = StyleSheet.create({
-    container : {
-        backgroundColor : "rgba(211, 211, 211, 0.7)",
-        padding : 3,
-        flexDirection : "column",
-        justifyContent : "center",
-        flex : 1
+    container: {
+        backgroundColor: "rgba(211, 211, 211, 0.7)",
+        padding: 3,
+        flexDirection: "column",
+        justifyContent: "center",
+        flex: 1
     },
-    mainView : {
-        alignSelf : "stretch",
-        backgroundColor : "#FFFFFF",
-        margin : 3,
-        padding : 3,
-        flexDirection : "column",
-        borderRadius : 5,
+    mainView: {
+        alignSelf: "stretch",
+        backgroundColor: "#FFFFFF",
+        margin: 3,
+        padding: 3,
+        flexDirection: "column",
+        borderRadius: 5,
     },
     titleView: {
         backgroundColor: "transparent",
@@ -106,14 +106,14 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: "#2A4580",
     },
-    contentView : {
-        alignSelf : "stretch",
-        backgroundColor : "#D3D3D3",
-        margin : 3,
-        flexDirection : "column",
-        borderRadius : 5,
-        borderColor : "#2A4580",
-        borderWidth : 2,
+    contentView: {
+        alignSelf: "stretch",
+        backgroundColor: "#D3D3D3",
+        margin: 3,
+        flexDirection: "column",
+        borderRadius: 5,
+        borderColor: "#2A4580",
+        borderWidth: 2,
     },
     topRow: {
         alignSelf: "stretch",
@@ -161,18 +161,18 @@ const styles = StyleSheet.create({
         borderTopColor: "#2A4580",
         borderTopWidth: 1,
     },
-    button : {
-        height : 50,
-        backgroundColor : "#2A4580",
-        margin : 3,
-        padding : 3,
-        flexDirection : "column",
-        borderRadius : 5,
-        justifyContent : "center",
-        alignItems : "center"
+    button: {
+        height: 50,
+        backgroundColor: "#2A4580",
+        margin: 3,
+        padding: 3,
+        flexDirection: "column",
+        borderRadius: 5,
+        justifyContent: "center",
+        alignItems: "center"
     },
-    textButton : {
-        fontSize : 24,
-        color : "#FFFFFF",
+    textButton: {
+        fontSize: 24,
+        color: "#FFFFFF",
     }
 })

@@ -1,72 +1,72 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, TextInput, Button} from 'react-native';
+import { View, Text, Image, StyleSheet, TextInput, Button } from 'react-native';
 
-const userInfo = {email: 'admin', password: '123'}
+const userInfo = { email: 'admin', password: '123' }
 
 export default class LoginPage extends Component {
 
     static navigationOptions = {
         title: 'Login',
-      }
-    
-      constructor(props){
+    }
+
+    constructor(props) {
         super(props);
         this.state = {
             email: '',
             password: ''
         }
     }
-    
-  render(){
-    return(
-      <View style={styles.container}>
-        <Image style={styles.imageHBM} source={require('../resources/hbm.png')}/>
-        <View style={styles.containerBody}>
-                <View style={styles.viewTextHeader}> 
-                    <Text style={styles.textHeaderLeft}>Masuk ke</Text>
-                    <Text style={styles.textHeaderRight}> Sales Force - HBM</Text>
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Image style={styles.imageHBM} source={require('../resources/hbm.png')} />
+                <View style={styles.containerBody}>
+                    <View style={styles.viewTextHeader}>
+                        <Text style={styles.textHeaderLeft}>Masuk ke</Text>
+                        <Text style={styles.textHeaderRight}> Sales Force - HBM</Text>
+                    </View>
+                    <View style={styles.viewInput}>
+                        <Text style={styles.textInput}>Email</Text>
+                        <TextInput
+                            style={styles.input}
+                            autoCompleteType={"email"}
+                            onChangeText={(email) => this.setState({ email })}
+                            value={this.state.email} />
+                    </View>
+                    <View style={styles.viewInput}>
+                        <Text style={styles.textInput}>Password</Text>
+                        <TextInput
+                            style={styles.input}
+                            autoCompleteType={"password"}
+                            secureTextEntry={true}
+                            onChangeText={(password) => this.setState({ password })}
+                            value={this.state.password} />
+                    </View>
+                    <View style={styles.viewButton}>
+                        <Button title={"Masuk"} onPress={this._login}></Button>
+                    </View>
                 </View>
-                <View style={styles.viewInput}>
-                    <Text style={styles.textInput}>Email</Text>
-                    <TextInput
-                    style={styles.input} 
-                    autoCompleteType={"email"}                    
-                    onChangeText={(email)=>this.setState({email})}
-                    value={this.state.email}/>
-                </View>
-                <View style={styles.viewInput}>
-                    <Text style={styles.textInput}>Password</Text>
-                    <TextInput 
-                    style={styles.input} 
-                    autoCompleteType={"password"} 
-                    secureTextEntry={true}
-                    onChangeText={(password)=>this.setState({password})}
-                    value={this.state.password}/>
-                </View>
-                <View style={styles.viewButton}>
-                    <Button title={"Masuk"} onPress={this._login}></Button>
+                <View style={styles.viewCopyright}>
+                    <View style={styles.viewUpperCopyright}>
+                        <Text style={styles.textCopyright}>Copyright © 2019</Text>
+                        <Text style={styles.textCopyrightBold}> HBM</Text>
+                        <Text style={styles.textCopyright}>,</Text>
+                    </View>
+                    <Text style={styles.textCopyright}>All right reserved.</Text>
                 </View>
             </View>
-        <View style={styles.viewCopyright}>
-          <View style={styles.viewUpperCopyright}>
-            <Text style={styles.textCopyright}>Copyright © 2019</Text>
-            <Text style={styles.textCopyrightBold}> HBM</Text>
-            <Text style={styles.textCopyright}>,</Text>
-          </View>
-          <Text style={styles.textCopyright}>All right reserved.</Text>
-        </View>
-      </View>
-    );
-  }
-
-  _login = async() => {
-    if(userInfo.email === this.state.email && userInfo.password === this.state.password){
-        alert('Logged In.');
-        this.props.navigation.navigate('DrawerNavigator');
-    } else {
-        alert('Username or Password is incorrect.');
+        );
     }
-}
+
+    _login = async () => {
+        if (userInfo.email === this.state.email && userInfo.password === this.state.password) {
+            alert('Logged In.');
+            this.props.navigation.navigate('DrawerNavigator');
+        } else {
+            alert('Username or Password is incorrect.');
+        }
+    }
 }
 
 const styles = StyleSheet.create({
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column'
     },
-    viewUpperCopyright : {
+    viewUpperCopyright: {
         backgroundColor: '#ffffff',
         justifyContent: 'center',
         alignItems: 'center',

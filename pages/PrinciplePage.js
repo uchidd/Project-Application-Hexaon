@@ -43,7 +43,7 @@ export default class PrinciplePage extends Component {
             isLoading: false,
             dataSource: responseJson.principles
           },
-          function() {}
+          function () { }
         );
       })
       .catch(error => {
@@ -103,16 +103,16 @@ export default class PrinciplePage extends Component {
             keyExtractor={(item, index) => index.toString()}
           />
         </ScrollView>
-          <TouchableOpacity
-            activeOpacity={0.5}
-            onPress={this.SampleFunction}
-            style={styles.TouchableOpacityStyle}
-          >
-            <View style={styles.fabCircle}>
-              <Icon name={"plus"} color={"#FFFFFF"} size={24} />
-            </View>
-          </TouchableOpacity>
-        
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={this.SampleFunction}
+          style={styles.TouchableOpacityStyle}
+        >
+          <View style={styles.fabCircle}>
+            <Icon name={"plus"} color={"#FFFFFF"} size={24} />
+          </View>
+        </TouchableOpacity>
+
       </View>
     );
   }

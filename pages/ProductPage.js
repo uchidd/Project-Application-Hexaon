@@ -13,7 +13,7 @@ export default class ProductPage extends Component {
   static navigationOptions = {
     drawerLabel: "Product",
     drawerIcon: () => (
-      <Icon name={"box"} color={"#2A4580"} size={19} solid={true}/>
+      <Icon name={"box"} color={"#2A4580"} size={19} solid={true} />
     ),
   };
 
@@ -30,21 +30,21 @@ export default class ProductPage extends Component {
     this._listViewOffset = 0;
   }
 
-  componentDidMount(){
+  componentDidMount() {
     return fetch('http://sales.hexaon.id/api/getOption',
-    {method: 'POST'})
+      { method: 'POST' })
       .then((response) => response.json())
       .then((responseJson) => {
 
         this.setState({
           isLoading: false,
           dataSource: responseJson.products,
-        }, function(){
+        }, function () {
 
         });
 
       })
-      .catch((error) =>{
+      .catch((error) => {
         console.error(error);
       });
   }
@@ -96,8 +96,8 @@ export default class ProductPage extends Component {
   _onScroll = (event) => {
     const isBottomBounce =
       event.nativeEvent.layoutMeasurement.height -
-        event.nativeEvent.contentSize.height +
-        event.nativeEvent.contentOffset.y >=0;
+      event.nativeEvent.contentSize.height +
+      event.nativeEvent.contentOffset.y >= 0;
     const CustomLayoutLinear = {
       duration: 100,
       create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
@@ -141,16 +141,16 @@ export default class ProductPage extends Component {
         ) : null}
 
         <ScrollView
-        onScroll={this._onScroll}
+          onScroll={this._onScroll}
         >
           <FlatList
-          style={{marginTop: 3, marginBottom: 3}}
+            style={{ marginTop: 3, marginBottom: 3 }}
             data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardProduct
-              id={item.id}
-              name={item.name}
-              description={item.description}
+                id={item.id}
+                name={item.name}
+                description={item.description}
               />
             )}
             enableEmptySections={true}
@@ -158,7 +158,7 @@ export default class ProductPage extends Component {
           />
         </ScrollView>
 
-        {this.state.isActionButtonVisible ?<TouchableOpacity
+        {this.state.isActionButtonVisible ? <TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16
   },
-
   fabCircle: {
     backgroundColor: "#2A4580",
     resizeMode: "contain",

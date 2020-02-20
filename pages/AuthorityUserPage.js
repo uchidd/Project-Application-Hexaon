@@ -43,7 +43,7 @@ export default class AuthorityUserPage extends Component {
             isLoading: false,
             dataSource: responseJson.sales
           },
-          function() {}
+          function () { }
         );
       })
       .catch(error => {
@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16
   },
-
   fabCircle: {
     backgroundColor: "#2A4580",
     resizeMode: "contain",

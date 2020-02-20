@@ -13,7 +13,7 @@ export default class PrinciplePage extends Component {
   static navigationOptions = {
     drawerLabel: "Contack Book",
     drawerIcon: () => (
-      <Icon name={"address-book"} color={"#2A4580"} size={19} solid={true}/>
+      <Icon name={"address-book"} color={"#2A4580"} size={19} solid={true} />
     ),
   };
 
@@ -103,21 +103,21 @@ export default class PrinciplePage extends Component {
     this._listViewOffset = 0;
   }
 
-  componentDidMount(){
+  componentDidMount() {
     return fetch('http://sales.hexaon.id/api/getOption',
-    {method: 'POST'})
+      { method: 'POST' })
       .then((response) => response.json())
       .then((responseJson) => {
 
         this.setState({
           isLoading: false,
           dataSource: responseJson.principles,
-        }, function(){
+        }, function () {
 
         });
 
       })
-      .catch((error) =>{
+      .catch((error) => {
         console.error(error);
       });
   }
@@ -169,8 +169,8 @@ export default class PrinciplePage extends Component {
   _onScroll = (event) => {
     const isBottomBounce =
       event.nativeEvent.layoutMeasurement.height -
-        event.nativeEvent.contentSize.height +
-        event.nativeEvent.contentOffset.y >=0;
+      event.nativeEvent.contentSize.height +
+      event.nativeEvent.contentOffset.y >= 0;
     const CustomLayoutLinear = {
       duration: 100,
       create: { type: LayoutAnimation.Types.linear, property: LayoutAnimation.Properties.opacity },
@@ -191,7 +191,6 @@ export default class PrinciplePage extends Component {
   }
 
   render() {
-
     return (
       <View style={styles.container}>
         {this.state.headerview ? (
@@ -214,10 +213,10 @@ export default class PrinciplePage extends Component {
         ) : null}
 
         <ScrollView
-        onScroll={this._onScroll}
+          onScroll={this._onScroll}
         >
           <FlatList
-          style={{marginTop: 3, marginBottom: 3}}
+            style={{ marginTop: 3, marginBottom: 3 }}
             data={this.state.dataSource}
             renderItem={({ item }) => (
               <CardPrinciple
@@ -235,7 +234,7 @@ export default class PrinciplePage extends Component {
           />
         </ScrollView>
 
-        {this.state.isActionButtonVisible ?<TouchableOpacity
+        {this.state.isActionButtonVisible ? <TouchableOpacity
           activeOpacity={0.5}
           onPress={this.SampleFunction}
           style={styles.TouchableOpacityStyle}
@@ -264,7 +263,6 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16
   },
-
   fabCircle: {
     backgroundColor: "#2A4580",
     resizeMode: "contain",

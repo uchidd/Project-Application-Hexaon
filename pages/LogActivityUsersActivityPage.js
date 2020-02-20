@@ -8,12 +8,12 @@ import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 
-export default class LogActivityUsersActivityPage extends Component{
+export default class LogActivityUsersActivityPage extends Component {
 
   static navigationOptions = {
     drawerLabel: 'Users Activity',
     drawerIcon: () => (
-      <Icon name={"user-clock"} color={"#2A4580"} size={19} solid={true}/>
+      <Icon name={"user-clock"} color={"#2A4580"} size={19} solid={true} />
     ),
   }
 
@@ -40,8 +40,8 @@ export default class LogActivityUsersActivityPage extends Component{
     this.setState({ text: "" });
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
@@ -63,7 +63,7 @@ export default class LogActivityUsersActivityPage extends Component{
         ) : null}
 
         <ScrollView>
-          
+
         </ScrollView>
 
         <TouchableOpacity
@@ -82,28 +82,27 @@ export default class LogActivityUsersActivityPage extends Component{
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex: 1,
-        backgroundColor: '#D3D3D3'
-    },
-    TouchableOpacityStyle: {
-      position: "absolute",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      right: 16,
-      bottom: 16
-    },
-  
-    fabCircle: {
-      backgroundColor: "#2A4580",
-      resizeMode: "contain",
-      width: 56,
-      height: 56,
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: 50,
-      elevation: 9,
-    }
+  container: {
+    flex: 1,
+    backgroundColor: '#D3D3D3'
+  },
+  TouchableOpacityStyle: {
+    position: "absolute",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    right: 16,
+    bottom: 16
+  },
+  fabCircle: {
+    backgroundColor: "#2A4580",
+    resizeMode: "contain",
+    width: 56,
+    height: 56,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 50,
+    elevation: 9,
+  }
 })

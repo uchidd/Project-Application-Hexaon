@@ -8,12 +8,12 @@ import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 
-export default class FileManagementFilePage extends Component{
+export default class FileManagementFilePage extends Component {
 
   static navigationOptions = {
     drawerLabel: 'File Management',
     drawerIcon: () => (
-      <Icon name={"file"} color={"#2A4580"} size={19} solid={true}/>
+      <Icon name={"file"} color={"#2A4580"} size={19} solid={true} />
     ),
   }
 
@@ -40,8 +40,8 @@ export default class FileManagementFilePage extends Component{
     this.setState({ text: "" });
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
@@ -63,7 +63,7 @@ export default class FileManagementFilePage extends Component{
         ) : null}
 
         <ScrollView>
-          
+
         </ScrollView>
 
         <TouchableOpacity
@@ -81,9 +81,9 @@ export default class FileManagementFilePage extends Component{
 }
 
 const styles = StyleSheet.create({
-  container : {
-      flex: 1,
-      backgroundColor: '#D3D3D3'
+  container: {
+    flex: 1,
+    backgroundColor: '#D3D3D3'
   },
   TouchableOpacityStyle: {
     position: "absolute",
@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
     right: 16,
     bottom: 16
   },
-  
   fabCircle: {
     backgroundColor: "#2A4580",
     resizeMode: "contain",

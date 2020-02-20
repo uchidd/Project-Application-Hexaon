@@ -6,12 +6,12 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 import { TextInput } from "react-native-gesture-handler";
 
-export default class LeadProjectPage extends Component{
+export default class LeadProjectPage extends Component {
 
   static navigationOptions = {
     drawerLabel: 'Lead Project',
     drawerIcon: () => (
-      <Icon name={"file-upload"} color={"#2A4580"} size={19} solid={true}/>
+      <Icon name={"file-upload"} color={"#2A4580"} size={19} solid={true} />
     ),
   }
 
@@ -24,7 +24,7 @@ export default class LeadProjectPage extends Component{
       text: "",
       searchData: this.arrayHolder,
       dataSource: this.arrayHolder,
-      PickerSelectedVal : ''
+      PickerSelectedVal: ''
     };
   }
 
@@ -39,8 +39,8 @@ export default class LeadProjectPage extends Component{
     this.setState({ text: "" });
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <View style={styles.container}>
         {this.state.headerview ? (
           <Header
@@ -68,9 +68,9 @@ export default class LeadProjectPage extends Component{
                 <Text style={styles.text}>Client</Text>
                 <View style={styles.picker}>
                   <Picker
-                    style={{height: 40}}
+                    style={{ height: 40 }}
                     selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
 
                     <Picker.Item label="BPD BANTEN" value="BPD BANTEN" />
                     <Picker.Item label="BANK COMMONWEALTH" value="BANK COMMONWEALTH" />
@@ -85,9 +85,9 @@ export default class LeadProjectPage extends Component{
                 <Text style={styles.text}>Product</Text>
                 <View style={styles.picker}>
                   <Picker
-                    style={{height: 40}}
+                    style={{ height: 40 }}
                     selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
 
                     <Picker.Item label="CRM" value="CRM" />
                     <Picker.Item label="EJM" value="EJM" />
@@ -99,9 +99,9 @@ export default class LeadProjectPage extends Component{
                 <Text style={styles.text}>Principle</Text>
                 <View style={styles.picker}>
                   <Picker
-                    style={{height: 40}}
+                    style={{ height: 40 }}
                     selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
 
                     <Picker.Item label="FIORANO" value="FIORANO" />
                     <Picker.Item label="BPC" value="BPC" />
@@ -111,29 +111,29 @@ export default class LeadProjectPage extends Component{
 
               <View>
                 <Text style={styles.text}>PIC Name</Text>
-                <TextInput 
-                  style={styles.input} multiline/>
+                <TextInput
+                  style={styles.input} multiline />
               </View>
 
               <View>
                 <Text style={styles.text}>Reference</Text>
-                <TextInput 
-                  style={styles.input} multiline/>
+                <TextInput
+                  style={styles.input} multiline />
               </View>
 
               <View>
                 <Text style={styles.text}>Potential / Budget</Text>
-                <TextInput 
-                  style={styles.input} multiline/>
+                <TextInput
+                  style={styles.input} multiline />
               </View>
 
               <View>
                 <Text style={styles.text}>Pipeline</Text>
                 <View style={styles.picker}>
                   <Picker
-                    style={{height: 40}}
+                    style={{ height: 40 }}
                     selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
 
                     <Picker.Item label="Registered" value="Registered" />
                     <Picker.Item label="Cold Call" value="Cold Call" />
@@ -143,14 +143,14 @@ export default class LeadProjectPage extends Component{
                   </Picker>
                 </View>
               </View>
-            
+
               <View>
                 <Text style={styles.text}>Principle</Text>
                 <View style={styles.picker}>
                   <Picker
-                    style={{height: 40}}
+                    style={{ height: 40 }}
                     selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
 
                     <Picker.Item label="Active" value="Active" />
                     <Picker.Item label="Not Active" value="Not Active" />
@@ -160,7 +160,7 @@ export default class LeadProjectPage extends Component{
 
               <View>
                 <Text style={styles.text}>Remark</Text>
-                  <TextInput style={styles.input} multiline/>
+                <TextInput style={styles.input} multiline />
               </View>
             </View>
 
@@ -186,7 +186,7 @@ export default class LeadProjectPage extends Component{
 }
 
 const styles = StyleSheet.create({
-  container : {
+  container: {
     flex: 1,
     backgroundColor: '#D3D3D3'
   },
