@@ -17,7 +17,7 @@ import { LinearGradient } from "expo-linear-gradient";
 export default class HomePage extends Component {
   static navigationOptions = {
     drawerLabel: "Home",
-    drawerIcon: () => <Icon name={"home"} color={"#2A4580"} size={19} />
+    drawerIcon: () => <Icon name={"home"} color={"#2A4580"} size={19} solid={true} />
   };
 
   render() {
@@ -37,7 +37,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("AuthorityUser")}
             >
               <View style={styles.iconView}>
-                <Icon name={"user-cog"} color={"#2A4580"} size={40} />
+                <Icon name={"user-cog"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Authority User</Text>
@@ -48,7 +48,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("AuthorityRole")}
             >
               <View style={styles.iconView}>
-                <Icon name={"users-cog"} color={"#2A4580"} size={40} />
+                <Icon name={"users-cog"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Authority Role</Text>
@@ -59,7 +59,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("Client")}
             >
               <View style={styles.iconView}>
-                <Icon name={"users"} color={"#2A4580"} size={40} />
+                <Icon name={"users"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Client</Text>
@@ -72,7 +72,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("Product")}
             >
               <View style={styles.iconView}>
-                <Icon name={"box"} color={"#2A4580"} size={40} />
+                <Icon name={"box"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Product</Text>
@@ -83,7 +83,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("Principle")}
             >
               <View style={styles.iconView}>
-                <Icon name={"user-tie"} color={"#2A4580"} size={40} />
+                <Icon name={"user-tie"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Principle</Text>
@@ -94,7 +94,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("Pipeline")}
             >
               <View style={styles.iconView}>
-                <Icon name={"tasks"} color={"#2A4580"} size={40} />
+                <Icon name={"tasks"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Pipeline</Text>
@@ -107,7 +107,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("LeadProject")}
             >
               <View style={styles.iconView}>
-                <Icon name={"file-upload"} color={"#2A4580"} size={40} />
+                <Icon name={"file-upload"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Lead Project</Text>
@@ -136,7 +136,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("FileManagement")}
             >
               <View style={styles.iconView}>
-                <Icon name={"file"} color={"#2A4580"} size={40} />
+                <Icon name={"file"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>File Management</Text>
@@ -147,7 +147,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("FolderManagement")}
             >
               <View style={styles.iconView}>
-                <Icon name={"folder-open"} color={"#2A4580"} size={40} />
+                <Icon name={"folder-open"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Folder Management</Text>
@@ -160,7 +160,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("ContactBook")}
             >
               <View style={styles.iconView}>
-                <Icon name={"address-book"} color={"#2A4580"} size={40} />
+                <Icon name={"address-book"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Contact Book</Text>
@@ -171,7 +171,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("LogSignActivity")}
             >
               <View style={styles.iconView}>
-                <Icon name={"history"} color={"#2A4580"} size={40} />
+                <Icon name={"history"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Sign Activity</Text>
@@ -182,7 +182,7 @@ export default class HomePage extends Component {
               onPress={() => this.props.navigation.navigate("LogUsersActivity")}
             >
               <View style={styles.iconView}>
-                <Icon name={"user-clock"} color={"#2A4580"} size={40} />
+                <Icon name={"user-clock"} color={"#2A4580"} size={40} solid={true} />
               </View>
               <View style={styles.titleView}>
                 <Text style={styles.titleText}>Users Activity</Text>

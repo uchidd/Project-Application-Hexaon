@@ -77,7 +77,7 @@ export default class CardPrinciple extends Component {
             <Icon
               name={"ellipsis-v"}
               color={"#2A4580"}
-              size={20}
+              size={24}
               onPress={() => this._showModalOptionAction()}
             />
           </View>

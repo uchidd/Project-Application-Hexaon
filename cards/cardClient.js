@@ -8,11 +8,10 @@ import {
   Modal
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import ModalViewData from '../modal_details/modalViewData'
 import ModalOptionAction from '../modal/modalOptionAction'
-import ModalEditData from '../modal_edit/modalEditData'
 import ModalAlertDialog from '../modal/modalAlertDialog'
 import ModalDetailClient from '../modal_details/modalDetailClient'
+import ModalEditClient from '../modal_edit/modalEditClient'
 
 export default class CardClient extends Component {
   constructor(props) {
@@ -101,7 +100,7 @@ export default class CardClient extends Component {
         >
           <ModalOptionAction
             hideModalOptionAction={() => this._hideModalOptionAction()}
-            showModalEditData={() =>
+            showModalEdit={() =>
               this._hideModalOptionActionAndShowModalEditData()
             }
             showModalAlertDialog={() =>
@@ -115,12 +114,14 @@ export default class CardClient extends Component {
           visible={this.state.isModalEditDataVisible}
           onRequestClose={() => this._hideModalEditDataAndModalOptionAction()}
         >
-          <ModalEditData
-            idModal={this.state.id}
-            nameModal={this.state.name}
-            divisionModal={this.state.division}
-            phoneModal={this.state.phone}
-            emailModal={this.state.email}
+          <ModalEditClient
+            idModal={this.props.id}
+            nameModal={this.props.name}
+            emailModal={this.props.email}
+            phoneModal={this.props.phone}
+            addressModal={this.props.address}
+            pic_nameModal={this.props.pic_name}
+            pic_contactModal={this.props.pic_contact}
             hideModalEditData={() =>
               this._hideModalEditDataAndModalOptionAction()
             }

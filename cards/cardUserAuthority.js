@@ -9,9 +9,9 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import ModalOptionAction from "../modal/modalOptionAction";
-import ModalEditData from "../modal_edit/modalEditData";
 import ModalAlertDialog from "../modal/modalAlertDialog";
 import ModalDetailAuthorityUser from "../modal_details/modalDetailAuthorityUser";
+import ModalEditUserAuthority from "../modal_edit/modalEditUserAuthority";
 
 export default class CardUserAuthority extends Component {
   constructor(props) {
@@ -105,7 +105,7 @@ export default class CardUserAuthority extends Component {
         >
           <ModalOptionAction
             hideModalOptionAction={() => this._hideModalOptionAction()}
-            showModalEditData={() =>
+            showModalEdit={() =>
               this._hideModalOptionActionAndShowModalEditData()
             }
             showModalAlertDialog={() =>
@@ -119,12 +119,12 @@ export default class CardUserAuthority extends Component {
           visible={this.state.isModalEditDataVisible}
           onRequestClose={() => this._hideModalEditDataAndModalOptionAction()}
         >
-          <ModalEditData
-            idModal={this.state.id}
-            nameModal={this.state.name}
-            divisionModal={this.state.division}
-            phoneModal={this.state.phone}
-            emailModal={this.state.email}
+          <ModalEditUserAuthority
+            idModal={this.props.id}
+            nikModal={this.props.nik}
+            nameModal={this.props.name}
+            emailModal={this.props.email}
+            phoneModal={this.props.phone}
             hideModalEditData={() =>
               this._hideModalEditDataAndModalOptionAction()
             }

@@ -104,7 +104,7 @@ export default class ModalEditPrinciple extends Component {
           onPress={this.props.hideModalEditData}
           style={styles.button}
         >
-          <Text style={styles.textButton}>Close</Text>
+          <Text style={styles.textButton}>Save</Text>
         </TouchableOpacity>
       </View>
     );

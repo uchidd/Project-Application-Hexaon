@@ -18,15 +18,11 @@ import HeaderSearch from "../headers/headerSearch";
 export default class PrinciplePage extends Component {
   static navigationOptions = {
     drawerLabel: "Principle",
-    drawerIcon: () => <Icon name={"user-tie"} color={"#2A4580"} size={19} />
+    drawerIcon: () => <Icon name={"user-tie"} color={"#2A4580"} size={19} solid={true} />
   };
 
   constructor(props) {
     super(props);
-<<<<<<< HEAD
-
-=======
->>>>>>> aeb319b0ec3295573a0981ddb3e86a16a4b80483
     this.state = {
       searchview: false,
       headerview: true,

@@ -8,7 +8,7 @@ import {
   TextInput
 } from "react-native";
 
-export default class ModalEditProduct extends Component {
+export default class ModalEditClient extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -38,14 +38,62 @@ export default class ModalEditProduct extends Component {
                 ></TextInput>
               </View>
             </View>
-            <View style={styles.rowBottom}>
+            <View style={styles.row}>
               <View style={styles.leftView}>
-                <Text style={styles.text}>Description</Text>
+                <Text style={styles.text}>Email</Text>
               </View>
               <View style={styles.rightView}>
                 <TextInput
                   style={styles.inputText}
-                  defaultValue={this.props.descriptionModal}
+                  defaultValue={this.props.emailModal}
+                  multiline
+                ></TextInput>
+              </View>
+            </View>
+            <View style={styles.row}>
+              <View style={styles.leftView}>
+                <Text style={styles.text}>Phone</Text>
+              </View>
+              <View style={styles.rightView}>
+                <TextInput
+                  style={styles.inputText}
+                  defaultValue={this.props.phoneModal}
+                  multiline
+                ></TextInput>
+              </View>
+            </View>
+            <View style={styles.row}>
+              <View style={styles.leftView}>
+                <Text style={styles.text}>Address</Text>
+              </View>
+              <View style={styles.rightView}>
+                <TextInput
+                  style={styles.inputText}
+                  defaultValue={this.props.addressModal}
+                  multiline
+                ></TextInput>
+              </View>
+            </View>
+            <View style={styles.row}>
+              <View style={styles.leftView}>
+                <Text style={styles.text}>PIC Name</Text>
+              </View>
+              <View style={styles.rightView}>
+                <TextInput
+                  style={styles.inputText}
+                  defaultValue={this.props.pic_nameModal}
+                  multiline
+                ></TextInput>
+              </View>
+            </View>
+            <View style={styles.rowBottom}>
+              <View style={styles.leftView}>
+                <Text style={styles.text}>PIC Contact</Text>
+              </View>
+              <View style={styles.rightView}>
+                <TextInput
+                  style={styles.inputText}
+                  defaultValue={this.props.pic_contactModal}
                   multiline
                 ></TextInput>
               </View>

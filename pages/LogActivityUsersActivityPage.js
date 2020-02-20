@@ -13,7 +13,7 @@ export default class LogActivityUsersActivityPage extends Component{
   static navigationOptions = {
     drawerLabel: 'Users Activity',
     drawerIcon: () => (
-      <Icon name={"user-clock"} color={"#2A4580"} size={19}/>
+      <Icon name={"user-clock"} color={"#2A4580"} size={19} solid={true}/>
     ),
   }
 

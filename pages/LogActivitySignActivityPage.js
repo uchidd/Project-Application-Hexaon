@@ -13,7 +13,7 @@ export default class LogActivitySignActivityPage extends Component{
   static navigationOptions = {
     drawerLabel: 'Sign Activity',
     drawerIcon: () => (
-      <Icon name={"history"} color={"#2A4580"} size={19}/>
+      <Icon name={"history"} color={"#2A4580"} size={19} solid={true}/>
     ),
   }
 

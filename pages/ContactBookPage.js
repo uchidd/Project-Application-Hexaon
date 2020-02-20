@@ -13,7 +13,7 @@ export default class PrinciplePage extends Component {
   static navigationOptions = {
     drawerLabel: "Contack Book",
     drawerIcon: () => (
-      <Icon name={"address-book"} color={"#2A4580"} size={19}/>
+      <Icon name={"address-book"} color={"#2A4580"} size={19} solid={true}/>
     ),
   };
 

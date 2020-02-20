@@ -8,7 +8,7 @@ import {
   TextInput
 } from "react-native";
 
-export default class ModalEditProduct extends Component {
+export default class ModalEditPipeline extends Component {
   render() {
     return (
       <View style={styles.container}>

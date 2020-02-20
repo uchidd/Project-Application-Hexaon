@@ -18,7 +18,7 @@ import HeaderSearch from "../headers/headerSearch";
 export default class AuthorityUserPage extends Component {
   static navigationOptions = {
     drawerLabel: "Authority User",
-    drawerIcon: () => <Icon name={"user-cog"} color={"#2A4580"} size={19} />
+    drawerIcon: () => <Icon name={"user-cog"} color={"#2A4580"} size={19} solid={true} />
   };
 
   constructor(props) {

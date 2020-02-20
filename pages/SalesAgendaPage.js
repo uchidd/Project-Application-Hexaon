@@ -12,7 +12,7 @@ export default class SalesAgendaPage extends Component{
   static navigationOptions = {
     drawerLabel: 'Sales Agenda',
     drawerIcon: () => (
-      <Icon name={"calendar-alt"} color={"#2A4580"} size={19}/>
+      <Icon name={"calendar-alt"} color={"#2A4580"} size={19} solid={true}/>
     ),
   }
 

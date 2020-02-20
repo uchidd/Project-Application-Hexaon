@@ -13,7 +13,7 @@ export default class ProductPage extends Component {
   static navigationOptions = {
     drawerLabel: "Product",
     drawerIcon: () => (
-      <Icon name={"box"} color={"#2A4580"} size={19}/>
+      <Icon name={"box"} color={"#2A4580"} size={19} solid={true}/>
     ),
   };
 

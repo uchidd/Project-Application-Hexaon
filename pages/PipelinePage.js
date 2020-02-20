@@ -13,7 +13,7 @@ export default class PipelinePage extends Component {
   static navigationOptions = {
     drawerLabel: "Pipeline",
     drawerIcon: () => (
-      <Icon name={"tasks"} color={"#2A4580"} size={19}/>
+      <Icon name={"tasks"} color={"#2A4580"} size={19} solid={true}/>
     ),
   };
 
