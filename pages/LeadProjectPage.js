@@ -5,6 +5,7 @@ import { DrawerActions } from 'react-navigation-drawer';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import HeaderSearchWithButton from "../headers/headerSearchWithButton";
 import { TextInput } from "react-native-gesture-handler";
+import RNPickerSelect from 'react-native-picker-select';
 
 export default class LeadProjectPage extends Component {
 
@@ -67,7 +68,24 @@ export default class LeadProjectPage extends Component {
               <View>
                 <Text style={styles.text}>Client</Text>
                 <View style={styles.picker}>
-                  <Picker
+                  <RNPickerSelect
+                    placeholder={{
+                      label: '-- Please choose Client --',
+                      value: null,
+                      color: '#9EA0A4'
+                    }}
+                    style={{ height: 40 }}
+                    onValueChange={(value) => console.log(value)}
+                    items={[
+                      { label: 'BPD BANTEN', value: 'BPD BANTEN' },
+                      { label: 'BANK COMMONWEALTH', value: 'BANK COMMONWEALTH' },
+                      { label: 'BANK DANAMON', value: 'BANK DANAMON' },
+                      { label: 'BANK MAYBANK INDONESIA', value: 'BANK MAYBANK INDONESIA' },
+                      { label: 'ANK TABUNGAN NEGARA (BTN)', value: 'ANK TABUNGAN NEGARA (BTN)' },
+                    ]}
+                  />
+
+                  {/* <Picker
                     style={{ height: 40 }}
                     selectedValue={this.state.PickerSelectedVal}
                     onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
@@ -77,35 +95,45 @@ export default class LeadProjectPage extends Component {
                     <Picker.Item label="BANK DANAMON" value="BANK DANAMON" />
                     <Picker.Item label="BANK MAYBANK INDONESIA" value="BANK MAYBANK INDONESIA" />
                     <Picker.Item label="BANK TABUNGAN NEGARA (BTN)" value="BANK TABUNGAN NEGARA (BTN)" />
-                  </Picker>
+                  </Picker> */}
                 </View>
               </View>
 
               <View>
                 <Text style={styles.text}>Product</Text>
                 <View style={styles.picker}>
-                  <Picker
+                  <RNPickerSelect
+                    placeholder={{
+                      label: '-- Please choose Product --',
+                      value: null,
+                      color: '#9EA0A4'
+                    }}
                     style={{ height: 40 }}
-                    selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
-
-                    <Picker.Item label="CRM" value="CRM" />
-                    <Picker.Item label="EJM" value="EJM" />
-                  </Picker>
+                    onValueChange={(value) => console.log(value)}
+                    items={[
+                      { label: 'CRM', value: 'CRM' },
+                      { label: 'EJM', value: 'EJM' },
+                    ]}
+                  />
                 </View>
               </View>
 
               <View>
                 <Text style={styles.text}>Principle</Text>
                 <View style={styles.picker}>
-                  <Picker
+                  <RNPickerSelect
+                    placeholder={{
+                      label: '-- Please choose Principle --',
+                      value: null,
+                      color: '#9EA0A4'
+                    }}
                     style={{ height: 40 }}
-                    selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
-
-                    <Picker.Item label="FIORANO" value="FIORANO" />
-                    <Picker.Item label="BPC" value="BPC" />
-                  </Picker>
+                    onValueChange={(value) => console.log(value)}
+                    items={[
+                      { label: 'FIORANO', value: 'FIORANO' },
+                      { label: 'BPC', value: 'BPC' },
+                    ]}
+                  />
                 </View>
               </View>
 
@@ -130,31 +158,41 @@ export default class LeadProjectPage extends Component {
               <View>
                 <Text style={styles.text}>Pipeline</Text>
                 <View style={styles.picker}>
-                  <Picker
+                  <RNPickerSelect
+                    placeholder={{
+                      label: '-- Please choose Pipeline --',
+                      value: null,
+                      color: '#9EA0A4'
+                    }}
                     style={{ height: 40 }}
-                    selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
-
-                    <Picker.Item label="Registered" value="Registered" />
-                    <Picker.Item label="Cold Call" value="Cold Call" />
-                    <Picker.Item label="Visit" value="Visit" />
-                    <Picker.Item label="Informal Meeting" value="Informal Meeting" />
-                    <Picker.Item label="Formal Meeting" value="Formal Meeting" />
-                  </Picker>
+                    onValueChange={(value) => console.log(value)}
+                    items={[
+                      { label: 'Registered', value: 'Registered' },
+                      { label: 'Cold Call', value: 'Cold Call' },
+                      { label: 'Visit', value: 'Visit' },
+                      { label: 'Informal Meeting', value: 'Informal Meeting' },
+                      { label: 'Formal Meeting', value: 'Formal Meeting' },
+                    ]}
+                  />
                 </View>
               </View>
 
               <View>
                 <Text style={styles.text}>Principle</Text>
                 <View style={styles.picker}>
-                  <Picker
+                  <RNPickerSelect
+                    placeholder={{
+                      label: '-- Please choose Principle --',
+                      value: null,
+                      color: '#9EA0A4'
+                    }}
                     style={{ height: 40 }}
-                    selectedValue={this.state.PickerSelectedVal}
-                    onValueChange={(itemValue, itemIndex) => this.setState({ PickerSelectedVal: itemValue })} >
-
-                    <Picker.Item label="Active" value="Active" />
-                    <Picker.Item label="Not Active" value="Not Active" />
-                  </Picker>
+                    onValueChange={(value) => console.log(value)}
+                    items={[
+                      { label: 'Active', value: 'Active' },
+                      { label: 'Not Active', value: 'Not Active' },
+                    ]}
+                  />
                 </View>
               </View>
 
